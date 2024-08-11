@@ -1,0 +1,267 @@
+﻿@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@model FrontendBlazor.Models.QPolicyViewModel
+@{
+    var opciones = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "dolares", Text = "Dolares" },
+        new SelectListItem { Value = "colones", Text = "Colones" }
+    };
+}
+
+<div>
+
+    @if (Model.Found == true)
+    {
+                <div class="card">
+            <div class="card-body">
+        <!-- Otras propiedades de QPolicyViewModel -->
+
+                <form id="signupForm" asp-action="PolicySearched" asp-controller="Home">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                    <div class="form-group">
+
+
+
+                        <div class="form-group mb-3">
+                            <label asp-for="PolicyNumber" class="control-label"></label>
+                            <input asp-for="PolicyNumber" class="form-control" id="policyNumberGet"/>
+                            <span asp-validation-for="PolicyNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                        <label for="selectDni" class="cotrol-label">Tipo de documento</label>
+                        <select class="form-select" id="selectDni" class="form-control" onchange="validarLongitud()">
+                            @foreach (var item in Model.dniViewModels)
+                            {
+
+
+                                <option value="@item.IdDni">@item.Name</option>
+
+
+
+                            }
+                        </select>
+                        </div>
+
+
+                        <div class="form-group mb-3">
+
+                            <label asp-for="Identification" class="control-label"></label>
+                            <input asp-for="Identification" class="form-control" id="Identification"
+                                   placeholder="Digite la cedula del cliente en caso  de que la tenga" oninput="validarLongitud()" />
+                            <span id="messageId" asp-validation-for="Identification" class="text-danger"></span>
+                            <span id="message" style="color: red;"></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Currency" class="control-label"></label>
+                        <select  asp-for="Currency" class="form-control">
+                                            @foreach(var item in opciones)
+                                            {
+                                                @if (Model.Currency == item.Value) {
+                                                    <option selected value="@item.Value">@item.Text</option>
+                                                }
+                                                else 
+                                                {
+                                                    <option  value="@item.Value">@item.Text</option>
+                                                    
+                                                }
+
+
+                            }
+                        </select>
+                        <span asp-validation-for="Currency" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="PolicyPremium" class="control-label"></label>
+                        <input asp-for="PolicyPremium" type="number" value="@Model.PolicyPremium" class="form-control" id="PolicyPremium" readonly />
+                        <span asp-validation-for="PolicyPremium" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label asp-for="ExpirationDate" class="control-label"></label>
+                        <input asp-for="ExpirationDate" class="form-control" disabled />
+                        <span asp-validation-for="ExpirationDate" class="text-danger"></span>
+                    </div>
+
+
+                    <input asp-for="PolicyTypeId" class="form-control" disable hidden="true" />
+
+
+                    <input asp-for="IdPolicyState" class="form-control" disable hidden="true" />
+
+                    <div class="form-group mb-3">
+                        <label asp-for="PolicyDate" class="control-label"></label>
+                        <input asp-for="PolicyDate" class="form-control" disabled />
+                        <span asp-validation-for="PolicyDate" class="text-danger"></span>
+                    </div>
+
+
+                    
+
+                    <div class=" form- group mb-3">
+
+                        <label asp-for="PolicyTypeId" class="control-label"> Tipo de poliza </label>
+
+                        <input   asp-for="policyType" class="form-control" disabled="true"/>
+                        <span></span>
+
+                        <span asp-validation-for="PolicyTypeId" class="text-danger"></span>
+
+                    </div>
+
+
+
+                        <input class="btn btn-primary" id="createBut"  value="Agregar a colección">
+
+                      
+
+                </form>
+
+
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <h2>Póliza no encontrada</h2>
+    }
+</div>
+
+
+
+                        <script>
+
+
+
+    $(document).ready(function () {
+        // Función para mostrar la alerta
+        function mostrarAlerta() {
+            // Mostrar una alerta usando SweetAlert
+            Swal.fire({
+                title: "Confirmación",
+                text: "¿Estás seguro de que desea guardar la poliza?",
+                icon: "question",
+                showCancelButton: true,
+                background: '#172340',
+                confirmButtonText: "Sí, guardar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Si el usuario confirma, enviar el formulario
+                    $('#signupForm').submit();
+                }
+            });
+        }
+
+        // Vincular la función mostrarAlerta al evento de envío del formulario
+        $('#createBut').on('click', function (event) {
+            // Evitar el envío del formulario predeterminado
+            event.preventDefault();
+            var number = $("#policyNumberGet").val();
+            console.log(number);
+            // Mostrar la alerta
+            $.ajax({
+                url: '@Url.Action("checkExist" , "Policy")',
+                type: "GET",
+                data: { policyNumber: number },
+                success: function (response) {
+                    if (response === true) {
+                        Swal.fire({
+                            title: "El numero de poliza esta repetido",
+                            text: "Este numero de poliza ya se encuentra agregado en la coleccion",
+                            background: '#172340', // Para mantener el mismo fondo de color
+                            icon: "warning"
+                        });
+                    } else {
+                        mostrarAlerta();
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        title: "Ocurrio un error agregando la poliza",
+                        text: "Esta accion dio problemas, por favor intentelo de nuevo mas tarde",
+                        background: '#172340', // Para mantener el mismo fondo de color
+                        icon: "error"
+                    });
+                }
+            });
+
+
+
+          
+        });
+    }
+    )
+
+
+        function validarLongitud() {
+            var tipoDocumento = $("#selectDni").val();
+            var numeroDocumento = $("#Identification").val();
+            var longitudRequerida;
+            var mensajeSpan = $("#message");
+            var createBut = $("#createBut");
+
+            console.log(numeroDocumento);
+            console.log(tipoDocumento);
+            console.log(mensajeSpan.text);
+
+            // Determinar la longitud requerida según el tipo de documento seleccionado
+            switch (parseInt(tipoDocumento)) {
+                case 3:
+                    longitudRequeridaMin = 9;
+                    longitudRequeridaMax = 9;
+                    console.log(numeroDocumento);
+                    break;
+                case 4:
+                    longitudRequeridaMin = 10;
+                    console.log(numeroDocumento);
+                    longitudRequeridaMax = 10;
+                    break;
+                case 5:
+                    longitudRequeridaMin = 11;
+                    console.log(numeroDocumento);
+                    longitudRequeridaMax = 12;
+                    break;
+                case 6:
+                    longitudRequeridaMin = 10;
+                    console.log(numeroDocumento);
+                    longitudRequeridaMax = 10;
+                    break;
+                default:
+                    // No se seleccionó un tipo de documento válido
+                    console.log(numeroDocumento);
+                    mensajeSpan.text("Por favor, seleccione un tipo de documento válido.");
+                    mensajeSpan.show();
+                    createBut.prop("disabled", true);
+                    return false;
+            }
+
+            // Establecer el atributo maxlength del input
+            $("#Identification").attr("maxlength", longitudRequeridaMax);
+            $("#Identification").attr("minlength", longitudRequeridaMin);
+            console.log(numeroDocumento);
+            // Verificar si la longitud del número de documento es válida
+            if (numeroDocumento.length >= longitudRequeridaMin && numeroDocumento.length <= longitudRequeridaMax) {
+                mensajeSpan.hide();
+                createBut.prop("disabled", false);
+                return true;
+            } else {
+                mensajeSpan.text("La longitud del número de documento no es válida para el tipo seleccionado.");
+                mensajeSpan.show();
+                createBut.prop("disabled", true);
+                return false;
+            }
+        }
+
+
+
+
+                        </script>

@@ -1,0 +1,432 @@
+﻿@model TicketViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/FrontPageLayout.cshtml";
+}
+
+<style>
+
+    .field-container {
+        position: relative;
+        margin-bottom: 20px; /* Agregamos un margen inferior */
+    }
+
+    .validation-message {
+        position: absolute;
+        bottom: -20px; /* Ajustamos la posición */
+        left: 0;
+        display: none;
+        color: red;
+        font-size: 0.8em;
+    }
+
+    .field-container input:focus + .validation-message,
+    .field-container textarea:focus + .validation-message {
+        display: block;
+    }
+
+</style>
+
+<body>
+    <div id="content" class="site-content">
+        <section id="section-slider" class="fullwidthbanner-container" aria-label="section-slider">
+            <div id="revolution-slider">
+                <ul>
+                    <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                        <!--  BACKGROUND IMAGE -->
+                        <img src="~/Content/assets/images/slide-home1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                        <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="['0']" data-y="bottom" data-voffset="" data-width="['auto','320','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
+                            <img class="img-responsive md-hidden sm-hidden xs-hidden" src="~/Content/assets/images/man-slide.png" alt="Image">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="top" data-voffset="200" data-width="['580','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-fontsize="['14','14','14','14']" data-responsive_offset="on">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['-45','-45','-45','-45']" data-width="['670','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1700" data-whitespace="['normal']" data-fontsize="['50','50','40','30']" data-lineheight="['60','60','50','40']" data-responsive_offset="on">
+                            <p>El Valor De Sus Activos Es Relevante</p>
+                        </div>
+                        <div class="tp-caption tp-resizeme sh3" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['60','60','60','60']" data-width="['580','580','480','300']" data-transform_idle="o:1;" data-whitespace="['normal','normal','normal','normal']" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1900" data-fontsize="['16','16','14','12']" data-lineheight="['24','24','18','16']" data-responsive_offset="on">
+                            <p>Somos Su Solución En Seguros</p>
+                        </div>
+                        <div class="tp-caption" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="bottom" data-voffset="['185','185','185','185']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2100">
+                            <a class="btn" href="@Url.Action("Create", "Ticket")">Consultar ahora</a>
+                        </div>
+                    </li>
+
+                    <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                        <!--  BACKGROUND IMAGE -->
+                        <img src="~/Content/assets/images/slide-home1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                        <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="" data-y="bottom" data-voffset="" data-width="['auto','380','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
+                            <img class="img-responsive md-hidden sm-hidden xs-hidden" src="~/Content/assets/images/woman-slide.png" alt="Image">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="top" data-voffset="200" data-width="['580','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-fontsize="['14','14','14','14']" data-responsive_offset="on">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['-45','-45','-45','-45']" data-width="['670','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1700" data-whitespace="['normal']" data-fontsize="['50','50','40','30']" data-lineheight="['60','60','50','40']" data-responsive_offset="on">
+                            <p>Genere Seguridad Para Sus Bienes</p>
+                        </div>
+                        <div class="tp-caption tp-resizeme" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['60','60','60','60']" data-width="['580','580','480','300']" data-transform_idle="o:1;" data-whitespace="['normal','normal','normal','normal']" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1900" data-fontsize="['16','16','14','12']" data-lineheight="['24','24','18','16']" data-responsive_offset="on">
+                            <p>¿Sabía usted que la posibilidad de riesgos puede ser mitigada en un 90% gracias a seguros?</p>
+                        </div>
+                        <div class="tp-caption" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="bottom" data-voffset="['185','185','185','185']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2100">
+                            <a class="btn" href="@Url.Action("Create", "Ticket")">Consultar Ahora</a>
+                        </div>
+                    </li>
+
+                    <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                        <!--  BACKGROUND IMAGE -->
+                        <img src="~/Content/assets/images/slide-home1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                        <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="" data-y="bottom" data-voffset="" data-width="['auto','290','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
+                            <img class="img-responsive md-hidden sm-hidden xs-hidden" src="~/Content/assets/images/man-slide-2.png" alt="Image">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="top" data-voffset="200" data-width="['580','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-fontsize="['14','14','14','14']" data-responsive_offset="on">
+                        </div>
+                        <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['-45','-45','-45','-45']" data-width="['670','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1700" data-whitespace="['normal']" data-fontsize="['50','50','40','30']" data-lineheight="['60','60','50','40']" data-responsive_offset="on">
+                            <p>Te ofrecemos tanto seguros personales, como colectivos</p>
+                        </div>
+                        <div class="tp-caption tp-resizeme sh3" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="center" data-voffset="['60','60','60','60']" data-width="['580','580','480','300']" data-transform_idle="o:1;" data-whitespace="['normal','normal','normal','normal']" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1900" data-fontsize="['16','16','14','12']" data-lineheight="['24','24','18','16']" data-responsive_offset="on">
+                            <p>Póngase en contacto con nosotros para aserorarle de la mejor manera.</p>
+                        </div>
+                        <div class="tp-caption" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="bottom" data-voffset="['185','185','185','185']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="2100">
+                            <a class="btn" href="@Url.Action("Create", "Ticket")">Consultar Ahora</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="wpb_row row-fluid top-70 row-has-fill relative bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="empty_space_70 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic ">
+                                    <i class="ion-md-medal ion-ios-medal ion-logo-medal ion-ios-medal"></i>
+                                    <div class="content-box">
+                                        <h4>Servicio de Calidad</h4>
+                                        <p>Brindamos soluciones que se adapten a nuestros clientes. Envíenos su consulta para poder ayudarle.</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30  lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic ">
+                                    <i class="ion-md-bulb ion-ios-bulb ion-logo-bulb ion-ios-bulb"></i>
+                                    <div class="content-box">
+                                        <h4>Consideramos Ideas</h4>
+                                        <p>Estamos dispuestos a escuchar sus ideas y aconsejar sobre sus desiciones.</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic ">
+                                    <i class="ion-md-cash ion-ios-cash ion-logo-cash ion-ios-cash"></i>
+                                    <div class="content-box">
+                                        <h4>Pólizas Accesibles</h4>
+                                        <p>Le ayudaremos a buscar la opción que mejor se adapte a sus necesidades y que aún siga cumpliendo sus expectativas</p>
+                                    </div>
+                                </div>
+
+                                <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-6 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="service-box icon-box box-shadow-2 ionic ">
+                                    <i class="ion-md-headset ion-ios-headset ion-logo-headset ion-ios-headset"></i>
+                                    <div class="content-box">
+                                        <h4>Soporte</h4>
+                                        <p>Utilice nuestra plataforma de WhatsApp para encontrar soluciones a sus problemas. Estamos para servirle</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd row-has-fill row-o-equal-height row-o-content-middle row-flex bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="row wpb_row inner row-fluid row-o-equal-height row-o-content-middle row-flex">
+                                    <div class="wpb_column column_container col-sm-12 col-md-6 col-has-fill custom-padd-1">
+                                        <div class="column-inner">
+                                            <div class="wpb_wrapper"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-second wpb_column column_container col-sm-12 col-md-6">
+                                        <div class="column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="empty_space_60 lg-hidden h60"><span class="empty_space_inner"></span></div>
+
+                                                <div class="section-head padding-box-2 text-light">
+                                                    <h6><span>¿Quienes somos?</span></h6>
+                                                    <h2 class="section-title">Nuestra misión y<br>Valores</h2>
+                                                </div>
+
+                                                <div class="wpb_text_column wpb_content_element padding-box-2 text-light">
+                                                    <div class="wpb_wrapper">
+                                                        <p>
+                                                            Como Asesora de Seguros me encuentro preparada para la administración y venta de todas las
+                                                            líneas de seguros que ofrece el Instituto Nacional de Seguros. El arduo trabajo a lo
+                                                            largo de más de 12 años de experiencia, me convierte en una fuente confiable y segura de
+                                                            asesoría y administración integral de las necesidades empresariales, administrativas y
+                                                            personales de quienes son mi prioridad, mis clientes. Lo que le garantiza a usted,
+                                                            que cuidar la inversión de su patrimonio a través de la buena aplicación de un seguro
+                                                            será siempre mi prioridad.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wpb_text_column wpb_content_element paddtop-75 padding-box-2 info-box text-light">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="sign">
+                                                            <h5>Marcela Vega</h5>
+                                                            <p>
+                                                                Agente autorizada del INS
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="empty_space_60 lg-hidden"><span class="empty_space_inner"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd-top bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12 col-md-9">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="section-head ">
+                                    <h6><span>Nuestros Proyectos</span></h6>
+                                    <h2 class="section-title">Ser líderes en el mercado de seguros en Costa Rica.</h2>
+                                </div>
+
+                                <div class="empty_space_30 md-hidden sm-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column column_container col-sm-12 col-md-3">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element text-right mobile-left">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd-bot row-has-fill row-full-width row-no-padding bg-light">
+            <div class="row">
+                <div class="wpb_column column_container col-sm-12">
+                    <div class="column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="project-list-2">
+                                <div class="project-slider-2 projects" data-show="1" data-auto="" data-dot="true">
+
+                                    <div class="col-md-12">
+                                        <div class="project-item">
+
+                                            <div class="slide-img"><img src="~/Content/assets/images/case-slide1.jpg" alt=""></div>
+
+                                            <div class="inner row">
+                                                <div class="col-md-9">
+                                                    <h4>Contactenos</h4>
+                                                    <p>La transparencia con nuestros clientes es vital para generar confianza</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="project-item">
+
+                                            <div class="slide-img"><img src="~/Content/assets/images/case-slide2.jpg" alt=""></div>
+
+                                            <div class="inner row">
+                                                <div class="col-md-9">
+                                                    <h4>Usted es nuestra prioridad</h4>
+                                                    <p>Nuestro equipo de trabajo es altamente competitivo y está enfocado en un objetivo: su tranquilidad.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="project-item">
+
+                                            <div class="slide-img"><img src="~/Content/assets/images/case-slide3.jpg" alt=""></div>
+
+                                            <div class="inner row">
+                                                <div class="col-md-9">
+                                                    <h4>Estamos altamente capacitados para poder atenderle</h4>
+                                                    <p>La transparencia con nuestros clientes es vital para generar confianza.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="arrows-slick">
+                                        <button type="button" class="btn-left slick-arrow prev-nav"><i class="fa fa-angle-left"></i></button>
+                                        <button type="button" class="btn-right slick-arrow next-nav"><i class="fa fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wpb_row row-fluid section-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column column_container col-sm-12 col-md-9">
+                        <div class="column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="section-head ">
+                                    <h6><span>Envíe su consulta para que podamos atenderle</span></h6>
+                                    <h2 class="section-title">Seguros en todas las líneas</h2>
+                                </div>
+
+                                <div class="empty_space_30 md-hidden sm-hidden"><span class="empty_space_inner"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-margin col-md-12">
+                        <div class="clearfix">
+                            <form id="ticketForm" asp-controller="Ticket" asp-action="Create" class="wpcf7-form">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label asp-for="Name" class="form-label your-name">Nombre:</label>
+                                        <div class="field-container">
+                                            <input asp-for="Name" class="form-control" placeholder="Marcela" pattern="[A-Za-z\s]+" />
+                                            <span asp-validation-for="Name" class="text-danger validation-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label asp-for="Mail" class="form-label">Correo:</label>
+                                        <div class="field-container">
+                                            <input asp-for="Mail" class="form-control" placeholder="ejemplo@gmail.com" />
+                                            <span asp-validation-for="Mail" class="text-danger validation-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label asp-for="QUERY" class="form-label">Consulta:</label>
+                                        <div class="field-container">
+                                            <textarea asp-for="QUERY" class="form-control" placeholder="Quisiera saber mas sobre..." style="width: 100%; height: 150px; resize: none;"></textarea>
+                                            <span asp-validation-for="QUERY" class="text-danger validation-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <!-- Botón de enviar al final del formulario -->
+                                    <button type="button" id="submitBtn" class="wpcf7-form-control wpcf7-submit btn btn-primary btn-block" style="margin-top:15px;">Enviar Pregunta</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submitBtn').click(function (e) {
+                e.preventDefault(); // Prevenir el envío por defecto del formulario
+
+                // Serializar el formulario
+                var formData = $('#ticketForm').serialize();
+
+                // Realizar la solicitud AJAX
+                $.ajax({
+                    url: '@Url.Action("Create", "Ticket")',
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    success: function (response) {
+                        if (response.success) {
+                            // Mostrar SweetAlert de éxito
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Ticket enviado',
+                                text: 'El ticket se ha enviado correctamente.',
+                                confirmButtonText: 'Aceptar'
+                            }).then((result) => {
+                                // Redireccionar o hacer cualquier otra acción
+                                window.location.href = '@Url.Action("Index", "Home")';
+                            });
+                        } else {
+                            // Mostrar errores de validación u otros errores
+                            displayValidationErrors(response.errors);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Hubo un error al enviar el ticket. Por favor, intenta nuevamente más tarde.',
+                            confirmButtonText: 'Aceptar'
+                        });
+                    }
+                });
+            });
+        });
+
+        function displayValidationErrors(errors) {
+            // Limpiar mensajes de error anteriores
+            $('.validation-message').hide();
+
+            // Mostrar errores recibidos
+            $.each(errors, function (key, value) {
+                var errorMessage = value.join('<br>'); // Si hay varios errores, mostrarlos todos
+                $('[name="' + key + '"]').siblings('.validation-message').html(errorMessage).show();
+            });
+        }
+    </script>
+}
+

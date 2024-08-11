@@ -1,0 +1,2857 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FrontendBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FrontendBlazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\NewFolder\\gsi_estados_financieros_al_30-09-2017.pdf",
+      "PackagePath": "staticwebassets\\Content\\NewFolder\\gsi_estados_financieros_al_30-09-2017.pdf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\ResponsiveTables.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\ResponsiveTables.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\bootstrap3.2.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\bootstrap3.2.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\bootstrap3.2.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\bootstrap3.2.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\bootstrap3.2.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\bootstrap3.2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\bootstrap3.2.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\bootstrap3.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo1\\style-rtl.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo1\\style-rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo1\\style-rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo1\\style-rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo1\\style.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo1\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo1\\style.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo1\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo2\\style-rtl.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo2\\style-rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo2\\style-rtl.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo2\\style-rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo2\\style.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo2\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\demo2\\style.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\demo2\\style.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\ionicon.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\ionicon.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\maps\\demo1\\style.css.map",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\maps\\demo1\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\maps\\demo2\\style.css.map",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\maps\\demo2\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\royal-preload.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\royal-preload.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\.gitignore",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\css\\iconfont.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\css\\iconfont.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\examples\\index.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\examples\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\examples\\index.html",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\examples\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\fonts\\feather.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\fonts\\feather.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\fonts\\feather.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\fonts\\feather.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\fonts\\feather.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\fonts\\feather.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\feather-font\\fonts\\feather.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\feather-font\\fonts\\feather.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\ionicons.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\ionicons.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\ionicons.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\ionicons.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\fonts\\ionicons.woff2",
+      "PackagePath": "staticwebassets\\Content\\assets\\fonts\\ionicons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\INS.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\INS.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\LogMVR.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\LogMVR.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\MVRICON.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\MVRICON.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\MVRVirtual.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\MVRVirtual.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\avatar3.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\avatar3.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\avatar4.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\avatar4.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\avatar9.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\avatar9.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\bg-home1.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\bg-home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\blog1.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\blog1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\blog2.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\blog2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\blog3.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\blog3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\blog4.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\blog4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\case-slide1.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\case-slide1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\case-slide2.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\case-slide2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\case-slide3.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\case-slide3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\case-slide4.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\case-slide4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-calendar.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-calendar.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-data.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-data.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-diamond.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-diamond.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-dollar.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-dollar.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-light.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-light.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-paper.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-paper.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-stock.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-stock.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-taxes.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-taxes.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\icon-write.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\icon-write.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo-bg.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo-blue.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo-blue.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo-white1.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo-white1.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo2.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\logo5.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\logo5.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\man-slide-2.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\man-slide-2.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\man-slide.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\man-slide.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\marcela.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\marcela.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\others\\404.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\others\\404.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\others\\logo-placeholder.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\others\\logo-placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\others\\placeholder.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\others\\placeholder.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\placeholder1.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\placeholder1.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\placeholder2.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\placeholder2.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\pngtree-whatsapp-icon-social-media-png-image_6618452.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\pngtree-whatsapp-icon-social-media-png-image_6618452.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\screenshots\\dark.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\screenshots\\dark.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\screenshots\\light.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\screenshots\\light.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\slide-home1.jpg",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\slide-home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\stars.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\stars.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\whats2.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\whats2.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\whatsapp-icon.gif",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\whatsapp-icon.gif"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\images\\woman-slide.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\images\\woman-slide.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\AddTableARIA.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\AddTableARIA.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\ace.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\ace.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\apexcharts-dark-rtl.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\apexcharts-dark-rtl.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\apexcharts-dark.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\apexcharts-dark.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\apexcharts-light-rtl.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\apexcharts-light-rtl.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\apexcharts-light.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\apexcharts-light.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\bootstrap-maxlength.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\bootstrap-maxlength.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\carousel-rtl.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\carousel-rtl.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\carousel.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\chartjs-dark.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\chartjs-dark.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\chartjs-light.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\chartjs-light.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\chat.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\countto.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\countto.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\cropper.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\cropper.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\dashboard-dark.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\dashboard-dark.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\dashboard-light.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\dashboard-light.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\data-table.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\data-table.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\demo.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\dropify.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\dropify.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\dropzone.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\dropzone.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\easymde.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\easymde.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\email.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\email.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\flatpickr.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\flatpickr.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\form-validation.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\form-validation.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\header-footer.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\header-footer.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\inputmask.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\inputmask.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\jquery-3.6.4.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\jquery-3.6.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\jquery.flot-dark.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\jquery.flot-dark.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\jquery.flot-light.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\jquery.flot-light.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\jquery.isotope.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\jquery.isotope.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\peity.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\peity.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\pickr.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\pickr.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\royal_preloader.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\royal_preloader.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\select2.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\select2.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\sortablejs-dark.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\sortablejs-dark.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\sortablejs-light.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\sortablejs-light.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\sparkline.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\sparkline.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\sweet-alert.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\sweet-alert.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\tags-input.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\tags-input.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\template.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\template.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\tinymce.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\tinymce.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\typeahead.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\typeahead.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\js\\wizard.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\js\\wizard.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\coloredbg.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\coloredbg.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\gridtile.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\gridtile.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\gridtile_3x3.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\gridtile_3x3.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\gridtile_3x3_white.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\gridtile_3x3_white.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\gridtile_white.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\gridtile_white.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\loader.gif",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\fb.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\fb.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\fr.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\fr.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\ig.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\ig.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\post.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\post.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\revolution_slide1.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\revolution_slide1.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\revolution_slide2.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\revolution_slide2.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\tw.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\tw.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\vm.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\vm.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\wc.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\wc.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\assets\\sources\\yt.png",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\assets\\sources\\yt.png"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\closedhand.cur",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\closedhand.cur"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\layers.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\layers.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\ares.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\ares.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\custom.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\dione.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\dione.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\erinyen.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\erinyen.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\gyges.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\gyges.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\hades.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\hades.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\hebe.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\hebe.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\hephaistos.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\hephaistos.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\hermes.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\hermes.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\hesperiden.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\hesperiden.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\metis.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\metis.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\persephone.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\persephone.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\uranus.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\uranus.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation-skins\\zeus.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation-skins\\zeus.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\navigation.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\navigation.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\openhand.cur",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\openhand.cur"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\css\\settings.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\css\\settings.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\font-awesome\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\font-awesome\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\helper.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\helper.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\css\\pe-icon-7-stroke.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\Pe-icon-7-stroke.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\fonts\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\pe-icon-7-stroke\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\revicons\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\revicons\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\revicons\\revicons.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\revicons\\revicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\revicons\\revicons.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\revicons\\revicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\revicons\\revicons.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\revicons\\revicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\fonts\\revicons\\revicons.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\fonts\\revicons\\revicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\info.cfg",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\info.cfg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.actions.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.actions.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.carousel.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.migration.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.migration.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.navigation.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.navigation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.parallax.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.parallax.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.video.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\revolution.extension.video.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.actions.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.actions.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.carousel.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.kenburn.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.kenburn.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.layeranimation.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.layeranimation.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.migration.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.migration.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.navigation.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.navigation.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.parallax.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.parallax.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.slideanims.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.slideanims.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.video.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\extensions\\source\\revolution.extension.video.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\jquery.themepunch.enablelog.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\jquery.themepunch.enablelog.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\jquery.themepunch.revolution.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\jquery.themepunch.revolution.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\jquery.themepunch.tools.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\jquery.themepunch.tools.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\source\\index.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\source\\index.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.enablelog.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.enablelog.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.revolution.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.revolution.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.tools.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\js\\source\\jquery.themepunch.tools.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\facebook\\class-facebook.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\facebook\\class-facebook.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\flickr\\class-flickr.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\flickr\\class-flickr.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\instagram\\class-instagram.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\instagram\\class-instagram.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\.DS_Store",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\RestApi.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\RestApi.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\class-twitter.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\class-twitter.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\connection\\Application.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\connection\\Application.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\connection\\ConnectionAbstract.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\connection\\ConnectionAbstract.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\twitter\\connection\\User.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\twitter\\connection\\User.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\vimeo\\class-vimeo.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\vimeo\\class-vimeo.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\revolution\\php\\youtube\\class-youtube.php",
+      "PackagePath": "staticwebassets\\Content\\assets\\revolution\\php\\youtube\\class-youtube.php"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\animate.css\\animate.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\animate.css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\apexcharts\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\apexcharts\\apexcharts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\bootstrap-maxlength\\bootstrap-maxlength.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\bootstrap-maxlength\\bootstrap-maxlength.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\chartjs\\Chart.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\chartjs\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\clipboard\\clipboard.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\clipboard\\clipboard.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\core\\core.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\core\\core.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\core\\core.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\core\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\cropperjs\\cropper.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\cropperjs\\cropper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\cropperjs\\cropper.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\cropperjs\\cropper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\datatables.net-bs5\\dataTables.bootstrap5.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\datatables.net-bs5\\dataTables.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\datatables.net-bs5\\dataTables.bootstrap5.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\datatables.net-bs5\\dataTables.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\datatables.net\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\datatables.net\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\dist\\dropify.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\dist\\dropify.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\dist\\dropify.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\dist\\dropify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\fonts\\dropify.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\fonts\\dropify.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\fonts\\dropify.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\fonts\\dropify.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\fonts\\dropify.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\fonts\\dropify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropify\\fonts\\dropify.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropify\\fonts\\dropify.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropzone\\dropzone.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropzone\\dropzone.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\easymde\\easymde.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\easymde\\easymde.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\easymde\\easymde.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\easymde\\easymde.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\feather-sprite.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\feather-sprite.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\feather.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\feather.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\feather.js.map",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\feather.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\feather.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\feather.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\feather.min.js.map",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\feather.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\feather-icons\\icons.json",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\feather-icons\\icons.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flag-icon-css\\css\\flag-icon.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flag-icon-css\\css\\flag-icon.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\es-ga.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\es-ga.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\et.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\et.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\eu.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flag-icon-css\\flags\\1x1\\eu.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flatpickr\\flatpickr.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flatpickr\\flatpickr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\flatpickr\\flatpickr.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\flatpickr\\flatpickr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\index.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\index.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\index.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\index.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales-all.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales-all.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales-all.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales-all.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-au.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-au.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-au.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-au.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-gb.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-gb.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-gb.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-gb.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-nz.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-nz.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-nz.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\en-nz.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es-us.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es-us.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es-us.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es-us.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es.global.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es.global.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es.global.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\core\\locales\\es.global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\main.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\fullcalendar\\main.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\fullcalendar\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\inputmask\\jquery.inputmask.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\inputmask\\jquery.inputmask.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-mousewheel\\jquery.mousewheel.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-mousewheel\\jquery.mousewheel.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-steps\\jquery.steps.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-steps\\jquery.steps.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-steps\\jquery.steps.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-steps\\jquery.steps.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-tags-input\\jquery.tagsinput.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-tags-input\\jquery.tagsinput.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-tags-input\\jquery.tagsinput.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-tags-input\\jquery.tagsinput.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery-validation\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery-validation\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.categories.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.categories.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.pie.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.pie.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery.flot\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\jquery\\jquery-3.6.4.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\jquery\\jquery-3.6.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\moment\\moment.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\moment\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\owl.carousel\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\owl.carousel\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\owl.carousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\owl.carousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\owl.carousel\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\owl.carousel\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\peity\\jquery.peity.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\peity\\jquery.peity.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\pickr\\pickr.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\pickr\\pickr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\pickr\\themes\\classic.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\pickr\\themes\\classic.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\pickr\\themes\\monolith.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\pickr\\themes\\monolith.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\pickr\\themes\\nano.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\pickr\\themes\\nano.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\plugins\\prism-normalize-whitespace.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\plugins\\prism-normalize-whitespace.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\prism.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\prism.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-coy.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-coy.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-coy.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-coy.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-dark.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-dark.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-dark.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-dark.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-funky.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-funky.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-funky.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-funky.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-okaidia.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-okaidia.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-okaidia.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-okaidia.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-solarizedlight.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-solarizedlight.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-solarizedlight.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-solarizedlight.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-tomorrow.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-tomorrow.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-tomorrow.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-tomorrow.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-twilight.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-twilight.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism-twilight.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism-twilight.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\prismjs\\themes\\prism.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\prismjs\\themes\\prism.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\select2\\select2.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\select2\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\select2\\select2.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\select2\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\sortablejs\\Sortable.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\sortablejs\\Sortable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\sweetalert2\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\sweetalert2\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\sweetalert2\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\sweetalert2\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\bower.json",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\composer.json",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\composer.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\icons\\default\\icons.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\icons\\default\\icons.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\icons\\default\\icons.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\icons\\default\\icons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\icons\\default\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\icons\\default\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\license.txt",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\license.txt"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\models\\dom\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\models\\dom\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\models\\dom\\model.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\models\\dom\\model.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\models\\dom\\model.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\models\\dom\\model.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\package-lock.json",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\package.json",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\advlist\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\anchor\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autolink\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autoresize\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\autosave\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\charmap\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\code\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\code\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\code\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\code\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\code\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\code\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\codesample\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\directionality\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojiimages.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojiimages.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojiimages.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojiimages.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojis.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojis.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojis.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\js\\emojis.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\emoticons\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\fullscreen\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\help\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\help\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\help\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\help\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\help\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\help\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\image\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\image\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\image\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\image\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\image\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\image\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\importcss\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\insertdatetime\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\link\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\link\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\link\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\link\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\link\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\link\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\lists\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\media\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\media\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\media\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\media\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\media\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\media\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\nonbreaking\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\pagebreak\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\preview\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\quickbars\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\save\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\save\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\save\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\save\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\save\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\save\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\searchreplace\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\table\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\table\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\table\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\table\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\table\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\table\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\template\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\template\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\template\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\template\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\template\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\template\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualblocks\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\visualchars\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\plugin.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\plugin.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\plugins\\wordcount\\plugin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\readme.md",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\readme.md"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\dark\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\dark\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\default\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\default\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\default\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\default\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\document\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\document\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\document\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\document\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5-dark\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\tinymce-5\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\writer\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\writer\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\content\\writer\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\content\\writer\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.inline.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide-dark\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.inline.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\oxide\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5-dark\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.inline.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.inline.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.inline.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.inline.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\content.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.min.css",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\skins\\ui\\tinymce-5\\skin.shadowdom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\themes\\silver\\index.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\themes\\silver\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\themes\\silver\\theme.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\themes\\silver\\theme.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\themes\\silver\\theme.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\themes\\silver\\theme.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\tinymce.d.ts",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\tinymce.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\tinymce.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\tinymce.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\tinymce\\tinymce.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\tinymce\\tinymce.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\assets\\vendors\\typeahead.js\\typeahead.bundle.min.js",
+      "PackagePath": "staticwebassets\\Content\\assets\\vendors\\typeahead.js\\typeahead.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\about.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\blog.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\career.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\career.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\contact.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\home-2.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\home-2.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\how-it-work.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\how-it-work.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\index.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\post.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\post.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\project-detail.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\project-detail.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\projects-2.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\projects-2.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\projects.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\projects.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\service-detail.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\service-detail.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\services-icon.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\services-icon.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\services.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\services.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\team.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\team.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\consultax_pages\\testimonials.html",
+      "PackagePath": "staticwebassets\\Content\\consultax_pages\\testimonials.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\dashboard.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\dashboard.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\advanced-ui\\cropper.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\advanced-ui\\cropper.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\advanced-ui\\owl-carousel.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\advanced-ui\\owl-carousel.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\advanced-ui\\sortablejs.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\advanced-ui\\sortablejs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\advanced-ui\\sweet-alert.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\advanced-ui\\sweet-alert.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\apps\\calendar.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\apps\\calendar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\apps\\chat.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\apps\\chat.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\auth\\login.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\auth\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\auth\\register.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\auth\\register.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\charts\\apex.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\charts\\apex.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\charts\\chartjs.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\charts\\chartjs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\charts\\flot.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\charts\\flot.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\charts\\peity.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\charts\\peity.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\charts\\sparkline.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\charts\\sparkline.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\email\\compose.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\email\\compose.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\email\\inbox.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\email\\inbox.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\email\\read.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\email\\read.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\error\\404.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\error\\404.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\error\\500.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\error\\500.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\forms\\advanced-elements.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\forms\\advanced-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\forms\\basic-elements.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\forms\\basic-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\forms\\editors.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\forms\\editors.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\forms\\wizard.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\forms\\wizard.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\blank-page.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\blank-page.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\faq.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\faq.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\invoice.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\invoice.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\pricing.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\pricing.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\profile.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\profile.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\general\\timeline.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\general\\timeline.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\icons\\feather-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\icons\\feather-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\icons\\flag-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\icons\\flag-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\icons\\mdi-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\icons\\mdi-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\tables\\basic-table.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\tables\\basic-table.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\tables\\data-table.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\tables\\data-table.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\accordion.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\accordion.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\alerts.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\alerts.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\badges.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\badges.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\breadcrumbs.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\breadcrumbs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\button-group.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\button-group.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\buttons.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\cards.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\cards.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\carousel.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\carousel.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\collapse.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\collapse.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\dropdowns.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\dropdowns.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\list-group.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\list-group.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\media-object.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\media-object.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\modal.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\modal.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\navbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\navbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\navs.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\navs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\pagination.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\pagination.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\popover.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\popover.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\progress.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\progress.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\scrollbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\scrollbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\scrollspy.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\scrollspy.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\spinners.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\spinners.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\tabs.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\tabs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\pages\\ui-components\\tooltips.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\pages\\ui-components\\tooltips.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\partials\\_footer.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\partials\\_footer.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\partials\\_navbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\partials\\_navbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo1\\partials\\_sidebar.html",
+      "PackagePath": "staticwebassets\\Content\\demo1\\partials\\_sidebar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\dashboard.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\dashboard.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\advanced-ui\\cropper.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\advanced-ui\\cropper.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\advanced-ui\\owl-carousel.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\advanced-ui\\owl-carousel.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\advanced-ui\\sortablejs.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\advanced-ui\\sortablejs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\advanced-ui\\sweet-alert.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\advanced-ui\\sweet-alert.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\apps\\calendar.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\apps\\calendar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\apps\\chat.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\apps\\chat.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\auth\\login.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\auth\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\auth\\register.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\auth\\register.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\charts\\apex.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\charts\\apex.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\charts\\chartjs.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\charts\\chartjs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\charts\\flot.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\charts\\flot.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\charts\\peity.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\charts\\peity.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\charts\\sparkline.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\charts\\sparkline.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\email\\compose.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\email\\compose.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\email\\inbox.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\email\\inbox.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\email\\read.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\email\\read.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\error\\404.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\error\\404.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\error\\500.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\error\\500.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\forms\\advanced-elements.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\forms\\advanced-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\forms\\basic-elements.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\forms\\basic-elements.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\forms\\editors.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\forms\\editors.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\forms\\wizard.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\forms\\wizard.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\blank-page.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\blank-page.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\faq.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\faq.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\invoice.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\invoice.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\pricing.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\pricing.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\profile.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\profile.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\general\\timeline.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\general\\timeline.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\icons\\feather-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\icons\\feather-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\icons\\flag-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\icons\\flag-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\icons\\mdi-icons.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\icons\\mdi-icons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\tables\\basic-table.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\tables\\basic-table.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\tables\\data-table.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\tables\\data-table.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\accordion.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\accordion.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\alerts.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\alerts.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\badges.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\badges.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\breadcrumbs.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\breadcrumbs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\button-group.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\button-group.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\buttons.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\cards.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\cards.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\carousel.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\carousel.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\collapse.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\collapse.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\dropdowns.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\dropdowns.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\list-group.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\list-group.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\media-object.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\media-object.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\modal.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\modal.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\navbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\navbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\navs.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\navs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\pagination.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\pagination.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\popover.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\popover.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\progress.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\progress.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\scrollbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\scrollbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\scrollspy.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\scrollspy.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\spinners.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\spinners.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\tabs.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\tabs.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\pages\\ui-components\\tooltips.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\pages\\ui-components\\tooltips.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\partials\\_footer.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\partials\\_footer.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\partials\\_navbar.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\partials\\_navbar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\demo2\\partials\\_sidebar.html",
+      "PackagePath": "staticwebassets\\Content\\demo2\\partials\\_sidebar.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\gulpfile.js",
+      "PackagePath": "staticwebassets\\Content\\gulpfile.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\index.html",
+      "PackagePath": "staticwebassets\\Content\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\Content\\package.json",
+      "PackagePath": "staticwebassets\\Content\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\emailTemplates\\AppointmentConfirmation.html",
+      "PackagePath": "staticwebassets\\emailTemplates\\AppointmentConfirmation.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\emailTemplates\\CancellationConfirmation.html",
+      "PackagePath": "staticwebassets\\emailTemplates\\CancellationConfirmation.html"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\js\\loginInterop.js",
+      "PackagePath": "staticwebassets\\js\\loginInterop.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\crist\\Documents\\GitHub\\GSI_WebPortal\\FrontendBlazor\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FrontendBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FrontendBlazor.props",
+      "PackagePath": "build\\FrontendBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FrontendBlazor.props",
+      "PackagePath": "buildMultiTargeting\\FrontendBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FrontendBlazor.props",
+      "PackagePath": "buildTransitive\\FrontendBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

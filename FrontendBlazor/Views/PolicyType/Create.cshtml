@@ -1,0 +1,58 @@
+﻿@model FrontendBlazor.Models.PolicyTypeViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PolicyTypeViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PolicyTypeId" class="control-label"></label>
+                <input asp-for="PolicyTypeId" class="form-control" />
+                <span asp-validation-for="PolicyTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InsuraceCId" class="control-label"></label>
+                <input asp-for="InsuraceCId" class="form-control" />
+                <span asp-validation-for="InsuraceCId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyDateRange" class="control-label"></label>
+                <input asp-for="PolicyDateRange" class="form-control" />
+                <span asp-validation-for="PolicyDateRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyCostRange" class="control-label"></label>
+                <input asp-for="PolicyCostRange" class="form-control" />
+                <span asp-validation-for="PolicyCostRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyClassId" class="control-label"></label>
+                <input asp-for="PolicyClassId" class="form-control" />
+                <span asp-validation-for="PolicyClassId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

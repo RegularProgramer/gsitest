@@ -1,0 +1,259 @@
+﻿@{
+    ViewBag.Title = "PolizasManagment";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+@model FrontendBlazor.Models.QPolicyViewModel
+@{
+    ViewData["Title"] = "EditarPoliza";
+}
+
+
+
+<div class="page-content">
+
+
+    <div class="row">
+        <div class="col-lg-14 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Creacion de poliza</h4>
+                    <p class="text-muted mb-3">Leer el <a href="https://jqueryvalidation.org/" target="_blank"> QA de polizas </a>para mayor informacion acerca de como funcionan la creacion de polizas.</p>
+                    <form id="signupForm" asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="PolicyPremium" class="control-label"></label>
+                            <input asp-for="PolicyPremium" class="form-control" />
+                            <span asp-validation-for="PolicyPremium" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="ExpirationDate" class="control-label"></label>
+                            <input asp-for="ExpirationDate" class="form-control" />
+                            <span asp-validation-for="ExpirationDate" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label class="form-label">Compania de Seguros</label>
+                            <div>
+                                @foreach (var company in Model.InsuranceCompanys)
+                                {
+                                    <div class="form-check form-check-inline">
+
+
+                                        @if (company.InsuranceCompanyId == Model.PolicyType2.InsuraceCId)
+                                        {
+                                            <input type="radio" class="form-check-input" value="@company.InsuranceCompanyId" name="company_option" onchange="showTypes(this);" checked>
+                                            <label class="form-check-label">
+                                                @company.InsuranceCompanyName
+                                            </label>
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" class="form-check-input" value="@company.InsuranceCompanyId" name="company_option" onchange="showTypes(this);">
+                                            <label class="form-check-label">
+                                                @company.InsuranceCompanyName
+                                            </label>
+                                        }
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+
+                        <div class=" form- group mb-3">
+
+                            <label asp-for="IdPolicyState" class="control-label"> Estado de la poliza</label>
+
+                            <select class="form-select" asp-for="IdPolicyState" asp-items="ViewBag.states" class="form-control"></select>
+
+                            <span asp-validation-for="IdPolicyState" class="text-danger"></span>
+
+                        </div>
+
+                        <div class=" form- group mb-3">
+
+                            <label asp-for="PolicyTypeId" class="control-label"> Tipo de poliza </label>
+
+                            <select id="policyType" class="form-select" asp-for="PolicyTypeId" class="form-control"></select>
+
+
+
+                            <span asp-validation-for="PolicyTypeId" class="text-danger"></span>
+
+                        </div>
+
+                        <div class=" form- group mb-6">
+
+
+
+                            <label asp-for="Good.GoodTypeId" class="control-label"> Tipo de bien </label>
+
+                            <select class="form-select" asp-for="Good.GoodTypeId" asp-items="ViewBag.types_good" class="form-control"></select>
+
+                            <span asp-validation-for="Good.GoodTypeId" class="text-danger"></span>
+
+
+
+                            <label asp-for="Good.GoodDescription" class="control-label">  Descripcion del bien </label>
+                            <input asp-for="Good.GoodDescription" class="form-control" />
+                            <span asp-validation-for="Good.GoodDescription" class="text-danger"></span>
+
+
+
+
+
+
+                            <div class="form-group">
+
+
+
+                                <div class="mb-3">
+
+                                    <label asp-for="PolicyNumber" class="control-label form-control"> Número de Póliza </label>
+                                    <input asp-for="PolicyNumber" class="form-control" />
+                                    <span asp-validation-for="PolicyNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <label asp-for="Identification" class="control-label form-control"> Número de Póliza </label>
+                                    <input asp-for="Identification" class="form-control" />
+                                    <span asp-validation-for="Identification" class="text-danger"></span>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contrasena</label>
+                                <input id="password" class="form-control" name="password" type="password">
+                            </div>
+
+                            <input class="btn btn-primary" type="submit" value="Guardar">
+
+                            <div>
+                                <a asp-action="Index">Regresar</a>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showTypes(src) {
+
+
+
+        $("#policyType").empty();
+        //Dropdownlist Selectedchange event
+        console.log(src.value)
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("getByCompanyId")', // we are calling json method
+
+            dataType: 'json',
+            data: { id: src.value },
+            success: ((types) => {
+                // cantones contains the JSON formatted list
+                // of states passed from the controller
+                // $("policyType").attr("asp-items", types)
+                console.log(types)
+                $("#policyType").append('<option value="' + "0" + '">' + "Seleccionar Tipo Poliza" + '</option>');
+
+                $.each(types, function (i, type) {
+                    $("#policyType").append('<option value="' + type.PolicyTypeId + '">' + type.policyClasses.policyName + '</option>');
+                    // here we are adding option for Cantones
+
+
+                })
+            }),
+            error: function (ex) {
+                alert('Failed to retrieve states.' + ex);
+            }
+
+        })
+    }
+    const radioButtons = document.querySelectorAll('input[type=radio]');
+
+    function adapt() {
+
+        $("#policyType").empty();
+        //Dropdownlist Selectedchange event
+        console.log(src.value)
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("getByCompanyId")', // we are calling json method
+
+            dataType: 'json',
+            data: { id: src.value },
+            success: ((types) => {
+                // cantones contains the JSON formatted list
+                // of states passed from the controller
+                // $("policyType").attr("asp-items", types)
+                console.log(types)
+                $("#policyType").append('<option value="' + "0" + '">' + "Seleccionar Tipo Poliza" + '</option>');
+
+                $.each(types, function (i, type) {
+                    $("#policyType").append('<option value="' + type.PolicyTypeId + '">' + type.policyClasses.policyName + '</option>');
+                    // here we are adding option for Cantones
+
+
+                })
+            }),
+            error: function (ex) {
+                alert('Failed to retrieve states.' + ex);
+            }
+
+        })
+    }
+
+
+    radioButtons.forEach(radioButton => {
+        radioButton.addEventListener('change', function () {
+            if (this.checked) {
+
+                adapt();
+            }
+        }
+        )
+    }
+
+    )
+
+
+    /*
+    $("userFilter").change((function () {
+
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("getClients")', // we are calling json method
+            dataType: 'json',
+            success: function (clients) {
+
+
+        })
+    }
+        )
+
+    )
+    */
+
+</script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

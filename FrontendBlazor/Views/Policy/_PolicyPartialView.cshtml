@@ -1,0 +1,26 @@
+﻿@model FrontendBlazor.Models.QPolicyViewModel
+
+<div>
+
+    @if (Model.Found == true)
+    {
+                <div class="card">
+            <div class="card-body">
+        <h2>Policy Found</h2>
+        <p>Policy Number: @Model.PolicyNumber</p>
+        <!-- Otras propiedades de QPolicyViewModel -->
+
+                
+                <h6 class="card-subtitle mb-2 text-muted"> Dia de expiracion:  @Model.ExpirationDate</h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Dia de salida:  @Model.PolicyDate</h6>
+                <p class="card-text> @Model.IdPolicyState </p>
+                <p class="card-text">Tipo de poliza: @Model.PolicyTypeId </p>
+                <p class="card-text">Costo de la poliza:  @Model.PolicyPremium</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <h2>Policy Not Found2</h2>
+    }
+</div>

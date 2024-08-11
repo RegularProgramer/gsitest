@@ -1,0 +1,796 @@
+﻿@model FrontendBlazor.Models.AppointmentViewModel
+
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewBag.Title = "Appointments";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+<style>
+    ::-webkit-calendar-picker-indicator {
+        filter: invert(1) brightness(100%) sepia(100%) saturate(10000%) hue-rotate(180deg)
+    }
+</style>
+
+<div class="page-content">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row justify-content-center align-items-center">
+                <div id='external-events' class='external-events' hidden>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id='fullcalendar'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OPCIONES CITA MODAL -->
+    <div id="fullCalModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="modalTitle1" class="modal-title"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">close</span></button>
+                </div>
+                <div id="modalBody1" class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" id="cancelButton" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                        Cancelar cita
+                    </button>
+                    <button type="button" class="btn btn-primary" id="editButton" data-bs-toggle="modal" data-bs-target="#editModal">
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="createEventModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="modalTitle2" class="modal-title">Añadir cita</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <span class="visually-hidden">Cerrar</span>
+                    </button>
+                </div>
+                <!-- AGREGAR CITA MODAL -->
+                <div id="modalBody2" class="modal-body">
+                    <form asp-controller="Appointments" asp-action="AddAppointment" id="createAppointmentForm" class="wpcf7-form">
+                        <input asp-for="AppointmentDate" name="AppointmentDate" class="form-control" type="date" id="appointmentDate" hidden>
+                        <div class="mb-3">
+                            <label asp-for="AppointmentHour" class="form-label">Hora de la cita</label>
+                            <select asp-for="AppointmentHour" name="AppointmentHour" class="form-control" id="appointmentHour">
+                                @for (int i = 0; i < 24; i++)
+                                {
+                                    <option value="@i">@i.ToString("D2")</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="ClientCell" class="form-label">Teléfono del cliente</label>
+                            <input asp-for="ClientCell" name="ClientCell" class="form-control" id="clientCell" required>
+                            <div id="messageClientCell" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="ClientMail" class="form-label">Correo Electrónico del cliente</label>
+                            <input asp-for="ClientMail" class="form-control" name="ClientMail" id="clientMail" required>
+                            <div id="messageClientMail" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Place" class="form-label">Agregar la ubicacion que se desea:</label>
+                            <input asp-for="Place" name="Place" class="form-control" id="PlaceAdd" required>
+                           
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Comment" class="form-label">Comentario</label>
+                            <textarea asp-for="Comment" name="Comment" class="form-control" id="CommentAdd" style="min-height:80px; max-height:240px;"></textarea>
+                           
+                        </div>
+                        <div class="mb-3">
+                            <div id="createModalErrorMessage" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" id="conf-appo">Añadir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="modalTitle3" class="modal-title">Editar cita</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <span class="visually-hidden">Cerrar</span>
+                    </button>
+                </div>
+                <!-- EDITAR CITA MODAL -->
+                <div id="modalBody3" class="modal-body">
+                    <form asp-controller="Appointments" asp-action="UpdateAppointment" id="editAppointmentForm" class="wpcf7-form">
+                        <input type="hidden" asp-for="IdAppointment" class="form-control" id="editIdAppointment">
+                        <div class="mb-3">
+                            <label asp-for="AppointmentDate" class="form-label">Día de la cita</label>
+                            <input asp-for="AppointmentDate" class="form-control" type="date" id="editAppointmentDate">
+                            <div id="editMessageAppointmentDate" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="AppointmentHour" class="form-label">Hora de la cita</label>
+                            <select asp-for="AppointmentHour" class="form-control" id="editAppointmentHour">
+                                @for (int i = 0; i < 24; i++)
+                                {
+                                    <option value="@i">@i.ToString("D2")</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="ClientCell" class="form-label">Teléfono del cliente</label>
+                            <input asp-for="ClientCell" class="form-control" id="editClientCell">
+                            <div id="editMessageClientCell" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="ClientMail" class="form-label">Correo Electrónico del cliente</label>
+                            <input asp-for="ClientMail" class="form-control" id="editClientMail">
+                            <div id="editMessageClientMail" class="alert d-none" role="alert"></div>
+                        </div>
+                          <div class="mb-3">
+                            <label asp-for="Place" class="form-label">Lugar a reunierse con el cliente</label>
+                            <input asp-for="Place" class="form-control" id="editPlace">
+                            <div id="editPlace" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Comment" class="form-label">Comentario</label>
+                            <textarea asp-for="Comment" class="form-control" id="editComment" style="min-height:80px; max-height:240px;">
+                                </textarea>
+                            <div id="editComment" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <div id="editModalErrorMessage" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Confirmar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CANCELAR MODAL -->
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">CANCELAR CITA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                </div>
+                <div class="modal-body" id="cancelMessage"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <form asp-controller="Appointments" asp-action="CancelAppointment" id="cancelAppointmentForm" class="wpcf7-form">
+                        <input type="hidden" asp-for="IdAppointment" class="form-control" id="cancelIdAppointment">
+                        <button type="submit" class="btn btn-danger">Confirmar cancelación</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Content/assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+
+<!-- Plugin js for FullCalendar -->
+<script src="~/Content/assets/vendors/moment/moment.min.js"></script>
+<script src="~/Content/assets/vendors/fullcalendar/core/index.global.js"></script>
+<script src="~/Content/assets/vendors/fullcalendar/core/locales/es.global.js"></script>
+<script src="~/Content/assets/vendors/fullcalendar/main.min.js"></script>
+
+<!-- Plugin js for sweetalert -->
+<script src="~/Content/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+<script src="~/Content/assets/js/sweet-alert.js"></script>
+
+<script>
+    var apiKey = '@Configuration["ApiKey"]';
+    var apiUrl = '@Configuration["BackendApiUrl"]';
+
+    $(function () {
+        var Draggable = FullCalendar.Draggable;
+        var calendarEl = document.getElementById('fullcalendar');
+        var containerEl = document.getElementById('external-events');
+
+        // Calendar Event Source
+        var calendarEvents = {
+            id: 1,
+            backgroundColor: 'rgba(1,104,250, .15)',
+            borderColor: '#0168fa',
+            events: []
+        };
+
+        const statusColors = {
+            1: { color: '#6571ff', className: 'status-pending' },
+            2: { color: '#6571ff', className: 'status-pending' },
+            3: { color: 'grey', className: 'status-confirmed' },
+            4: { color: 'red', className: 'status-cancelled' },
+        };
+
+        console.log("Se procede a enviar la solicitud AJAX");
+
+        $.ajax({
+            url: apiUrl + "/api/Appointment",
+            method: 'GET',
+            headers: {
+                "ApiKey": apiKey
+            },
+            success: function (data) {
+                console.log("Datos recibidos: ", data);
+
+                data.forEach(function (event) {
+                    let date = event.appointmentDate.split('T')[0];
+                    let startHour = String(event.appointmentHour).padStart(2, '0') + ':00:00';
+                    let endHour = String(event.appointmentHour + 1).padStart(2, '0') + ':00:00';
+                    let daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+                    let appointmentDate = new Date(event.appointmentDate);
+                    let dayOfWeek = daysOfWeek[appointmentDate.getUTCDay()];
+                    let eventStatus = statusColors[event.statusAppointmentId] || { color: 'gray', className: 'status-default' };
+
+                    calendarEvents.events.push({
+                        id: event.idAppointment,
+                        title: 'Cita con ' + event.clientMail,
+                        start: date + 'T' + startHour,
+                        end: date + 'T' + endHour,
+                        description: 'Cita con ' + event.clientMail + '<br/>' + 'Tel: ' + event.clientCell + '<br/>' + 'Hora: ' + event.appointmentHour + ':00 para el ' + dayOfWeek + ', ' + date + '.'
+                            + '<br/>Lugar: ' + event.place + '<br/>Comentarios Extras: ' + (event.comment !== null ? event.comment : '')
+                        ,
+                        allDay: false,
+                        backgroundColor: eventStatus.color,
+                        borderColor: eventStatus.color,
+                        className: eventStatus.className,
+                        appointmentHour: event.appointmentHour,
+                        clientCell: event.clientCell,
+                        clientMail: event.clientMail,
+                        statusAppointmentId: event.statusAppointmentId,
+                        comment : event.comment, 
+                        place: event.place
+
+                    });
+                });
+
+                console.log("Datos cargados en calendarEvents: ", calendarEvents.events);
+
+                initializeCalendar();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Error al recuperar los datos: ", textStatus, errorThrown);
+            }
+        });
+
+        new Draggable(containerEl, {
+            itemSelector: '.fc-event',
+            eventData: function (eventEl) {
+                return {
+                    title: eventEl.innerText
+                };
+            }
+        });
+
+        var calendar;
+
+        function initializeCalendar() {
+            console.log("Inicializando el calendario con los siguientes eventos: ", calendarEvents.events);
+
+            if (calendar) {
+                calendar.destroy();
+            }
+
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    left: "prev,today,next",
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                },
+                buttonText: {
+                    prev: 'Anterior',
+                    next: 'Siguiente',
+                    today: 'Hoy',
+                    month: 'Mes',
+                    week: 'Semana',
+                    day: 'Día',
+                    list: 'Lista'
+                },
+                allDayText: 'Todo el día',
+                editable: true,
+                droppable: true,
+                fixedWeekCount: true,
+                initialView: 'dayGridMonth',
+                timeZone: 'UTC',
+                hiddenDays: [],
+                navLinks: true,
+                dayMaxEvents: 2,
+                events: calendarEvents.events,
+                drop: function (info) {
+                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+                },
+                eventClick: function (info) {
+                    var eventObj = info.event;
+                    console.log("Event clicked:", eventObj);
+                    $('#modalTitle1').html(eventObj.title);
+                    if (eventObj.extendedProps.statusAppointmentId == 4) {
+                        $('#modalBody1').html(eventObj._def.extendedProps.description + "<br><br><span style='color: red;'>Esta cita ha sido cancelada.</span><br/>");
+                        $("#editButton").hide();
+                        $("#cancelButton").hide();
+                    } else {
+                        $('#modalBody1').html(eventObj._def.extendedProps.description);
+                        $("#editButton").show();
+                        $("#cancelButton").show();
+                    }
+                    $('#eventUrl').attr('href', eventObj.url);
+                    console.log("ID del evento: ", eventObj.id);
+                    $('#fullCalModal').modal("show");
+                    $("#cancelIdAppointment").val(eventObj.id);
+
+                    $("#cancelMessage").text("¿Realmente desea cancelar la " + toLowerCaseFirstLetter(eventObj._def.extendedProps.description).replace(/<br\s*\/?>/gi, ', ') + "?");
+                    $('#cancelButton').off('click').on('click', function () {
+                        $('#cancelModal').modal('show');
+                    });
+                    $("#editIdAppointment").val(eventObj.id);
+                    var appointmentDate = eventObj.start.toISOString().split('T')[0];
+                    $("#editAppointmentDate").val(appointmentDate);
+                    $("#editAppointmentHour").val(eventObj.extendedProps.appointmentHour);
+                    $("#editClientCell").val(eventObj.extendedProps.clientCell);
+                    $("#editPlace").val(eventObj.extendedProps.place);
+                    $("#editComment").val(eventObj.extendedProps.comment);
+                    $("#editClientMail").val(eventObj.extendedProps.clientMail);
+                    $('#editButton').off('click').on('click', function () {
+                        $('#editMessageAppointmentDate').text("").addClass("d-none");
+                        $('#editMessageClientCell').text("").addClass("d-none");
+                        $('#editMessageClientMail').text("").addClass("d-none");
+                        $('#editModalErrorMessage').text("").addClass("d-none");
+                        $('#editModal').modal('show');
+                    });
+                },
+                dateClick: function (info) {
+                    var selectedDate = new Date(info.dateStr);
+                    var currentDate = new Date();
+                    currentDate.setDate(currentDate.getDate() - 1);
+                    var maxDate = new Date();
+                    maxDate.setMonth(maxDate.getMonth() + 6);
+                    if (selectedDate >= currentDate && selectedDate <= maxDate) {
+                        $("#appointmentDate").val(info.dateStr);
+                        $("#modalTitle2").text("Añadir cita para el " + info.dateStr);
+                        $('#messageClientCell').text("").addClass("d-none");
+                        $('#messageClientMail').text("").addClass("d-none");
+                        $('#createModalErrorMessage').text("").addClass("d-none");
+                        $("#createEventModal").modal("show");
+                    }
+                },
+
+                locale: 'es',
+                views: {
+                    dayGridMonth: {
+                        moreLinkText: function (n) {
+                            return `+${n} más`;
+                        }
+                    },
+                    timeGridWeek: {
+                        moreLinkText: function (n) {
+                            return `+${n} más`;
+                        }
+                    },
+                    timeGridDay: {
+                        moreLinkText: function (n) {
+                            return `+${n} más`;
+                        }
+                    },
+                    listMonth: {
+                        moreLinkText: function (n) {
+                            return `+${n} más`;
+                        }
+                    }
+                }
+            });
+            calendar.render();
+            console.log("Los datos de las citas debieron ser añadidos al calendario");
+        }
+    });
+
+    function toLowerCaseFirstLetter(str) {
+        if (!str) return str; // Manejar el caso de cadena vacía o indefinida
+        return str.charAt(0).toLowerCase() + str.slice(1);
+    }
+</script>
+<!-- End custom js for FullCalendar -->
+<script>
+    var apiKey = '@Configuration["ApiKey"]';
+    var apiUrl = '@Configuration["BackendApiUrl"]';
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById('createEventModal');
+
+        modal.addEventListener('hidden.bs.modal', function () {
+            var form = document.getElementById('createAppointmentForm');
+            form.reset();
+            $("#messageClientCell").addClass("d-none");
+            $("#messageClientMail").addClass("d-none");
+        });
+    });
+
+    $(document).ready(function () {
+        $("#cancelAppointmentForm").submit(async function (event) {
+            event.preventDefault(); // Detiene el envío del formulario por defecto
+            Swal.fire({
+                title: "¡La cita ha sido cancelada correctamente!",
+                text: "La cita fue cancelada",
+                didOpen: (popup) => {
+                    popup.style.backgroundColor = '#0C1427';
+                },
+                didClose: () => {
+                    this.submit(); // Envía el formulario si no hay problemas
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $("#createAppointmentForm").submit(async function (event) {
+            event.preventDefault(); // Detiene el envío del formulario por defecto
+
+            if (validateForm("#clientCell", "#clientMail", "#messageClientCell", "#messageClientMail")) {
+                return;
+            }
+
+            var appointmentDate = new Date($("#appointmentDate").val());
+            var appointmentHour = $("#appointmentHour").val();
+            var ModalError = "#createModalErrorMessage";
+           
+
+            try {
+                var data = await verifyAppointment(appointmentDate, appointmentHour,0, ModalError);
+
+                if (data.statusCode === 500) {
+                    $(ModalError).text("Error al intentar verificar la fecha de la cita: " + data.errorMessage)
+                        .removeClass("alert-success")
+                        .addClass("alert-danger")
+                        .css("color", "red")
+                        .removeClass("d-none");
+                    console.error("Error:", data.message);
+                } else {
+                    if (data.exists) {
+                        $(ModalError).text("Ya se encuentra una cita registrada para esa misma hora")
+                            .removeClass("alert-success")
+                            .addClass("alert-danger")
+                            .css("color", "red")
+                            .removeClass("d-none");
+                        console.error("Error: Ya se encuentra una cita registrada para esa misma hora");
+                    } else {
+                        console.log("La cita ha sido registrada correctamente:", data);
+                        Swal.fire({
+                            title: "¡La cita ha sido registrada correctamente!",
+                            text: "La cita fue añadida exitosamente",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            },
+                            didClose: () => {
+                                this.submit(); // Envía el formulario si no hay problemas
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '/Email/SendEmail',
+                                    data: $('#createAppointmentForm').serialize(), // Serializa el formulario para enviar los datos
+                                    success: function (response) {
+                                        if (response.success) {
+                                            //alert('Correo enviado con éxito.');
+                                            // Aquí puedes cerrar el modal o realizar cualquier otra acción necesaria
+                                            //$('#createAppointmentForm')[0].reset(); // Opcional: limpiar el formulario
+                                            $('.modal').modal('hide'); // Opcional: cerrar el modal
+                                        } else {
+                                            alert('Error: ' + response.errorMessage);
+                                        }
+                                    },
+                                    error: function (xhr, status, error) {
+                                        alert('Error al enviar el formulario: ' + error);
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+            } catch (error) {
+                $(ModalError).text("Error en la solicitud AJAX: " + error)
+                    .removeClass("alert-success")
+                    .addClass("alert-danger")
+                    .css("color", "red")
+                    .removeClass("d-none");
+                console.error("Error en la solicitud AJAX:", error);
+            }
+        });
+    });
+</script>
+<script>
+    // $(document).ready(function () {
+    //     $('#conf-appo').click(function (event) {
+    //         event.preventDefault(); // Evita cualquier comportamiento predeterminado del botón
+
+    //         $.ajax({
+    //             type: 'POST',
+    //             url: '/Email/SendEmail',
+    //             data: $('#createAppointmentForm').serialize(), // Serializa el formulario para enviar los datos
+    //             success: function (response) {
+    //                 if (response.success) {
+    //                     //alert('Correo enviado con éxito.');
+    //                     // Aquí puedes cerrar el modal o realizar cualquier otra acción necesaria
+    //                     //$('#createAppointmentForm')[0].reset(); // Opcional: limpiar el formulario
+    //                     $('.modal').modal('hide'); // Opcional: cerrar el modal
+    //                 } else {
+    //                     alert('Error: ' + response.errorMessage);
+    //                 }
+    //             },
+    //             error: function (xhr, status, error) {
+    //                 alert('Error al enviar el formulario: ' + error);
+    //             }
+    //         });
+    //     });
+    // });
+
+
+    $(document).ready(function () {
+        $("#editAppointmentForm").submit(async function (event) {
+            event.preventDefault();
+            var selectedDate = new Date(editAppointmentDate.value);
+            var today = new Date();
+            today.setDate(today.getDate() - 1);
+            var validDate = true;
+
+            if (!editAppointmentDate.value) {
+                $('#editMessageAppointmentDate').text("Por favor seleccione una fecha válida.")
+                    .removeClass("alert-success")
+                    .addClass("alert-danger")
+                    .css("color", "red")
+                    .removeClass("d-none");
+                validDate = false;
+                return;
+            }
+
+            if (selectedDate < today) {
+                $('#editMessageAppointmentDate').text("Por favor seleccione una fecha igual o posterior a hoy.")
+                    .removeClass("alert-success")
+                    .addClass("alert-danger")
+                    .css("color", "red")
+                    .removeClass("d-none");
+                validDate = false;
+                return;
+            }
+
+            if (selectedDate > maxDate) {
+                $('#editMessageAppointmentDate').text('La fecha seleccionada debe estar dentro de los próximos 6 meses.')
+                    .removeClass("alert-success")
+                    .addClass("alert-danger")
+                    .css("color", "red")
+                    .removeClass("d-none");
+                validDate = false;
+                return;
+            }
+
+            if (validDate) {
+                $('#editMessageAppointmentDate').text("").addClass("d-none");
+            }
+
+            if (validateForm("#editClientCell", "#editClientMail", "#editMessageClientCell", "#editMessageClientMail")) {
+                return;
+            }
+
+            var appointmentDate = new Date($("#editAppointmentDate").val());
+            var appointmentHour = $("#editAppointmentHour").val();
+            var ModalError = "#editModalErrorMessage";
+            var idAppointment = $("#editIdAppointment").val();
+            console.log("id", idAppointment)
+            var appointmentVerified = verifyAppointment(appointmentDate, appointmentHour, idAppointment,ModalError, event);
+
+            try {
+                var data = await verifyAppointment(appointmentDate, appointmentHour, idAppointment, ModalError);
+
+                if (data.statusCode === 500) {
+                    $(ModalError).text("Error al intentar verificar la fecha de la cita: " + data.errorMessage)
+                        .removeClass("alert-success")
+                        .addClass("alert-danger")
+                        .css("color", "red")
+                        .removeClass("d-none");
+                    console.error("Error:", data.message);
+                } else {
+                    if (data.exists) {
+                        $(ModalError).text("Ya se encuentra una cita registrada para esa misma hora")
+                            .removeClass("alert-success")
+                            .addClass("alert-danger")
+                            .css("color", "red")
+                            .removeClass("d-none");
+                        console.error("Error: Ya se encuentra una cita registrada para esa misma hora");
+                    } else {
+                        console.log("La cita ha sido editada correctamente:", data);
+                        Swal.fire({
+                            title: "¡La cita ha sido editada correctamente!",
+                            text: "La cita fue actualizada exitosamente",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            },
+                            didClose: () => {
+                                this.submit(); // Envía el formulario si no hay problemas
+                            }
+                        });
+                    }
+                }
+            } catch (error) {
+                $(ModalError).text("Error en la solicitud AJAX: " + error)
+                    .removeClass("alert-success")
+                    .addClass("alert-danger")
+                    .css("color", "red")
+                    .removeClass("d-none");
+                console.error("Error en la solicitud AJAX:", error);
+            }
+        });
+    });
+
+    document.getElementById('clientCell').addEventListener('input', function (event) {
+        var input = event.target;
+        var value = input.value;
+
+        value = value.replace(/\D/g, '');
+
+        if (value.length > 8) {
+            value = value.slice(0, 8);
+        }
+
+        input.value = value;
+    });
+
+    document.getElementById('editClientCell').addEventListener('input', function (event) {
+        var input = event.target;
+        var value = input.value;
+
+        value = value.replace(/\D/g, '');
+
+        if (value.length > 8) {
+            value = value.slice(0, 8);
+        }
+
+        input.value = value;
+    });
+
+    $('#createEventModal').on('hidden.bs.modal', function () {
+        // Restablecer los campos del formulario
+        $('#createAppointmentForm')[0].reset();
+        $('#messageClientCell').text("").addClass("d-none");
+        $('#messageClientMail').text("").addClass("d-none");
+        $('#createModalErrorMessage').text("").addClass("d-none");
+    });
+
+    // ---------------------- VALIDACIONES DE INPUT PARA EL ESPACIO DE FECHA AL EDITAR UNA CITA ----------------------
+
+    var editAppointmentDate = document.getElementById('editAppointmentDate');
+    var currentDate = new Date().toISOString().split('T')[0];
+
+    var maxDate = new Date();
+    maxDate.setMonth(maxDate.getMonth() + 6);
+    var maxDateISO = maxDate.toISOString().split('T')[0];
+
+    editAppointmentDate.setAttribute('min', currentDate);
+    editAppointmentDate.setAttribute('max', maxDateISO);
+
+    editAppointmentDate.addEventListener('input', function () {
+        var selectedDate = new Date(editAppointmentDate.value);
+        var today = new Date();
+        today.setDate(today.getDate() - 1);
+        var validDate = true;
+
+        if (!editAppointmentDate.value) {
+            $('#editMessageAppointmentDate').text("Por favor seleccione una fecha válida.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            validDate = false;
+        }
+
+        if (selectedDate < today) {
+            $('#editMessageAppointmentDate').text("Por favor seleccione una fecha igual o posterior a hoy.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            validDate = false;
+        }
+
+        if (selectedDate > maxDate) {
+            $('#editMessageAppointmentDate').text("La fecha seleccionada debe estar dentro de los próximos 6 meses.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            validDate = false;
+        }
+
+        if (validDate) {
+            $('#editMessageAppointmentDate').text("").addClass("d-none");
+        }
+    });
+
+    // ---------------------- FIN VALIDACIONES DE INPUT PARA EL ESPACIO DE FECHA AL EDITAR UNA CITA ----------------------
+
+    function validateForm(phone, email, phoneMessageId, emailMessageId) {
+        var formHasErrors = false;
+
+        // Validate PhoneNumber
+        if (!$(phone).val().trim()) {
+            $(phoneMessageId).text("Por favor rellena este campo.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            formHasErrors = true;
+        } else if (!$(phone).val().match(/^\d{8}$/)) {
+            $(phoneMessageId).text("El número de teléfono debe constar exactamente de 8 dígitos.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            formHasErrors = true;
+        } else {
+            $(phoneMessageId).addClass("d-none");
+        }
+
+        // Validate Email
+        if (!$(email).val().trim()) {
+            $(emailMessageId).text("Por favor rellena este campo.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            formHasErrors = true;
+        } else if (!$(email).val().match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            $(emailMessageId).text("Por favor ingrese un correo electrónico válido.")
+                .removeClass("alert-success")
+                .addClass("alert-danger")
+                .css("color", "red")
+                .removeClass("d-none");
+            formHasErrors = true;
+        } else {
+            $(emailMessageId).addClass("d-none");
+        }
+
+        return formHasErrors;
+    }
+
+    function verifyAppointment(appointmentDate, appointmentHour, idAppointment, errorMessageId) {
+        var formattedDate = appointmentDate.toISOString();
+        console.log("ID:" , idAppointment)
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                url: apiUrl + `/api/Appointment/VerifyAppointment/`+idAppointment+`?AppointmentHour=${appointmentHour}`,
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(formattedDate),
+                headers: {
+                    "accept": "*/*",
+                    "ApiKey": apiKey
+                },
+                success: function (data) {
+                    resolve(data); // Resuelve la promesa con los datos recibidos
+                },
+                error: function (error) {
+                    reject(error); // Rechaza la promesa con el error recibido
+                }
+            });
+        });
+    }
+
+</script>

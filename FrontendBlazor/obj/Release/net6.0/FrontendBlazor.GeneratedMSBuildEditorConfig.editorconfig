@@ -1,0 +1,313 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FrontendBlazor
+build_property.RootNamespace = FrontendBlazor
+build_property.ProjectDir = C:\Users\crist\Documents\GitHub\GSI_WebPortal\FrontendBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\crist\Documents\GitHub\GSI_WebPortal\FrontendBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Components/LoginComp.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xMb2dpbkNvbXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Components/SignUpComp.razor]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xTaWduVXBDb21wLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Appointments/AppointmentsOptions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEFwcG9pbnRtZW50c09wdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Appointments/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENhbGVuZGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Appointments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Appointments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Email/CancelAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcQ2FuY2VsQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Email/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Email/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/aa1a.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYTFhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Forms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3Jtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/InformacionCorporativa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmZvcm1hY2lvbkNvcnBvcmF0aXZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/PolicySearched.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb2xpY3lTZWFyY2hlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SearchPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hQb2xpY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroAuto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9BdXRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroEstud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9Fc3R1ZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroExpImp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9FeHBJbXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroGastMed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9HYXN0TWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroPatrimonial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9QYXRyaW1vbmlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroRespCivil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9SZXNwQ2l2aWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroRT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9SVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroSalud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9TYWx1ZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Seguros_List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9zX0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/Seguros_List_Pers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9zX0xpc3RfUGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroTransporte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9UcmFuc3BvcnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroViaje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9WaWFqZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroVida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9WaWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/SeguroVivienda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWd1cm9WaXZpZW5kYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/service-detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzZXJ2aWNlLWRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Home/services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/InsuranceCompany/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlQ29tcGFueVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/InsuranceCompany/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdXJhbmNlQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyClass/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5Q2xhc3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyClass/Details1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5Q2xhc3NcRGV0YWlsczEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyClass/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5Q2xhc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyClass/Index1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5Q2xhc3NcSW5kZXgxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyType/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5VHlwZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyType/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5VHlwZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyType/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5VHlwZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5VHlwZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/PolicyType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5VHlwZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Policy/_PolicyPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XF9Qb2xpY3lQYXJ0aWFsVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Registration/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Registration/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFNpZ25VcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/ComunicationPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXVuaWNhdGlvblBhZ2VMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/FrontPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZyb250UGFnZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/MainPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE1haW5QYWdlTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Ticket/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Ticket/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Ticket/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Ticket/Tickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRpY2tldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Ticket/_TicketDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XF9UaWNrZXREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/Avisos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBdmlzb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/Comunicacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb211bmljYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/Correo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb3JyZW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/Logs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/PolizaData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQb2xpemFEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/User/UserManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyTWFuYWdlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/crist/Documents/GitHub/GSI_WebPortal/FrontendBlazor/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-u4a2p3trou

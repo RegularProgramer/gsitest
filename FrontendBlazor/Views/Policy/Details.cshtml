@@ -1,0 +1,791 @@
+﻿@model FrontendBlazor.Models.QPolicyViewModel
+@using System.Net.Http.Headers;
+@using PagedList; // Asegúrate de importar este espacio de nombres
+@using System.Web;
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewBag.Title = "Detalle Poliza";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+    var pageSize = 4; // Número de elementos por página
+    var pageNumber = (!string.IsNullOrEmpty(ViewContext.HttpContext.Request.Query["page"])) ? int.Parse(ViewContext.HttpContext.Request.Query["page"]) : 1;
+    var items = Model.History.ToPagedList(pageNumber, pageSize);
+    var opciones = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "USD", Text = "USD" },
+        new SelectListItem { Value = "CRC", Text = "CRC" }
+    };
+    TimeSpan? diff = DateTime.Now - Model.modStamp;
+    
+   
+    string stampDiff = ObtenerMensajeAnuncio(diff);
+}
+
+<link href="~/Content/assets/js/sweet-alert.js" rel="stylesheet">
+
+<div class="page-content">
+    <div class="alert alert-primary" role="alert" style="display:none;">
+        <i data-feather="alert-circle"></i>
+        A simple primary alert—check it out!
+    </div>
+    <div class="row">
+        <div class="col-lg-8 d-flex align-items-center m-3 gap-3">
+
+            <a class="btn btn-primary btn-lg btn-icon mr-3" type="button" title="Regresar" asp-action="Index">
+                <i data-feather="corner-up-left"></i>
+            </a>
+            <div class="dropdown ml-3">
+                <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Opciones
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                    @if (Context.Session.GetString("RoleId") == "1")
+                    {
+                        <a class="dropdown-item" data-bs-target="#editModal" data-bs-toggle="modal" data-bs-placement="top" title="Editar" data-user-id="@Model.IdPolicy" id="editDetails">Editar Poliza</a>
+                    }
+                    <a class="dropdown-item" id="btnGetPolicyInfo">Actualizar Poliza</a>
+                    @if (Context.Session.GetString("RoleId") == "1")
+                    {
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ModalCenter" href="#">Cambiar Estado</a>
+                    }
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+
+	<div class="row">
+        <div class="col-lg-5 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Informacion de la poliza</h4>
+                    <div class="card-body">
+                        <div class="mt-3">
+                            <p class=""> <span> @Html.DisplayNameFor(model => model.PolicyNumber) :         </span>@Html.DisplayFor(model => model.PolicyNumber)</p>
+                        </div>
+                        <div class="mt-3">
+                            <p class=""> <span> Cedula del cliente :         </span>@Html.DisplayFor(model => model.Identification)</p>
+                        </div>
+                        <div class="mt-3">
+                            <p class=""> <span> @Html.DisplayNameFor(model => model.PolicyTypeId) :         </span>@Html.DisplayFor(model => model.policyType)</p>
+                        </div>
+                        <div class="mt-3">
+                            <p class=""> <span> @Html.DisplayNameFor(model => model.PolicyPremium) :         </span>@Html.DisplayFor(model => model.PolicyPremium)</p>
+                        </div>
+                        <div class="mt-3">
+                            <p class=""> <span> @Html.DisplayNameFor(model => model.Currency) :         </span>@Model.Currency.ToUpper()</p>
+                        </div>
+                        <div class="mt-6">
+                            <label class="fw-bolder mb-2 text-uppercase">
+                                @Html.DisplayNameFor(model => model.PolicyDate)
+                            </label>
+                            <p class="text-muted tx-20">
+                                @Html.DisplayFor(model => model.PolicyDate)
+                            </p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="fw-bolder mb-2 text-uppercase">
+                                @Html.DisplayNameFor(model => model.ExpirationDate)
+                            </label>
+                            <p class="">
+                                @Html.DisplayFor(model => model.ExpirationDate)
+                            </p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="fw-bolder mb-2 text-uppercase">
+                                @Html.DisplayNameFor(model => model.IdPolicyState)
+                            </label>
+                            <p class="text-muted tx-20">
+                                @Html.DisplayFor(model => model.policyState)
+                            </p>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span> Actualizado hace: @stampDiff </span>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    <div class="col-lg-7">
+        <div class="p-3 border-bottom">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-end mb-2 mb-md-0">
+                        <i data-feather="inbox" class="text-muted me-2"></i>
+                        <h4 class="me-1">Historial de Cambios</h4>
+                        <span class="text-muted"></span>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        
+                @if (Model.History.Any()){
+        <div class="p-3 border-bottom d-flex align-items-center justify-content-between flex-wrap">
+
+            <div class="d-flex align-items-center justify-content-end flex-grow-1">
+                <div class="btn-group">
+
+                            <ul class="pagination pagination-lg">
+                            @for (int i = 1; i <= items.PageCount; i++)
+                            {
+                                if( i ==pageNumber){
+                                        <li class="page-item active">
+                                            <a class="page-link" type="button"
+                                       href="@Url.Action("Details", new { page = i, id = Model.IdPolicy })">@i</a>
+                                        </li>
+                                }else{
+                                  <li class="page-item">
+                                            <a class="page-link" type="button"
+                                   href="@Url.Action("Details", new { page = i, id = Model.IdPolicy })">@i</a>
+                                    </li>
+                                }
+                            }
+                            </ul>
+                </div>
+            </div>
+        </div>
+        <div class="email-list row">
+
+
+
+                
+           
+                    @foreach (var item in items)
+                    {
+                        <div class="email-list-item row" style="">
+                            <div class="email-list-actions">
+                                <!-- Aquí puedes agregar cualquier acción que desees -->
+                            </div>
+                            <div class="content col-sm" style="flex: 1;">
+                                <span class="from">Acción: @item.TipoAccion</span>
+                                <p class="msg">
+                                    <span class="from">Datos de la poliza: </span>
+                                </p>
+                              
+                              
+                            </div>
+                            <div class="col-sm">
+
+                                <p class="msg">
+                                    <span>Estado de la póliza: </span> @item.State
+                                </p>
+
+                                <p class="msg">
+                                    <span>Costo de la póliza: </span> @item.PolicyPremium
+                                </p>
+                                <p class="msg">
+                                    <span>Día de expiración: </span> @item.ExpirationDate.ToString("dd/MM/yyyy")
+                                </p>
+
+                               
+                            </div>
+                            <div class="col-sm">
+                                <div  class="m-1">
+                            <span class="date">
+                                <span class="icon"><i data-feather="calendar"></i>Modificacion: </span>
+                                @item.FechaAccion
+                            </span>
+                                    </div>
+                                <span class="icon"><i data-feather="info"></i>Mas info: </span>
+                                <p class="msg">
+                                    <span>Usuario:</span> @item.lastUser
+                                </p>
+                                <p class="msg">
+                                    <span>De forma:</span> @item.modHow
+                                </p>
+                            </div>
+                        </div>
+
+                    }
+                   
+
+                    
+
+                    
+
+                </div>
+
+                } else {
+                <div class="email-list">
+                <div class="email-list-item">
+                    <div class="email-list-actions">
+                    
+                       
+                    </div>
+                   
+                        <div class="content">
+                           
+                            <span> No hay contenido para mostrar  </span>
+
+                        </div>
+
+                  
+                </div>
+                </div>
+
+                }
+
+            
+
+    </div>
+        <div class="col-lg-8 grid-margin stretch-card">
+            <div class="d-grid gap-2 d-md-flex justify-content">
+ 
+  
+             <!-- Modal EditState -->
+          
+
+                <div class="modal fade" id="ModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Cambiar el estado de la poliza</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class=" form- group mb-3">
+
+                                    <input type="hidden" id="idPolicy" value=@Model.IdPolicy>
+                                    <label asp-for="IdPolicyState" class="control-label"> Estado de la poliza</label>
+
+                                    <select class="form-select" id="selectState" asp-for="IdPolicyState"  class="form-control">
+                                    @foreach (var item in Model.states)
+                                    {
+                                        @if(item.IdPolicyState == Model.IdPolicyState)
+                                        {
+                                            <option value="@item.IdPolicyState" selected>@item.StateName</option>
+                                        }else
+
+                                        {
+                                            <option value="@item.IdPolicyState">@item.StateName</option>
+                                        }
+                                       
+                                        
+                                    }
+                                    </select>
+                                    <span asp-validation-for="IdPolicyState" class="text-danger"></span>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" id="ConfirmStateChange" data-bs-dismiss="modal" class="btn btn-primary">Confirmar cambio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para ejecutar el método -->
+                
+                <!-- Modal para mostrar el mensaje de carga -->
+                @* <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Cargando...</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                             <div class="modal-body">
+                                <p>Cargando...</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div> *@
+
+                <!-- Modal para mostrar el resultado -->
+@*                 <div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="resultModalTitle">Resultado</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="resultModalBody">
+                                <!-- Aquí se mostrará el resultado -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> *@
+
+                <!-- Modal Edit -->
+
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">EDITAR POLIZA</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                            </div>
+                            <form id="signupForm" asp-action="Edit" asp-controller="Policy">
+                            <div class="modal-body">
+                                
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                                    <div class="form-group">
+
+                                        <input asp-for="IdPolicy" hidden />
+
+                                        <div class="form-group mb-3">
+                                            <label asp-for="PolicyNumber" class="control-label"></label>
+                                            <input asp-for="PolicyNumber" class="form-control" />
+                                            <span asp-validation-for="PolicyNumber" class="text-danger"></span>
+                                        </div>
+
+                                        <label for="selectDni" class="control-label">Tipo de documento</label>
+                                        <select class="form-select" id="selectDni" class="form-control" onchange="validarLongitud()">
+                                            @foreach (var item in Model.dniViewModels)
+                                            {
+                                               
+                                                
+                                                    <option value="@item.IdDni">@item.Name</option>
+                                                
+
+
+                                            }
+                                        </select>
+
+
+
+                                        <div class="mb-3">
+
+                                            <label asp-for="Identification" class="control-label"></label>
+                                            <input asp-for="Identification" class="form-control" id="Identification" 
+                                                   placeholder="Digite la cedula del cliente en caos de que la tenga" oninput="validarLongitud()" />
+                                            <span id="messageId" asp-validation-for="Identification" class="text-danger"></span>
+                                            <span id="message" style="color: red;"></span>
+
+                                        </div>
+
+                                        <input asp-for="ExpirationDate" class="form-control" hidden/>
+                                        <input asp-for="PolicyDate" class="form-control" hidden />
+
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label asp-for="Currency" class="control-label"></label>
+                                        <select  asp-for="Currency" class="form-control">
+                                            @foreach(var item in opciones)
+                                            {
+                                                @if (Model.Currency == item.Value) {
+                                                    <option selected value="@item.Value">@item.Text</option>
+                                                }
+                                                else 
+                                                {
+                                                    <option  value="@item.Value">@item.Text</option>
+                                                    
+                                                }
+
+                                                
+                                            }
+                                            
+
+
+                                        </select>
+                                        <span asp-validation-for="Currency" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label asp-for="PolicyPremium" class="control-label"></label>
+                                        <input asp-for="PolicyPremium" type="number"  class="form-control" id="PolicyPremium"  />
+                                        <span asp-validation-for="PolicyPremium" class="text-danger"></span>
+                                    </div>
+
+                                    
+                                   
+
+                                    <input asp-for="PolicyTypeId" class="form-control"  hidden="true" />
+
+
+                                    <label asp-for="IdPolicyState" class="control-label"> Estado de la poliza</label>
+
+                                    <select class="form-select" id="selectState" asp-for="IdPolicyState" class="form-control">
+                                        @foreach (var item in Model.states)
+                                        {
+                                            @if (item.IdPolicyState == Model.IdPolicyState)
+                                            {
+                                                <option value="@item.IdPolicyState" selected>@item.StateName</option>
+                                            }
+                                            else
+
+                                            {
+                                                <option value="@item.IdPolicyState">@item.StateName</option>
+                                            }
+
+
+                                        }
+                                    </select>
+                                    <span asp-validation-for="IdPolicyState" class="text-danger"></span>
+
+                                    <input asp-for="modStamp" hidden/>
+
+                             
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <input class="btn btn-primary" id="createBut" type="submit" value="Actualizar">
+                            </div>
+                            </form>
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+       
+
+
+    </div>
+   
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+        @* Función para obtener el mensaje de anuncio basado en la diferencia de tiempo *@
+@functions {
+    public string ObtenerMensajeAnuncio(TimeSpan? diferencia)
+    {
+        if (diferencia != null)
+        {
+            if (diferencia.Value.TotalDays >= 1)
+            {
+                return $"Hace {Math.Floor(diferencia.Value.TotalDays)} día(s)";
+            }
+            else if (diferencia.Value.TotalHours >= 1)
+            {
+                return $"Hace {Math.Floor(diferencia.Value.TotalHours)} hora(s)";
+            }
+            else if (diferencia.Value.TotalMinutes >= 1)
+            {
+                return $"Hace {Math.Floor(diferencia.Value.TotalMinutes)} minuto(s)";
+            }
+            else
+            {
+                return "Recién actualizado";
+            }
+        }
+        else
+        {
+            return "";
+        }
+    }
+    }
+
+
+    <script>
+
+
+    var apiKey = '@Configuration["ApiKey"]';
+    var apiUrl = '@Configuration["BackendApiUrl"]';
+
+        $(document).ready(function () {
+            $('#ConfirmStateChange').on('click', function () {
+                // Datos que deseas enviar en la solicitud POST
+                idpolicy = $('#idPolicy').val();
+            newState = $('#selectState').val();
+                var datos = {
+                    idpolicy: idpolicy,
+                    state: newState
+                    
+                };
+                console.log(datos);
+                // Realizar la solicitud AJAX POST
+                $.ajax({
+                url: apiUrl + "/api/Qpolicy/ChangeState/"+datos.idpolicy+"/"+datos.state,
+                    type: 'GET',
+                contentType: "application/json",
+                data: JSON.stringify(datos),
+                headers: {
+                    "ApiKey": apiKey
+                
+                },
+                    success: function (respuesta) {
+                        
+                    Swal.fire({
+                        title: "Exito",
+                        background: '#172340',
+                        text: "Las modificaciones fueron exitosas",
+                        icon: "success"
+                    });
+                    location.reload(); // Reload the page
+                        console.log(respuesta);
+                    },
+                    error: function (xhr, status, error) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Fallo con el error:"+xhr.responseText ,
+                        icon: "error"
+                    });
+                        // Manejar errores aquí
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+
+
+
+  $('#signupForm').on('submit', function (event) {
+
+    Swal.fire({
+        title: "Estamos actualizando la poliza",
+        html: "Por favor espere, este proceso deberia de tomar unos segundos",
+        allowOutsideClick: false, // Evitar que se cierre haciendo clic fuera de la alerta
+        background: '#172340',
+        showCloseButton: false, // Ocultar el botón "Cerrar"
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+        }
+    }); })
+
+   
+
+    
+
+    $(document).ready(function () {
+        // Mostrar la alerta cuando la página esté completamente cargada
+        var mostrarAlerta = "@ViewBag.Success"
+        if (mostrarAlerta === "true"){
+        Swal.fire({
+            title: "Actualizacion Completada",
+            text: "Los datos fueron actualizados correctamente",
+                background: '#172340', // Para mantener el mismo fondo de color
+            icon: "success"
+        });
+            }
+    });
+
+    /*------------------------------------------------------------*/
+    /*Metodos anteriores del web scrapping*/
+    // $(document).ready(function () {
+    //     // Configurar evento clic para el botón
+    //     $('#btnGetPolicyInfo').click(function () {
+    //         // Mostrar modal de carga
+    //         $('#loadingModal').modal('show');
+
+    //         var idPolicy = $('#idPolicy').val();
+
+    //         // Realizar la llamada AJAX al método del controlador
+    //         $.ajax({
+    //             url: '@Url.Action("GetPolicyInfoMessage", "Scrap")', // URL del método del controlador
+    //             type: 'GET',
+    //             data: { id: idPolicy },
+    //             success: function (data) {
+    //                 // Ocultar modal de carga
+    //                 $('#loadingModal').modal('hide');
+
+    //                 // Mostrar el resultado en el modal
+    //                 $('#resultBody').text(data.message); // Si el JSON tiene una propiedad 'message'
+    //                 $('#resultModal').modal('show');
+    //             },
+    //             error: function (xhr, status, error) {
+    //                 // Ocultar modal de carga
+    //                 $('#loadingModal').modal('hide');
+
+    //                 // Manejar errores aquí
+    //                 console.error(error);
+    //             }
+    //         });
+    //     });
+    // });
+
+    // $(document).ready(function () {
+    //     // Configurar evento clic para el botón
+    //     $('#btnGetPolicyInfo').click(function () {
+    //         // Mostrar SweetAlert de carga con fondo personalizado y sin permitir clics fuera del SweetAlert
+    //         Swal.fire({
+    //             title: "Cargando...",
+    //             html: "Por favor, espera.",
+    //             background: '#172340',
+    //             timerProgressBar: true,
+    //             allowOutsideClick: false,
+    //             didOpen: () => {
+    //                 Swal.showLoading();
+    //             }
+    //         });
+
+    //         var idPolicy = $('#idPolicy').val();
+
+    //         // Realizar la llamada AJAX al método del controlador
+    //         $.ajax({
+    //             url: '@Url.Action("GetPolicyInfoMessage", "Scrap")', // URL del método del controlador
+    //             type: 'GET',
+    //             data: { id: idPolicy },
+    //             success: function (data) {
+    //                 // Cerrar SweetAlert de carga
+    //                 Swal.close();
+
+    //                 // Mostrar el resultado en SweetAlert
+    //                 Swal.fire({
+    //                     title: "Resultado",
+    //                     text: data.message,
+    //                     background: '#172340', // Para mantener el mismo fondo de color
+    //                     icon: "success"
+    //                 });
+    //             },
+    //             error: function (xhr, status, error) {
+    //                 // Cerrar SweetAlert de carga
+    //                 Swal.close();
+
+    //                 // Mensaje de error
+    //                 var errorMessage = "Verifique que la deuda existe en el sistema del INS.<br>Verifique que cajero virtual se encuentra en horario activo.<br>Verifique que la póliza contenga la cantidad de dígitos correcta.<br>Realice nuevamente el proceso.";
+
+    //                 // Mostrar mensaje de error en SweetAlert
+    //                 Swal.fire({
+    //                     title: "Error",
+    //                     html: errorMessage,
+    //                     icon: "error",
+    //                     background: '#172340', // Para mantener el mismo fondo de color
+    //                     allowOutsideClick: false
+    //                 });
+    //             }
+    //         });
+    //     });
+    // });
+    /*Metodos anteriores del web scrapping*/
+    /*------------------------------------------------------------*/
+
+    $(document).ready(function () {
+        // Configurar evento clic para el botón
+        $('#btnGetPolicyInfo').click(function () {
+            // Mostrar SweetAlert de carga con fondo personalizado y sin permitir clics fuera del SweetAlert
+            Swal.fire({
+                title: "Cargando...",
+                html: "Por favor, espera.",
+                background: '#172340',
+                timerProgressBar: true,
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            var idPolicy = $('#idPolicy').val();
+
+            // Realizar la llamada AJAX al método del controlador
+            $.ajax({
+                url: '@Url.Action("GetPolicyInfoMessage", "Scrap")', // URL del método del controlador
+                type: 'GET',
+                data: { id: idPolicy },
+                success: function (data) {
+                    // Cerrar SweetAlert de carga
+                    Swal.close();
+
+                    // Mostrar el resultado en SweetAlert
+                    Swal.fire({
+                        title: "Resultado",
+                        text: data.message,
+                        background: '#172340', // Para mantener el mismo fondo de color
+                        icon: "success"
+                    }).then(() => {
+                        // Refrescar la página
+                        location.reload();
+                    });
+                },
+                error: function (xhr, status, error) {
+                    // Cerrar SweetAlert de carga
+                    Swal.close();
+
+                    // Mensaje de error
+                    var errorMessage = "Verifique que la deuda existe en el sistema del INS.<br>Verifique que cajero virtual se encuentra en horario activo.<br>Verifique que la póliza contenga la cantidad de dígitos correcta.<br>Realice nuevamente el proceso.";
+
+                    // Mostrar mensaje de error en SweetAlert
+                    Swal.fire({
+                        title: "Error",
+                        html: errorMessage,
+                        icon: "error",
+                        background: '#172340', // Para mantener el mismo fondo de color
+                        allowOutsideClick: false
+                    }).then(() => {
+                        // Refrescar la página
+                        location.reload();
+                    });
+                }
+            });
+        });
+    });
+
+
+    function validarLongitud() {
+        var tipoDocumento = $("#selectDni").val();
+        var numeroDocumento = $("#Identification").val();
+        var longitudRequerida;
+        var mensajeSpan = $("#message");
+        var createBut = $("#createBut");
+
+        console.log(numeroDocumento);
+        console.log(tipoDocumento);
+        console.log(mensajeSpan.text);
+
+        // Determinar la longitud requerida según el tipo de documento seleccionado
+        switch (parseInt(tipoDocumento)) {
+            case 3:
+                longitudRequeridaMin = 9;
+                longitudRequeridaMax = 9;
+                console.log(numeroDocumento);
+                break;
+            case 4:
+                longitudRequeridaMin = 10;
+                console.log(numeroDocumento);
+                longitudRequeridaMax = 10;
+                break;
+            case 5:
+                longitudRequeridaMin = 11;
+                console.log(numeroDocumento);
+                longitudRequeridaMax = 12;
+                break;
+            case 6:
+                longitudRequeridaMin = 10;
+                console.log(numeroDocumento);
+                longitudRequeridaMax = 10;
+                break;
+            default:
+                // No se seleccionó un tipo de documento válido
+                console.log(numeroDocumento);
+                mensajeSpan.text("Por favor, seleccione un tipo de documento válido.");
+                mensajeSpan.show();
+                createBut.prop("disabled", true);
+                return false;
+        }
+
+        // Establecer el atributo maxlength del input
+        $("#Identification").attr("maxlength", longitudRequeridaMax);
+        $("#Identification").attr("minlength", longitudRequeridaMin);
+        console.log(numeroDocumento);
+        // Verificar si la longitud del número de documento es válida
+        if (numeroDocumento.length >= longitudRequeridaMin && numeroDocumento.length <= longitudRequeridaMax) {
+            mensajeSpan.hide();
+            createBut.prop("disabled", false);
+            return true;
+        } else {
+            mensajeSpan.text("La longitud del número de documento no es válida para el tipo seleccionado.");
+            mensajeSpan.show();
+            createBut.prop("disabled", true);
+            return false;
+        }
+    }
+
+
+
+    </script>
+
+
+
+

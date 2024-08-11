@@ -1,0 +1,304 @@
+﻿﻿@{
+    ViewBag.Title = "PolizasManagment";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@model IEnumerable<FrontendBlazor.Models.QPolicyViewModel>
+
+<link rel="stylesheet" href="~/Content/assets/css/responsivetables.css" />
+
+<div class="page-content">
+
+    @if (Context.Session.GetString("RoleId") == "1")
+    {
+        <div class="m-4">
+            <p>
+                <a href="@Url.Action("SearchPolicy", "Home")" class="btn btn-primary btn-lg active">
+                    <span> Agregar nuevo </span>
+                </a>
+            </p>
+        </div>
+    }
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">CONTROL DE PÓLIZAS</h6>
+
+                    <div class="table-filters d-flex flex-wrap align-items-end">
+                        <div class="p-2">
+                            <label for="minStartDate">Fecha de Inicio de Póliza Desde:</label>
+                            <input type="date" class="form-control form-control-xs" id="minStartDate" name="minStartDate">
+                        </div>
+                        <div class="p-2">
+                            <label for="maxStartDate">Fecha de Inicio de Póliza Hasta:</label>
+                            <input type="date" class="form-control form-control-xs" id="maxStartDate" name="maxStartDate">
+                        </div>
+                        <div class="p-2">
+                            <label for="minExpDate">Fecha de Expiración Desde:</label>
+                            <input type="date" class="form-control form-control-xs" id="minExpDate" name="minExpDate">
+                        </div>
+                        <div class="p-2">
+                            <label for="maxExpDate">Fecha de Expiración Hasta:</label>
+                            <input type="date" class="form-control form-control-xs" id="maxExpDate" name="maxExpDate">
+                        </div>
+                        <div class="p-2">
+                            <label for="selected_policyState">Estado de Poliza:</label>
+                            <select id="selected_policyState" class="form-select form-select-xs" name="selected_policyState">
+                                <option value="">Todos</option>
+                                <option value="Vigente">Vigente</option>
+                                <option value="Pendiente de pago">Pendiente de pago</option>
+                                <option value="Cancelada">Cancelada</option>
+                                <option value="Pagado">Pagado</option>
+                                <option value="Activa">Activa</option>
+                            </select>
+                        </div>
+                        <div class="p-2">
+                            <button id="filterButton" class="btn btn-primary btn-xs">Filtrar</button>
+                        </div>
+                        <div class="p-2">
+                            <button id="clearFiltersButton" class="btn btn-secondary btn-xs">Borrar filtros</button>
+                        </div>
+                    </div>
+
+                    <BR/>
+
+                    <div id="layout" class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PolicyNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PolicyTypeId)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PolicyPremium)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PolicyDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ExpirationDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IdPolicyState)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Identification)
+                                    </th>
+
+
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td data-cell="Número de Póliza">
+                                            @Html.DisplayFor(modelItem => item.PolicyNumber)
+                                        </td>
+                                        <td data-cell="Tipo de Póliza">
+                                            @Html.DisplayFor(modelItem => item.policyType)
+                                        </td>
+                                        <td data-cell="Costo de la Póliza">
+                                            @Html.DisplayFor(modelItem => item.PolicyPremium)  @Html.DisplayFor(modelItem => item.Currency)
+                                        </td>
+                                        <td data-cell="Fecha de Inicio">
+                                            @item.PolicyDate.ToString("dd/MM/yyyy")
+                                        </td>
+                                        <td data-cell="Fecha de Expiración">
+                                            @item.ExpirationDate.ToString("dd/MM/yyyy")
+                                        </td>
+                                        <td data-cell="Estado de la Póliza">
+                                            @Html.DisplayFor(modelItem => item.policyState)
+                                        </td>
+
+                                        <td data-cell="Cédula Cliente">
+                                            @Html.DisplayFor(modelItem => item.Identification)
+                                        </td>
+
+                                        <td data-cell="Acciones" class="actions-cell">
+
+                                            @if (Context.Session.GetString("RoleId") == "1")
+                                            {
+                                                <div class="button-container">
+                                                    <a type="button" href="@Url.Action("Details", "Policy", new{ id = item.IdPolicy} )" class="btn btn-primary btn-icon btn-sm" title="Detalles">
+                                                        <i data-feather="file-text"></i>
+                                                    </a>
+                                                    <button type="button" class="btn btn-danger btn-icon btn-sm policyDelete" idPolicy="@item.IdPolicy" title="Cancelar">
+                                                        <i data-feather="delete"></i>
+                                                    </button>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="button-container">
+                                                    <a type="button" href="@Url.Action("Details", "Policy", new{ id = item.IdPolicy} )" class="btn btn-primary btn-icon btn-sm"
+                                                       data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalles">
+                                                        <i data-feather="file-text"></i>
+                                                    </a>
+                                                </div>
+                                            }
+
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="~/Content/assets/js/sweet-alert.js"></script>
+<script>
+
+
+    var apiKey = '@Configuration["ApiKey"]';
+    var apiUrl = '@Configuration["BackendApiUrl"]';
+
+    $(document).ready(function () {
+        $('.policyDelete').on('click', function () {
+            var id = $(this).attr('idPolicy');
+            console.log(id);
+            Swal.fire({
+                title: "¿Estás seguro de que quiere cancelar la poliza?",
+                text: "¡No podrás revertir esto!",
+                icon: "warning",
+
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sí, cancelarla",
+                cancelButtonText: "No"
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    var datos = {
+                        idpolicy: id,
+                        state: 3
+
+                    };
+                    $.ajax({
+                        url: apiUrl + "/api/Qpolicy/ChangeState/" + id + "/" + 3,
+                        type: 'GET',
+                        contentType: "application/json",
+                        data: JSON.stringify(datos),
+                        headers: {
+                            "ApiKey": apiKey
+
+                        },
+                        success: function (respuesta) {
+                            location.reload();
+                            $('.alert').fadeIn();
+
+                            // Hacer que la alerta se desvanezca después de cierto tiempo
+                            setTimeout(function () {
+                                $('.alert').fadeOut();
+                            }, 3000); // Desaparecerá después de 3 segundos (3000 milisegundos)
+                            console.log(respuesta);
+                        },
+                        error: function (xhr, status, error) {
+                            // Manejar errores aquí
+                            console.error(xhr.responseText);
+                            Swal.fire({
+                                title: "Ocurrio un error",
+                                text: "Error: " + xhr.responseText(),
+                                icon: "error"
+                            });
+                        }
+                    });
+                    // Aquí realizarías tu solicitud AJAX para eliminar
+                    // Una vez que la eliminación se complete con éxito, muestra el mensaje de éxito
+                    Swal.fire({
+                        title: "¡Eliminado!",
+                        text: "Tu archivo ha sido eliminado.",
+                        icon: "success"
+                    });
+                }
+            });
+        });
+    });
+
+
+
+    const table = document.getElementById('dataTableExample');
+    const filterButton = document.getElementById('filterButton');
+    const minStartDateInput = document.getElementById('minStartDate');
+    const maxStartDateInput = document.getElementById('maxStartDate');
+    const minExpDateInput = document.getElementById('minExpDate');
+    const maxExpDateInput = document.getElementById('maxExpDate');
+    const policyStateSelect = document.getElementById('selected_policyState');
+
+    filterButton.addEventListener("click", policyFilter);
+
+    document.getElementById("clearFiltersButton").addEventListener("click", function () {
+        clearFilters();
+        policyFilter();
+    });
+
+    function formatDate(date) {
+        var sections = date.split('/');
+        var day = sections[0].length === 1 ? '0' + sections[0] : sections[0];
+        var month = sections[1].length === 1 ? '0' + sections[1] : sections[1];
+        return sections[2] + '-' + month + '-' + day;
+    }
+
+    function policyFilter() {
+        const minStartDate = minStartDateInput.value;
+        const maxStartDate = maxStartDateInput.value;
+        const minExpDate = minExpDateInput.value;
+        const maxExpDate = maxExpDateInput.value;
+        const policyState = policyStateSelect.value;
+
+        for (let i = 1; i < table.rows.length; i++) {
+            const row = table.rows[i];
+            const cellStartDateText = row.cells[3].textContent;
+            const policyDateString = cellStartDateText.trim().replace(/00:00:00/, '');
+            const policyDateTrimmed = policyDateString.trim();
+            const policyDate = new Date(formatDate(policyDateTrimmed));
+            const cellExpDateText = row.cells[4].textContent;
+            const expirationDateString = cellExpDateText.trim().replace(/00:00:00/, '');
+            const expirationDateTrimmed = expirationDateString.trim();
+            const expirationDate = new Date(formatDate(expirationDateTrimmed));
+
+            let keepRow = true;
+            if (minExpDate && expirationDate < new Date(minExpDate)) {
+                keepRow = false;
+            }
+            if (maxExpDate && expirationDate > new Date(maxExpDate)) {
+                keepRow = false;
+            }
+            if (minStartDate && policyDate < new Date(minStartDate)) {
+                keepRow = false;
+            }
+            if (maxStartDate && policyDate > new Date(maxStartDate)) {
+                keepRow = false;
+            }
+            if (policyState && policyState !== row.cells[5].textContent.trim()) {
+                keepRow = false;
+            }
+            row.style.display = keepRow ? '' : 'none';
+        }
+    }
+
+    function clearFilters() {
+        document.getElementById("minStartDate").value = "";
+        document.getElementById("maxStartDate").value = "";
+        document.getElementById("minExpDate").value = "";
+        document.getElementById("maxExpDate").value = "";
+        document.getElementById("selected_policyState").value = "";
+    }
+    
+</script>

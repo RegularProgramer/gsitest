@@ -1,0 +1,88 @@
+﻿@model FrontendBlazor.Models.InsuranceCompanyViewModel
+
+@{
+	ViewData["Title"] = "Detalles";
+	Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+
+<div class="page-content">
+<div class="row">
+
+
+<div class="col-md-6 grid-margin stretch-card">
+<div class="card">
+	<div class="card-body">
+
+		<h6 class="card-title">Horizontal Form</h6>
+
+		<form class="forms-sample">
+			<div class="row mb-3">
+                    <label for="Name" class="col-sm-3 col-form-label">Nombre de la compania de seguros</label>
+				<div class="col-sm-9">
+							<p>@Html.DisplayFor(model => model.InsuranceCompanyName)</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label class="col-sm-3 col-form-label">Numeros de contacto</label>
+				<div class="col-sm-9">
+                        <p> @Html.DisplayFor(model => model.InsuranceCompanyNumber)</p>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<label  class="col-sm-3 col-form-label">Tipo de polizas manejadas</label>
+				<div class="col-sm-9">
+                        <p>  @Html.DisplayFor(model => model.InsuranceCompanyDescription) </p>
+				</div>
+			</div>
+			<div class="form-check mb-3">
+				<input type="checkbox" class="form-check-input" id="activa">
+				<label class="form-check-label" for="activa">
+					Activa
+				</label>
+			</div>
+		</form>
+
+	</div>
+</div>
+</div>
+
+<div>
+		<div class="accordion" id="accordionExample">
+		@foreach (var data in Model.classes)
+		{
+
+		
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							@data.PolicyName
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+							@data.PolicyDescription
+							<br>
+							<p>
+								@data.PossibleGoods
+							</p>
+							<div>
+								
+
+							</div>
+					</div>
+				</div>
+			</div>
+				
+					
+		}
+		</div>
+</div>
+
+</div>
+
+
+
+
+
+</div>

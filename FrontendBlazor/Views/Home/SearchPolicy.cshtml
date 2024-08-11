@@ -1,0 +1,271 @@
+﻿
+@model FrontendBlazor.Models.QPolicyViewModel
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+<body>
+    <div class="page-content">
+
+        <div class="row">
+            <div class="col-12 col-xl-12 stretch-card">
+                <div class="row flex-grow-1">
+
+        <div class="row">
+            <div class="col-12 col-xl-12 stretch-card">
+                <div class="row flex-grow-1">
+                    <div class="col-md-4 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <h6 class="card-title mb-0">Clientes registrados a su nombre</h6>
+                                    <div class="dropdown mb-2">
+                                        <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">Revisar Clientes</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Opciones</span></a>
+                                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Cerrar</span></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-md-12 col-xl-5">
+                                                    <h3 class="mb-2">@ViewBag.clients</h3>
+                                        <div class="d-flex align-items-baseline">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12 col-xl-7">
+                                        <div id="customersChart" class="mt-md-3 mt-xl-0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-baseline">
+                                    <h6 class="card-title mb-0">Total de contratos</h6>
+                                    <div class="dropdown mb-2">
+                                        <a type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">Revisar Clientes</span></a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Opciones</span></a>
+                                                        <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Cerrar</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-md-12 col-xl-5">
+                                                    <h3 class="mb-2">@ViewBag.contracts</h3>
+                                        <div class="d-flex align-items-baseline">
+                                            <p class="text-danger">
+                                                <span></span>
+                                              
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12 col-xl-7">
+                                        <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                        <div class="row mt-5 mb-5 justify-content-center">
+                            <div class="col-lg-7 col-xl-8 grid-margin stretch-card d-flex justify-content-center">
+
+                                <div class="col-lg-11 col-xl-8">
+                                   
+                                    <div class="navbar-content">
+                                  <div class="input-group">
+                                                <div class="input-group-text">
+                                                    <i data-feather="search"></i>
+                                                </div>
+                                            <input id="NumberPolicy" type="text" class="form-control" id="navbarForm" placeholder="Digite el número de la póliza a buscar" 
+                                            oninput="this.value = this.value.toUpperCase()">
+
+                                            <input type="submit" id="buttonPolicy" class="btn btn-primary" value="Buscar " />
+                                            </div>
+                                        <span id="message" style="color: red;"></span>
+                                      
+                                        <ul class="navbar-nav">
+                                           
+                                            
+                                            
+                                        </ul>
+
+                                    </div>
+                                        
+                                 
+                                </div>
+                        </div>
+                               
+               
+            </div>
+                        <div class="row mt-5 mb-5 justify-content-center">
+
+
+                            <div id="partialZone">
+                            </div>
+
+                            <div />
+            </div>
+        </div>
+
+    </div>
+        </div>
+    </div>
+</body>
+
+
+    <script src="~/Content/assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+
+
+
+    $(document).ready(function () {
+        // Función para mostrar la alerta y actualizar el mensaje de error
+        function mostrarAlertaYMensaje(mensaje) {
+            // Mostrar una alerta usando SweetAlert
+
+            // Actualizar el mensaje de error en el span o div
+            $('#message').text(mensaje);
+        }
+
+        // Función para verificar el valor del campo de entrada
+        function verificarValor() {
+            var inputValue = $('.cedula').val();
+            // Verificar si el valor tiene menos de 9 caracteres o está vacío
+            if (inputValue.length === 9 || inputValue.trim() === '') {
+                $('#message').text('');
+                $("#createBut").prop("disabled", false);
+            } else {
+                // Si el valor es válido, eliminar el mensaje de error
+                mostrarAlertaYMensaje("El valor debe tener al menos 9 o ningun caracter");
+                $("#createBut").prop("disabled", true);
+
+            }
+        }
+
+        // Llamar a la función verificarValor cuando se libere una tecla en el campo de entrada
+        $('.cedula').on('change', verificarValor);
+    });
+
+
+
+
+    $('#buttonPolicy').click(function () {
+        var identification = $('#NumberPolicy').val();
+        Swal.fire({
+            title: "Estamos buscando su poliza",
+            html: "Se esta buscando su poliza, por favor espere",
+            background: '#172340',
+            allowOutsideClick: false, // Evitar que se cierre haciendo clic fuera de la alerta
+            showCloseButton: false, // Ocultar el botón "Cerrar"  
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        });
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("PolicySearched", "Home")',
+            data: { id: identification },
+            success: function (result) {
+                Swal.close();
+                $('#partialZone').html(result);
+            },
+            error: function (xhr, status, error) {
+                // error handling
+                Swal.fire({
+                    title: "Error",
+                    text: "Fallo con el error: @Model.policyType",
+                    icon: "error"
+                })
+
+            }, complete: function () {
+                // Hide loading indicator after request is complete
+               
+            }
+        });
+    });
+    
+    $(document).ready(function () {
+        // Function to update the disabled attribute of the button and show message
+        function updateButtonState() {
+            var textLength = $("#NumberPolicy").val().length;
+            if (textLength === 0) {
+                $("#buttonPolicy").prop("disabled", true);
+            } else if (textLength === 14 || textLength === 7) {
+                $("#buttonPolicy").prop("disabled", false);
+                $("#message").text(""); // Clear message when text length is sufficient
+            } else {
+                $("#buttonPolicy").prop("disabled", true);
+                $("#message").text("El número de póliza debe tener al menos 14  o 7 caracteres.");
+            }
+        }
+
+        // Bind keyup event to the text input
+        $("#NumberPolicy").on("keyup", function () {
+            updateButtonState();
+        });
+
+        // Call the function initially to check input state
+        updateButtonState();
+    });
+
+    $(document).ready(function () {
+        // Función para mostrar la alerta y actualizar el mensaje de error
+        function mostrarAlertaYMensaje(mensaje) {
+            // Mostrar una alerta usando SweetAlert
+
+            // Actualizar el mensaje de error en el span o div
+            $('#message').text(mensaje);
+        }
+
+        // Función para verificar el valor del campo de entrada
+        function verificarValor() {
+            var inputValue = $('#Identification').val();
+            // Verificar si el valor tiene menos de 9 caracteres o está vacío
+            if (inputValue.length === 9 || inputValue.trim() === '') {
+                $('#message').text('');
+                $("#createBut").prop("disabled", false);
+            } else {
+                // Si el valor es válido, eliminar el mensaje de error
+                mostrarAlertaYMensaje("El valor debe tener al menos 9 o ningun caracter");
+                $("#createBut").prop("disabled", true);
+
+            }
+        }
+
+        // Llamar a la función verificarValor cuando se libere una tecla en el campo de entrada
+        $('#Identification').on('change', verificarValor);
+    });
+
+
+
+
+
+</script>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

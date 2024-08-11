@@ -1,0 +1,205 @@
+﻿@model FrontendBlazor.Models.LoginViewModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewData["Title"] = "Login";
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/FrontPageLayout.cshtml";
+}
+
+<style>
+    .footer-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    section{
+        background-size: cover;
+        min-height: 75vh;
+    }
+</style>
+
+<section class="wpb_row row-fluid section-padd row-has-fill" style="background-image: url('/Content/assets/images/slide-home1.jpg');">
+
+    <div class="container" style="
+        display: grid;
+        place-items: center; /* Centra tanto horizontal como verticalmente */
+    ">
+        <div class="row">
+            <div class="wpb_column column_container col-sm-6" style="width: 100%; padding-left: 10%">
+                <div class="column-inner" style="width: 100%;">
+                    <div class="wpb_wrapper" style="width: 100%;">
+
+                        <h2 class="custom_heading text-dark">INICIO DE SESIÓN</h2>
+
+                        <div role="form" class="wpcf7" id="wpcf7-f1626-p1530-o1" lang="es-mx" dir="ltr" style="width: 90%;">
+                            <div class="screen-reader-response"></div>
+                            <form> @* asp-action="Login" *@
+                                @* @Html.AntiForgeryToken() *@
+                                <div class="row">
+                                    <div class="col-md-6" style="width: 100%;">
+                                        <span class="wpcf7-form-control-wrap" id="EmailSpan">
+                                            <label for="Email" class="form-label">Correo Electrónico</label>
+                                            <input asp-for="Email" type="text" name="Email" value="" id="Email" size="40" class="wpcf7-form-control" placeholder="Correo Electrónico">
+                                            <div id="messageEmail" class="alert d-none" role="alert" style="padding: 0px; margin: 0px;"></div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row" >
+                                    <div class="col-md-6" style="width: 100%;">
+                                        <span class="wpcf7-form-control-wrap" id="PWDSpan">
+                                            <label for="PasswordHash" class="form-label">Contraseña</label>
+                                            <input asp-for="PasswordHash" type="password" name="PasswordHash" value="" id="PasswordHash" size="40" class="wpcf7-form-control" placeholder="Contraseña">
+                                            <div id="messagePasswordHash" class="alert d-none" role="alert" style="padding: 0px; margin: 0px;"></div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div id="ErrorMessage" class="alert alert-danger d-none" role="alert" style="padding-bottom: 10px; margin: 0px; color: red; font-weight: bold;"></div>
+                                    <input type="submit" value="INGRESAR" class="wpcf7-form-control wpcf7-submit btn" id="btnIniciarSesion">
+                                </p>
+                            </form>
+                        </div>
+
+                        <br>
+
+                        <div class="wpb_text_column wpb_content_element">
+                            <div class="wpb_wrapper">
+                                <a href="@Url.Action("SignUp", "Registration")">Crear una cuenta</a>
+                                @* <br>
+                                <a href="@Url.Action("ForgotPassword", "Home")">¿Olvidó su contraseña?</a> *@
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Content/assets/js/sweet-alert.js"></script>
+
+
+    <script>
+
+        var apiKey = '@Configuration["ApiKey"]';
+        var apiUrl = '@Configuration["BackendApiUrl"]';
+
+        // function HabilitarBoton() {
+        //     let correo = $("#Email").val();
+        //     let clave = $("#PasswordHash").val();
+
+        //     if (correo.trim() != "" && clave.trim() != "") {
+        //         $("#btnIniciarSesion").prop("disabled", false);
+        //     } else {
+        //         $("#btnIniciarSesion").prop("disabled", true);
+        //     }
+        // }
+
+        $(document).ready(function () {
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: "Iniciando sesion!",
+                    html: "Estamos iniciando sesion en tu cuenta espera por favor",
+                    timerProgressBar: true, 
+                    allowOutsideClick: false, // Evitar que se cierre haciendo clic fuera de la alerta
+                    showCloseButton: false, // Ocultar el botón "Cerrar"
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
+
+                var addFormHasErrors = false;
+                let email = $("#Email").val();
+                let pwd = $("#PasswordHash").val();
+
+                // Validate Email
+                if (!email.trim()) {
+                    $("#messageEmail").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    $("#EmailSpan").css("margin-bottom", "0px");
+                    $("#ErrorMessage").text("").addClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!email.match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    $("#messageEmail").text("Por favor ingrese un correo electrónico válido").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    $("#EmailSpan").css("margin-bottom", "0px");
+                    $("#ErrorMessage").text("").addClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageEmail").text("").addClass("d-none");
+                    $("#EmailSpan").css("margin-bottom", "20px");
+                }
+                // Validate PasswordHash
+                if (!pwd.trim()) {
+                    $("#messagePasswordHash").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    $("#PWDSpan").css("margin-bottom", "0px");
+                    $("#ErrorMessage").text("").addClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messagePasswordHash").text("").addClass("d-none");
+                    $("#PWDSpan").css("margin-bottom", "20px");
+                }
+
+                if (addFormHasErrors == true) {
+                    event.preventDefault();
+                    Swal.close()
+                    return;
+                }
+
+                $.ajax({
+                    url: apiUrl+"/api/Account/Login",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        Email: email,
+                        PasswordHash: pwd
+                    }),
+                    headers: {
+                        "ApiKey": apiKey
+                    },
+                    success: function (data) {
+                        let token = data.token;
+                        let userId = data.userId;
+                        console.log(token);
+
+                        $.ajax({
+                            url: '/Registration/SetSessionData', // Ruta del controlador en el servidor
+                            type: 'POST',
+                            data: {
+                                Token : token,
+                                UserId: userId
+                            },
+                            success: function (response) {
+                                console.log('Datos de sesión establecidos correctamente.');
+                                window.location.href = "/Policy/Index";
+                                Swal.close()
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error al establecer datos de sesión:', error);
+                                Swal.close()
+                            },
+                            complete: function(){
+                                $("#processing-alert").addClass("d-none");
+                                Swal.close()
+                            }
+                        });
+                    },
+                    error: function (error) {
+                        // Manejar el error, por ejemplo, mostrar un mensaje al usuario
+                        console.error("Error en la solicitud AJAX: "+error.responseText, error);
+                        $("#ErrorMessage").text(error.responseText).removeClass("d-none");
+                        Swal.close()
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,94 @@
+﻿@model FrontendBlazor.Models.QPolicyViewModel
+
+<h4>QPolicyViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="aa1a">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdPolicy" class="control-label"></label>
+                <input asp-for="IdPolicy" class="form-control" />
+                <span asp-validation-for="IdPolicy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyTypeId" class="control-label"></label>
+                <input asp-for="PolicyTypeId" class="form-control" />
+                <span asp-validation-for="PolicyTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyPremium" class="control-label"></label>
+                <input asp-for="PolicyPremium" class="form-control" />
+                <span asp-validation-for="PolicyPremium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyDate" class="control-label"></label>
+                <input asp-for="PolicyDate" class="form-control" />
+                <span asp-validation-for="PolicyDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpirationDate" class="control-label"></label>
+                <input asp-for="ExpirationDate" class="form-control" />
+                <span asp-validation-for="ExpirationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPolicyState" class="control-label"></label>
+                <input asp-for="IdPolicyState" class="form-control" />
+                <span asp-validation-for="IdPolicyState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Identification" class="control-label"></label>
+                <input asp-for="Identification" class="form-control" />
+                <span asp-validation-for="Identification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PolicyNumber" class="control-label"></label>
+                <input asp-for="PolicyNumber" class="form-control" />
+                <span asp-validation-for="PolicyNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency" class="control-label"></label>
+                <input asp-for="Currency" class="form-control" />
+                <span asp-validation-for="Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modStamp" class="control-label"></label>
+                <input asp-for="modStamp" class="form-control" />
+                <span asp-validation-for="modStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="policyState" class="control-label"></label>
+                <input asp-for="policyState" class="form-control" />
+                <span asp-validation-for="policyState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="policyType" class="control-label"></label>
+                <input asp-for="policyType" class="form-control" />
+                <span asp-validation-for="policyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="policyLine" class="control-label"></label>
+                <input asp-for="policyLine" class="form-control" />
+                <span asp-validation-for="policyLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pagination" class="control-label"></label>
+                <input asp-for="Pagination" class="form-control" />
+                <span asp-validation-for="Pagination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Found" class="control-label"></label>
+                <input asp-for="Found" class="form-control" />
+                <span asp-validation-for="Found" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

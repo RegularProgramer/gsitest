@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portal de seguros MVR Virtual, para el manejo de pólizas de seguros de todo tipo">
+    <meta name="author" content="MVR Seguros">
+    <meta name="keywords" content="GSI Seguros, MVR Seguros, Seguros del INS, Pólizas de seguros, INS">
+
+    <title>MVR Seguros Virtual</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- End fonts -->
+    <!-- core:css -->
+    <link rel="stylesheet" href="~/Content/assets/vendors/core/core.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/Content/assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/jquery-tags-input/jquery.tagsinput.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/dropzone/dropzone.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/dropify/dist/dropify.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/pickr/themes/classic.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/easymde/easymde.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/Content/assets/fonts/feather-font/css/iconfont.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/Content/assets/css/demo2/style.css">
+    <!-- End layout styles -->
+
+    <link rel="shortcut icon" href="~/Content/assets/images/favicon.png" />
+</head>
+
+<body>
+    div class="main-wrapper">
+
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="@Url.Action("Index", "Policy")" class="sidebar-brand">
+                Portal<span>GSI</span>
+            </a>
+            <div class="sidebar-toggler not-active">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="sidebar-body">
+            <ul class="nav">
+                <li class="nav-item nav-category">Main</li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Dashboard", "Home")" class="nav-link">
+                        <i class="link-icon" data-feather="layout"></i>
+                        <span class="link-title">Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Policy")" class="nav-link">
+                        <i class="link-icon" data-feather="dollar-sign"></i>
+                        <span class="link-title">Control de Polizas</span>
+                    </a>
+                </li>
+                @if (Context.Session.GetString("RoleId") == "1")
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Avisos", "User")" class="nav-link">
+                            <i class="link-icon" data-feather="mail"></i>
+                            <span class="link-title">Control de Avisos</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="@Url.Action("UserManagement", "User")" class="nav-link">
+                            <i class="link-icon" data-feather="users"></i>
+                            <span class="link-title">Control de Usuarios</span>
+                        </a>
+                    </li>
+                }
+                <li class="nav-item">
+                    <a href="@Url.Action("Tickets", "Ticket")" class="nav-link">
+                        <i class="link-icon" data-feather="inbox"></i>
+                        <span class="link-title">Control de Tickets</span>
+                    </a>
+                </li>
+                @if (Context.Session.GetString("RoleId") == "1")
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("SearchPolicy", "Home")" class="nav-link">
+                            <i class="link-icon" data-feather="search"></i>
+                            <span class="link-title">Buscar Poliza</span>
+                        </a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </nav>
+@*     <nav class="settings-sidebar">
+        <div class="sidebar-body">
+            <a href="#" class="settings-sidebar-toggler">
+                <i data-feather="settings"></i>
+            </a>
+            <div class="theme-wrapper">
+                <h6 class="text-muted mb-2">Light Theme:</h6>
+                <a class="theme-item" href="../demo1/dashboard.html">
+                    <img src="../Content/assets/images/screenshots/light.jpg" alt="light theme">
+                </a>
+                <h6 class="text-muted mb-2">Dark Theme:</h6>
+                <a class="theme-item active" href="../demo2/dashboard.html">
+                    <img src="../Content/assets/images/screenshots/dark.jpg" alt="light theme">
+                </a>
+            </div>
+        </div>
+    </nav> *@
+    <!-- partial -->
+
+    <div class="page-wrapper">
+
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar">
+            <a href="#" class="sidebar-toggler">
+                <i data-feather="menu"></i>
+            </a>
+            <div class="navbar-content">
+
+                <ul class="navbar-nav">
+
+                    <div class="nav-item text-center">
+                        <p class="tx-16 fw-bolder">@Context.Session.GetString("UserName")!.ToString()</p>
+                    </div>
+                    <div class="nav-item text-center">
+                        <p class="tx-14 text-muted">@Context.Session.GetString("Email")!.ToString()</p>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="me-2 icon-md" data-feather="user"></i>
+                        </a>
+                        <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+                            <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                <div class="text-center">
+                                    <p class="tx-16 fw-bolder">@Context.Session.GetString("UserName")!.ToString()</p>
+                                    <p class="tx-14 text-muted">@Context.Session.GetString("Email")!.ToString()</p>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled p-1">
+                                <li class="dropdown-item py-2">
+                                    <a href="pages/general/profile.html" class="text-body ms-0">
+                                        <i class="me-2 icon-md" data-feather="user"></i>
+                                        <span>Perfil</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item py-2">
+                                    <a href="javascript:;" class="text-body ms-0">
+                                        <i class="me-2 icon-md" data-feather="edit"></i>
+                                        <span>Editar Perfil</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item py-2">
+                                    <a href="@Url.Action("LogOut", "Home")" class="text-body ms-0">
+                                        <i class="me-2 icon-md" data-feather="log-out"></i>
+                                        <span>Cerrar Sesión</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- partial -->
+        @RenderBody()
+
+
+
+    </div>
+    </div>
+
+
+        <script src="~/Content/assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+    <!-- core:js -->
+    <script src="~/Content/assets/vendors/core/core.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Content/assets/vendors/select2/select2.min.js"></script>
+    <script src="~/Content/assets/vendors/easymde/easymde.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/Content/assets/vendors/feather-icons/feather.min.js"></script>
+    <script src="~/Content/assets/js/template.js"></script>
+    <script src="~/Content/assets/vendors/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/Content/assets/vendors/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="~/Content/assets/vendors/inputmask/jquery.inputmask.min.js"></script>
+    <script src="~/Content/assets/vendors/select2/select2.min.js"></script>
+    <script src="~/Content/assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="~/Content/assets/vendors/jquery-tags-input/jquery.tagsinput.min.js"></script>
+    <script src="~/Content/assets/vendors/dropzone/dropzone.min.js"></script>
+    <script src="~/Content/assets/vendors/dropify/dist/dropify.min.js"></script>
+    <script src="~/Content/assets/vendors/pickr/pickr.min.js"></script>
+    <script src="~/Content/assets/vendors/moment/moment.min.js"></script>
+    <script src="~/Content/assets/vendors/flatpickr/flatpickr.min.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/Content/assets/js/email.js"></script>
+    <script src="~/Content/assets/js/form-validation.js"></script>
+    <script src="~/Content/assets/js/bootstrap-maxlength.js"></script>
+    <script src="~/Content/assets/js/inputmask.js"></script>
+    <script src="~/Content/assets/js/select2.js"></script>
+    <script src="~/Content/assets/js/typeahead.js"></script>
+    <script src="~/Content/assets/js/tags-input.js"></script>
+    <script src="~/Content/assets/js/dropzone.js"></script>
+    <script src="~/Content/assets/js/dropify.js"></script>
+    <script src="~/Content/assets/js/pickr.js"></script>
+    <script src="~/Content/assets/js/flatpickr.js"></script>
+    <!-- End custom js for this page -->
+        @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

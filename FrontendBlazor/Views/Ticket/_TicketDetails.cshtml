@@ -1,0 +1,25 @@
+﻿@model FrontendBlazor.Models.TicketViewModel
+
+<div>
+    <p><strong>Id del Ticket:</strong> @Model.IdTicket</p>
+    <p><strong>Correo Electronico del cliente:</strong> @Model.Mail</p>
+    <p><strong>Nombre del Cliente:</strong> @Model.Name</p>
+    <p><strong>Consulta del Cliente:</strong> @Model.QUERY</p>
+    <p><strong>Estado del Ticket:</strong></p>
+    @Html.DropDownListFor(m => m.TicketState, new SelectList(new List<SelectListItem>
+    {
+    new SelectListItem { Text = "Contestado", Value = "Contestado" },
+    new SelectListItem { Text = "Pendiente Contestación", Value = "Pendiente Contestación" }
+    }, "Value", "Text", Model.TicketState), new { @class = "form-select", @id = "TicketState" })
+    <button type="button" class="btn btn-primary mt-3" id="saveChangesButton" data-id="@Model.IdTicket">Guardar Cambios</button>
+</div>
+
+
+
+@* 
+
+<select class="form-select" name="DNIType" id="DNIType_@item.Id" value="@user_RoleId">
+    <option value="1">Cédula Física</option>
+    <option value="2">Cédula Jurídica</option>
+    <option value="3">Cédula DIMEX</option>
+</select>  *@

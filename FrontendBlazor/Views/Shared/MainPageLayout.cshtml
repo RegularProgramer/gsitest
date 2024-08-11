@@ -1,0 +1,681 @@
+﻿@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portal de seguros MVR Virtual, para el manejo de pólizas de seguros de todo tipo">
+    <meta name="author" content="MVR Seguros">
+    <meta name="keywords" content="GSI Seguros, MVR Seguros, Seguros del INS, Pólizas de seguros, INS">
+
+    <title>MVR Seguros Virtual</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- End fonts -->
+    <!-- core:css -->
+    <link rel="stylesheet" href="~/Content/assets/vendors/core/core.css">
+    <!-- endinject -->
+    <!-- FullCalendar:css -->
+    <link href="~/Content/assets/vendors/fullcalendar/main.min.css" rel="stylesheet" />
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/Content/assets/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/jquery-tags-input/jquery.tagsinp>
+    <link rel="stylesheet" href="~/Content/assets/vendors/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/prismjs/themes/prism.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/prismjs/themes/prism.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/Content/assets/fonts/feather-font/css/iconfont.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/Content/assets/css/demo2/style.css">
+    <!-- End layout styles -->
+    <link rel="stylesheet" href="~/Content/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
+
+    <link rel="shortcut icon" href="~/Content/assets/images/INS.png" />
+    <link rel="stylesheet" href="~/Content/assets/vendors/sweetalert2/sweetalert2.min.css">
+    
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () {
+            null
+        };
+    </script>
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <a href="@Url.Action("Index", "Policy")" class="sidebar-brand">
+                    MVR<span> Virtual</span>
+                </a>
+                <div class="sidebar-toggler not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="sidebar-body">
+                <ul class="nav">
+                    <li class="nav-item nav-category">Principal</li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Policy")" class="nav-link">
+                            <i class="link-icon" data-feather="dollar-sign"></i>
+                            <span class="link-title">Control de Polizas</span>
+                        </a>
+                    </li>
+                    @if (Context.Session.GetString("RoleId") == "1")
+                    {
+                      @*  <li class="nav-item">
+                            <a href="@Url.Action("Avisos", "User")" class="nav-link">
+                                <i class="link-icon" data-feather="mail"></i>
+                                <span class="link-title">Control de Avisos</span>
+                            </a>
+                        </li>*@
+                       
+                        <li class="nav-item">
+                            <a href="@Url.Action("UserManagement", "User")" class="nav-link">
+                                <i class="link-icon" data-feather="users"></i>
+                                <span class="link-title">Control de Usuarios</span>
+                            </a>
+                        </li>
+@*                         <li class="nav-item">
+                            <a href="@Url.Action("Logs", "User")" class="nav-link">
+                                <i class="link-icon" data-feather="file-text"></i>
+                                <span class="link-title">Logs de usuarios</span>
+                            </a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a href="@Url.Action("Tickets", "Ticket")" class="nav-link">
+                                <i class="link-icon" data-feather="inbox"></i>
+                                <span class="link-title">Control de Tickets</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Context.Session.GetString("RoleId") == "1")
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Calendar", "Appointments")" class="nav-link">
+                                <i class="link-icon" data-feather="calendar"></i>
+                                <span class="link-title">Control de Citas</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("SearchPolicy", "Home")" class="nav-link">
+                                <i class="link-icon" data-feather="search"></i>
+                                <span class="link-title">Buscar Poliza</span>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </nav>
+@*         <nav class="settings-sidebar">
+            <div class="sidebar-body">
+                <a href="#" class="settings-sidebar-toggler">
+                    <i data-feather="settings"></i>
+                </a>
+                <div class="theme-wrapper">
+                    <h6 class="text-muted mb-2">Light Theme:</h6>
+                    <a class="theme-item" href="../demo1/dashboard.html">
+                        <img src="../Content/assets/images/screenshots/light.jpg" alt="light theme">
+                    </a>
+                    <h6 class="text-muted mb-2">Dark Theme:</h6>
+                    <a class="theme-item active" href="../demo2/dashboard.html">
+                        <img src="../Content/assets/images/screenshots/dark.jpg" alt="light theme">
+                    </a>
+                </div>
+            </div>
+        </nav> *@
+        <!-- partial -->
+
+        <div class="page-wrapper">
+
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar">
+                <a href="#" class="sidebar-toggler">
+                    <i data-feather="menu"></i>
+                </a>
+                <div class="navbar-content">
+
+                    <ul class="navbar-nav">
+                        
+                        <div class="nav-item text-center">
+                            <p class="tx-16 fw-bolder">@Context.Session.GetString("UserName")!.ToString()</p>
+                        </div>
+                        <div class="nav-item text-center">
+                            <p class="tx-14 text-muted">@Context.Session.GetString("Email")!.ToString()</p>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="me-2 icon-md" data-feather="user"></i>
+                            </a>
+                            <div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+                                <div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+                                    <div class="text-center">
+                                        <p class="tx-16 fw-bolder">@Context.Session.GetString("UserName")!.ToString()</p>
+                                        <p class="tx-14 text-muted">@Context.Session.GetString("Email")!.ToString()</p>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled p-1">
+                                    <li class="dropdown-item py-1">
+                                        <a class="text-body ms-0 profile-button" id="profileButton" data-bs-toggle="modal" data-bs-target="#profileModal" style="cursor: pointer">
+                                            <i class="me-2 icon-md" data-feather="user"></i>
+                                            <span>Perfil</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item py-2">
+                                        <a href="@Url.Action("LogOut", "Home")" class="text-body ms-0">
+                                            <i class="me-2 icon-md" data-feather="log-out"></i>
+                                            <span>Cerrar Sesión</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- partial -->
+            @RenderBody()
+
+          
+
+        </div>
+    </div>
+
+    <script src="~/Content/assets/vendors/jquery/jquery-3.6.4.min.js"></script>
+
+    @* <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="~/Content/assets/vendors/sweetalert2/sweetalert2.min.css">
+    <script src="~/Content/assets/js/sweet-alert.js"></script> *@
+    <!-- core:js -->
+    <script src="~/Content/assets/vendors/core/core.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Content/assets/vendors/flatpickr/flatpickr.min.js"></script>
+    <script src="~/Content/assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/Content/assets/vendors/feather-icons/feather.min.js"></script>
+    <script src="~/Content/assets/js/template.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/Content/assets/js/dashboard-dark.js"></script>
+    <!-- End custom js for this page -->
+    <!-- partial:../../partials/_footer.html -->
+    <!-- partial -->
+    <!-- Plugin js for this page -->
+    <script src="~/Content/assets/vendors/select2/select2.min.js"></script>
+    <script src="~/Content/assets/vendors/easymde/easymde.min.js"></script>
+    <script src="~/Content/assets/vendors/prismjs/prism.js"></script>
+    <script src="~/Content/assets/vendors/clipboard/clipboard.min.js"></script>
+
+
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page -->
+    <!-- Plugin js for this page -->
+    <script src="~/Content/assets/vendors/prismjs/prism.js"></script>
+    <script src="~/Content/assets/vendors/clipboard/clipboard.min.js"></script>
+    <script src="~/Content/assets/js/inputmask.js"></script>
+    <script src="~/Content/assets/js/select2.js"></script>
+    <script src="~/Content/assets/js/email.js"></script>
+    <!-- End custom js for this page -->
+
+    <script src="~/Content/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="~/Content/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js"></script>
+    <script src="~/Content/assets/js/data-table.js"></script>
+    <script src="~/Content/assets/js/email.js"></script>
+
+    <script src="~/Content/assets/js/addtablearia.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+@* --- PROFILE MODAL --- *@
+
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">PERFIL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm">
+                    <div class="mb-3">
+                        <label for="FirstName" class="form-label">Nombre</label>
+                        <input id="profileFirstName" class="form-control" name="FirstName" type="text" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="LastName" class="form-label">Primer Apellido</label>
+                        <input id="profileLastName" class="form-control" name="LastName" type="text" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="SecondLastName" class="form-label">Segundo Apellido</label>
+                        <input id="profileSecondLastName" class="form-control" name="SecondLastName" type="text" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Correo Electronico</label>
+                        <input id="profileEmail" class="form-control" name="Email" type="email" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Identification" class="form-label">Numero de Cédula</label>
+                        <input id="profileIdentification" class="form-control" name="Identification" type="text" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneNumber" class="form-label">Numero de Teléfono</label>
+                        <input id="profilePhoneNumber" class="form-control" name="PhoneNumber" type="tel" value="" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Role" class="form-label">Rol</label>
+                        <input id="profileRole" class="form-control" name="Role" type="text" value="" disabled>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary editProfile-button" id="editProfileButton" data-bs-toggle="modal" data-bs-target="#editProfileModal">Editar Perfil</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* --- PROFILE MODAL END --- *@
+
+@* --- EDIT PROFILE MODAL --- *@
+
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">EDITAR PERFIL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm">
+                    <input type="hidden" id="editProfileId" name="Id" value="">
+                    <input type="hidden" id="editProfileRole" name="Role" value="">
+                    <input type="hidden" id="editProfileIdStatus" name="IdStatus" value="">
+                    <div class="mb-3">
+                        <label for="FirstName" class="form-label">Nombre</label>
+                        <input id="editProfileFirstName" class="form-control" name="FirstName" type="text" value="" required>
+                        <div id="editProfileFirstNameError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="LastName" class="form-label">Primer Apellido</label>
+                        <input id="editProfileLastName" class="form-control" name="LastName" type="text" value="" required>
+                        <div id="editProfileLastNameError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="SecondLastName" class="form-label">Segundo Apellido</label>
+                        <input id="editProfileSecondLastName" class="form-control" name="SecondLastName" type="text" value="" required>
+                        <div id="editProfileSecondLastNameError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <label for="UserName" class="form-label">Nombre de Usuario</label>
+                        <input id="editProfileUserName" class="form-control" name="UserName" type="text" value="" required>
+                        <div id="editProfileUserNameError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Correo Electronico</label>
+                        <input id="editProfileEmail" class="form-control" name="Email" type="email" value="" required>
+                        <div id="editProfileEmailError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneNumber" class="form-label">Numero de Teléfono</label>
+                        <input id="editProfilePhoneNumber" class="form-control" name="PhoneNumber" type="number" value="" required>
+                        <div id="editProfilePhoneNumberError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="DNIType" class="form-label">Tipo de Cédula</label>
+                        <select class="form-select" name="DNIType" id="editProfileDNIType">
+                            <option value="1">Cédula Física</option>
+                            <option value="2">Cédula Jurídica</option>
+                            <option value="3">Cédula DIMEX</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Identification" class="form-label">Numero de Cédula</label>
+                        <input id="editProfileIdentification" class="form-control" name="Identification" type="number" value="" required>
+                        <div id="editProfileIdentificationError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PasswordHash" class="form-label">Nueva Contraseña</label>
+                        <input id="editProfilePasswordHash" class="form-control" name="PasswordHash" type="password">
+                        <div id="editProfilePasswordHashError" class="alert d-none" role="alert"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label">Confirme su contraseña</label>
+                        <input id="editProfile_confirm_password" class="form-control" name="confirm_password" type="password">
+                        <div id="editProfileConfirmPasswordError" class="alert d-none" role="alert"></div>
+                    </div>
+                </form>
+            </div>
+            <div id="editProfileErrorMessage" class="alert d-none" role="alert" style="padding-bottom: 20px"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary confirmEditProfile-Button" id="confirmEditProfileButton" data-user-id="Id">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* --- EDIT PROFILE MODAL END --- *@
+
+<script>
+
+    var utcLockoutEnd = new Date().toISOString();
+
+    var apiKey = '@Configuration["ApiKey"]';
+    var apiUrl = '@Configuration["BackendApiUrl"]';
+
+    var Id = "@Context.Session.GetString("UserId")";
+    var FirstName = "";
+    var LastName = "";
+    var SecondLastName = "";
+    var UserName = "";
+    var Email = "";
+    var PhoneNumber = "";
+    var Identification = "";
+    var Role = @Context.Session.GetString("RoleId");
+    var PasswordHash = "";
+    var ConfirmPassword = "";
+    var IdStatus = "";
+
+    // INICIALIZACIÓN MODAL VISUALIZAR PERFIL
+    $(".profile-button").click(function () {
+        $.ajax({
+            url: apiUrl + "/api/AspNetUser/" + Id,
+            type: "GET",
+            contentType: "application/json",
+            headers: {
+                "ApiKey": apiKey
+            },
+            success: function (data) {
+                if (data.statusCode == 500) {
+                    console.error("Error al intentar obtener el usuario:", data.errorMessage);
+                } else {
+                    console.log("El usuario fue obtenido exitosamente:", data);
+
+                    FirstName = data.firstName;
+                    LastName = data.lastName;
+                    SecondLastName = data.secondLastName;
+                    UserName = data.userName;
+                    Email = data.email;
+                    PhoneNumber = data.phoneNumber;
+                    Identification = data.identification;
+                    IdStatus = data.idStatus;
+
+                    $("#profileId").val(Id);
+                    $("#profileFirstName").val(FirstName);
+                    $("#profileLastName").val(LastName);
+                    $("#profileSecondLastName").val(SecondLastName);
+                    $("#profileUserName").val(UserName);
+                    $("#profileEmail").val(Email);
+                    $("#profilePhoneNumber").val(PhoneNumber);
+                    $("#profileIdentification").val(Identification);
+                    if (Role == 1) {
+                        $("#profileRole").val("Administrador");
+                    } else if (Role == 2) {
+                        $("#profileRole").val("Usuario");
+                    }
+                }
+            },
+            error: function (error) {
+                console.error("Error en la solicitud AJAX:", error);
+            }
+        });
+        console.log("La solicitud AJAX del perfil fue enviada");
+
+    });
+
+
+    // INICIALIZACIÓN MODAL EDITAR
+    $(".editProfile-button").click(function () {
+        $("#editProfileId").val(Id);
+        $("#editProfileRole").val(Role);
+        $("#editProfileFirstName").val(FirstName);
+        $("#editProfileLastName").val(LastName);
+        $("#editProfileSecondLastName").val(SecondLastName);
+        $("#editProfileUserName").val(UserName);
+        $("#editProfileEmail").val(Email);
+        $("#editProfilePhoneNumber").val(PhoneNumber);
+        $("#editProfileIdentification").val(Identification);
+        $('#editProfilePasswordHash').val("");
+        $('#editProfile_confirm_password').val("");
+        $("#editProfileIdStatus").val(IdStatus);
+    });
+
+    // LOGICA MODAL EDITAR
+    $(document).ready(function () {
+
+        $(".confirmEditProfile-Button").click(function (event) {
+            const profilePass = document.getElementById("editProfilePasswordHash").value;
+            var editProfileFormHasErrors = false;
+
+            // Validate FirstName
+            if (!$("#editProfileFirstName").val().trim()) {
+                $("#editProfileFirstNameError").text("Por favor rellena este campo.").removeClass("alert - success").addClass("alert - danger").css("color", "red").removeClass("d - none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfileFirstName").val().match(/^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/) || $("#editProfileFirstName").val().length < 3) {
+                $("#editProfileFirstNameError").text("El nombre debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert - success").addClass("alert - danger").css("color", "red").removeClass("d - none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileFirstNameError").addClass("d-none");
+            }
+
+            // Validate LastName
+            if (!$("#editProfileLastName").val().trim()) {
+                $("#editProfileLastNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfileLastName").val().match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                $("#editProfileLastNameError").text("El primer apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileLastNameError").addClass("d-none");
+            }
+
+            // Validate SecondLastName
+            if (!$("#editProfileSecondLastName").val().trim()) {
+                $("#editProfileSecondLastNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfileSecondLastName").val().match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                $("#editProfileSecondLastNameError").text("El segundo apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileSecondLastNameError").addClass("d-none");
+            }
+
+            // Validate UserName
+            if (!$("#editProfileUserName").val().trim()) {
+                $("#editProfileUserNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfileUserName").val().match(/^[a-zA-Z0-9_\-@@#$.]{5,}$/)) {
+                $("#editProfileUserNameError").text("El nombre de usuario debe tener al menos 5 caracteres y solo puede contener letras, números y los caracteres '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if ($("#editProfileUserName").val().match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                $("#editProfileUserNameError").text("El nombre de usuario no puede poseer formato de correo electrónico.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileUserNameError").addClass("d-none");
+            }
+
+            // Validate Email
+            if (!$("#editProfileEmail").val().trim()) {
+                $("#editProfileEmailError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfileEmail").val().match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                $("#editProfileEmailError").text("Por favor ingrese un correo electrónico válido.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileEmailError").addClass("d-none");
+            }
+
+            // Validate PhoneNumber
+            if (!$("#editProfilePhoneNumber").val().trim()) {
+                $("#editProfilePhoneNumberError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else if (!$("#editProfilePhoneNumber").val().match(/^\d{8}$/)) {
+                $("#editProfilePhoneNumberError").text("El número de teléfono debe constar exactamente de 8 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfilePhoneNumberError").addClass("d-none");
+            }
+
+            // Validate Identification
+            if ($("#editProfileDNIType").val() == "1") {
+                if (!$("#editProfileIdentification").val().trim()) {
+                    $("#editProfileIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else if (!$("#editProfileIdentification").val().match(/^\d{9}$/)) {
+                    $("#editProfileIdentificationError").text("El número de cédula física debe constar exactamente de 9 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else {
+                    $("#editProfileIdentificationError").addClass("d-none");
+                }
+            } else if ($("#editProfileDNIType").val() == "2") {
+                if (!$("#editProfileIdentification").val().trim()) {
+                    $("#editProfileIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else if (!$("#editProfileIdentification").val().match(/^\d{10}$/)) {
+                    $("#editProfileIdentificationError").text("El número de cédula jurídica debe constar exactamente de 10 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else {
+                    $("#editProfileIdentificationError").addClass("d-none");
+                }
+            } else if ($("#editProfileDNIType").val() == "3") {
+                if (!$("#editProfileIdentification").val().trim()) {
+                    $("#editProfileIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else if (!$("#editProfileIdentification").val().match(/^\d{11,12}$/)) {
+                    $("#editProfileIdentificationError").text("El número de cédula de migración y extrangería debe constar exactamente de 11 ó 12 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editProfileFormHasErrors = true;
+                } else {
+                    $("#editProfileIdentificationError").addClass("d-none");
+                }
+            }
+
+            // Validate PasswordHash
+            if (profilePass !== "" && !isValidPassword(profilePass)) {
+                $("#editProfilePasswordHashError").text("La contraseña debe tener al menos 7 caracteres y contener al menos un número, una letra mayúscula, una letra minúscula y un carácter especial '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfilePasswordHashError").addClass("d-none");
+            }
+
+            let confirmProfilePass = $("#editProfile_confirm_password").val();
+            if (profilePass !== confirmProfilePass) {
+                $("#editProfileConfirmPasswordError").text("Las contraseñas no coinciden.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                editProfileFormHasErrors = true;
+            } else {
+                $("#editProfileConfirmPasswordError").addClass("d-none");
+            }
+
+            console.log("no hubo problema con las contraseñas");
+
+            if (editProfileFormHasErrors == true) {
+                event.preventDefault();
+                Swal.close();
+                return;
+            }
+
+            var userData = {
+                Id: $("#editProfileId").val(),
+                UserName: $("#editProfileUserName").val(),
+                Email: $("#editProfileEmail").val(),
+                PhoneNumber: $("#editProfilePhoneNumber").val(),
+                Identification: $("#editProfileIdentification").val(),
+                FirstName: $("#editProfileFirstName").val(),
+                LastName: $("#editProfileLastName").val(),
+                SecondLastName: $("#editProfileSecondLastName").val(),
+                PasswordHash: $("#editProfilePasswordHash").val(),
+                IdStatus: $("#editProfileIdStatus").val(),
+            };
+            var profileRole = $("#editProfileRole").val();
+            console.log("evento userData activado correctamente");
+
+            $.ajax({
+                url: apiUrl + "/api/AspNetUser/EditUser",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(userData),
+                headers: {
+                    "ApiKey": apiKey,
+                    "Role": profileRole
+                },
+                success: function (data) {
+                    if (data.statusCode == 500) {
+                        console.error("Error al intentar actualizar el perfil:", data.errorMessage);
+                        Swal.fire({
+                            title: "¡Error!",
+                            text: data.errorMessage,
+                            icon: "error",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            }
+                        });
+                    }
+                    else {
+                        console.log("El perfil fue modificado exitosamente:", data);
+                        Swal.fire({
+                            title: "¡El perfil ha sido actualizado!",
+                            text: "El perfil fue modificado exitosamente",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            },
+                            didClose: () => {
+                                window.location.reload();
+                            }
+                        });
+                    }
+                },
+                error: function (error) {
+                    console.error("Error en la solicitud AJAX:", error);
+                    Swal.fire({
+                        title: "¡Error!",
+                        text: "Ocurrio un error mientras se editaba el perfil, por favor intente de nuevo." + error,
+                        icon: "error",
+                        didOpen: (popup) => {
+                            popup.style.backgroundColor = '#0C1427';
+                        }
+                    });
+                }
+            });
+            console.log("la solicitud AJAX fue enviada");
+        });
+    });
+
+    // OCULTAR ALERTAS AL CERRAR MODAL EDITAR
+        var EditProfileModal = document.getElementById('editProfileModal');
+        EditProfileModal.addEventListener('hidden.bs.modal', function () {
+            document.getElementById("editProfileFirstNameError").classList.add("d-none");
+            document.getElementById("editProfileLastNameError").classList.add("d-none");
+            document.getElementById("editProfileSecondLastNameError").classList.add("d-none");
+            document.getElementById("editProfileUserNameError").classList.add("d-none");
+            document.getElementById("editProfileEmailError").classList.add("d-none");
+            document.getElementById("editProfilePhoneNumberError").classList.add("d-none");
+            document.getElementById("editProfileIdentificationError").classList.add("d-none");
+            document.getElementById("editProfilePasswordHashError").classList.add("d-none");
+            document.getElementById("editProfileConfirmPasswordError").classList.add("d-none");
+            document.getElementById("editProfileErrorMessage").classList.add("d-none");
+        });
+</script>
+
+</html>

@@ -1,0 +1,845 @@
+﻿@model IEnumerable<FrontendBlazor.Models.AspNetUserViewModel>
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewBag.Title = "UserManagement";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/assets/css/responsivetables.css" />
+
+<style>
+    /* Ajusta el padding de las celdas */
+    .table td {
+        padding: 1rem;
+    }
+    /* Asegura que los botones estén alineados horizontalmente */
+    .actions-cell .button-container {
+        display: flex;
+    }
+    /* Ajusta el tamaño de los botones */
+    .btn-icon {
+        padding: 0.25rem 0.5rem;
+        margin: 0 2px;
+    }
+</style>
+
+<div class="page-content">
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">CONTROL DE USUARIOS</h6>
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre Completo</th>
+                                    <th>@Html.DisplayNameFor(model => model.UserName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                                    <th>@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Identification)</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    var user_Id = item.Id;
+                                    var user_RoleId = "2";
+                                    var user_RoleName = "Usuario";
+
+                                    foreach (var user in ViewBag.UserRoles)
+                                    {
+                                        if (user.UserId == user_Id)
+                                        {
+                                            user_RoleId = user.RoleId;
+                                            foreach (var role in ViewBag.Roles)
+                                            {
+                                                @if (role.Id == user_RoleId)
+                                                {
+                                                    user_RoleName = role.Name;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    <tr>
+                                        <td data-cell="Nombre Completo" title="Nombre Completo">
+                                            @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName) @Html.DisplayFor(modelItem => item.SecondLastName)
+                                        </td>
+                                        <td data-cell="Nombre de Usuario" title="Nombre de Usuario">
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td data-cell="Correo Electrónico" title="Correo Electrónico">
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+                                        <td data-cell="Número de Teléfono" title="Número de Teléfono">
+                                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                        </td >
+                                        <td data-cell="Número de Cédula" title="Número de Cédula">
+                                            @Html.DisplayFor(modelItem => item.Identification)
+                                        </td>
+                                        <td data-cell="Rol" title="Rol">
+                                            @user_RoleName
+                                        </td>
+                                        <td data-cell="Estado" title="Estado">
+                                            @(item.IdStatus == 2 ? "Deshabilitado" : "Habilitado")
+                                        </td>
+                                        <td data-cell="Acciones" class="actions-cell">
+                                            @if (Context.Session.GetString("UserId") != item.Id)
+                                            {
+                                                <div class="button-container">
+                                                    <div class="button-container">
+                                                        <button type="button" class="btn btn-primary btn-icon btn-sm view-id" title="Ver Detalles" id="detailsButtonId" data-bs-toggle="modal" data-bs-target="#viewModal"
+                                                                data-viewId="@item.Id" data-viewFirstName="@item.FirstName" data-viewLastName="@item.LastName" data-viewSecondLastName="@item.SecondLastName" data-viewUserName="@item.UserName"
+                                                                data-viewEmail="@item.Email" data-viewPhoneNumber="@item.PhoneNumber" data-viewIdentification="@item.Identification" data-viewRole="@user_RoleId" data-viewRoleName="@user_RoleName" data-viewIdStatus="@item.IdStatus">
+                                                            <i data-feather="file-text"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <button type="button" class="btn btn-primary btn-icon btn-sm edit-id" title="Editar" data-user-id="@item.Id" id="editButton" data-bs-toggle="modal" data-bs-target="#editModal"
+                                                            data-editId="@item.Id" data-editFirstName="@item.FirstName" data-editLastName="@item.LastName" data-editSecondLastName="@item.SecondLastName" data-editUserName="@item.UserName"
+                                                            data-editEmail="@item.Email" data-editPhoneNumber="@item.PhoneNumber" data-editIdentification="@item.Identification" data-editRole="@user_RoleId" data-editRoleName="@user_RoleName" data-editIdStatus="@item.IdStatus">
+                                                        <i data-feather="edit"></i>
+                                                    </button>
+
+                                                    @* <button type="button" class="btn btn-danger btn-icon btn-sm delete-id" title="Eliminar" data-user-id="@item.Id" id="deleteButton" data-bs-toggle="modal"
+                                                            data-bs-target="#deleteModal" data-deleteId="@item.Id" data-deleteFirstName="@item.FirstName">
+                                                        <i data-feather="delete"></i>
+                                                    </button> *@
+
+                                                    @if (item.IdStatus == 1) 
+                                                    {
+                                                        <button type="button" class="btn btn-danger btn-icon btn-sm disable-id" title="Desabilitar" data-user-id="@item.Id" id="disableButton" data-bs-toggle="modal" data-bs-target="#disableModal"
+                                                                data-disableId="@item.Id" data-disableFirstName="@item.FirstName" data-disableLastName="@item.LastName" data-disableSecondLastName="@item.SecondLastName" data-disableUserName="@item.UserName"
+                                                                data-disableEmail="@item.Email" data-disablePhoneNumber="@item.PhoneNumber" data-disableIdentification="@item.Identification" data-disableRole="@user_RoleId" data-disableRoleName="@user_RoleName" data-disableIdStatus="@item.IdStatus">
+                                                            <i data-feather="user-x"></i>
+                                                        </button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button type="button" class="btn btn-success btn-icon btn-sm disable-id" title="Habilitar" data-user-id="@item.Id" id="disableButton" data-bs-toggle="modal" data-bs-target="#disableModal"
+                                                                data-disableId="@item.Id" data-disableFirstName="@item.FirstName" data-disableLastName="@item.LastName" data-disableSecondLastName="@item.SecondLastName" data-disableUserName="@item.UserName"
+                                                                data-disableEmail="@item.Email" data-disablePhoneNumber="@item.PhoneNumber" data-disableIdentification="@item.Identification" data-disableRole="@user_RoleId" data-disableRoleName="@user_RoleName" data-disableIdStatus="@item.IdStatus">
+                                                            <i data-feather="user-check"></i>
+                                                        </button>
+                                                    }
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="button-container">
+                                                    <button type="button" class="btn btn-primary btn-icon btn-sm view-id" title="Ver Detalles" id="detailsButtonId" data-bs-toggle="modal" data-bs-target="#viewModal"
+                                                            data-viewId="@item.Id" data-viewFirstName="@item.FirstName" data-viewLastName="@item.LastName"  data-viewSecondLastName="@item.SecondLastName" data-viewUserName="@item.UserName"
+                                                            data-viewEmail="@item.Email" data-viewPhoneNumber="@item.PhoneNumber" data-viewIdentification="@item.Identification" data-viewRole="@user_RoleId" data-viewRoleName="@user_RoleName" data-viewIdStatus="@item.IdStatus">
+                                                        <i data-feather="file-text"></i>
+                                                    </button>
+                                                </div>
+                                            }
+                                        </td>
+                                    </tr>
+                                
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/Content/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+<script src="~/Content/assets/js/sweet-alert.js"></script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+
+        var utcLockoutEnd = new Date().toISOString();
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        var apiKey = '@Configuration["ApiKey"]';
+        var apiUrl = '@Configuration["BackendApiUrl"]';
+
+        // INICIALIZACIÓN MODAL EDITAR
+        $(".edit-id").click(function () {
+            $("#editId").val($(this).attr('data-editId'));
+            $("#editFirstName").val($(this).attr('data-editFirstName'));
+            $("#editLastName").val($(this).attr('data-editLastName'));
+            $("#editSecondLastName").val($(this).attr('data-editSecondLastName'));
+            $("#editUserName").val($(this).attr('data-editUserName'));
+            $("#editEmail").val($(this).attr('data-editEmail'));
+            $("#editPhoneNumber").val($(this).attr('data-editPhoneNumber'));
+            $("#editIdentification").val($(this).attr('data-editIdentification'));
+            $('#editRole').val($(this).attr('data-editRole'));
+            $('#editPasswordHash').val("");
+            $('#edit_confirm_password').val("");
+            $("#editIdStatus").val($(this).attr('data-editIdStatus'));
+        });
+
+        // INICIALIZACIÓN MODAL VISUALIZAR
+        $(".view-id").click(function () {
+            $("#Id").val($(this).attr('data-viewId'));
+            $("#FirstName").val($(this).attr('data-viewFirstName'));
+            $("#LastName").val($(this).attr('data-viewLastName'));
+            $("#SecondLastName").val($(this).attr('data-viewSecondLastName'));
+            $("#UserName").val($(this).attr('data-viewUserName'));
+            $("#Email").val($(this).attr('data-viewEmail'));
+            $("#PhoneNumber").val($(this).attr('data-viewPhoneNumber'));
+            $("#Identification").val($(this).attr('data-viewIdentification'));
+            $("#Role").val($(this).attr('data-viewRoleName'));
+        });
+
+        // INICIALIZACIÓN MODAL ELIMINAR
+        $(".delete-id").click(function () {
+            $("#idDeleteUser").val($(this).attr('data-deleteId'));
+            $("#confirmationMessage").text("¿Realmente desea eliminar al usuario " + $(this).attr('data-deleteFirstName') + "?");
+        });
+
+        // INICIALIZACIÓN MODAL DESABILITAR/ACTIVAR
+        $(".disable-id").click(function () {
+            var idStatus = $(this).attr('data-disableIdStatus');
+
+            if (idStatus == "2") {
+                $("#disableConfirmationMessage").text("¿Realmente desea habilitar al usuario " + $(this).attr('data-disableFirstName') + "?");
+                $("#disableModalLabel").text("HABILITAR USUARIO");
+                $("#confirmDisableButton").text("Habilitar Usuario");
+            } else {
+                $("#disableConfirmationMessage").text("¿Realmente desea desabilitar al usuario " + $(this).attr('data-disableFirstName') + "?");
+                $("#disableModalLabel").text("DESABILITAR USUARIO");
+                $("#confirmDisableButton").text("Desabilitar Usuario");
+            }
+
+            $("#disableId").val($(this).attr('data-disableId'));
+            $("#disableFirstName").val($(this).attr('data-disableFirstName'));
+            $("#disableLastName").val($(this).attr('data-disableLastName'));
+            $("#disableSecondLastName").val($(this).attr('data-disableSecondLastName'));
+            $("#disableUserName").val($(this).attr('data-disableUserName'));
+            $("#disableEmail").val($(this).attr('data-disableEmail'));
+            $("#disablePhoneNumber").val($(this).attr('data-disablePhoneNumber'));
+            $("#disableIdentification").val($(this).attr('data-disableIdentification'));
+            $('#disableRole').val($(this).attr('data-disableRole'));
+            $('#disablePasswordHash').val("");
+            $('#disable_confirm_password').val("");
+            $("#disableIdStatus").val(idStatus);
+        });
+
+
+        // LOGICA MODAL EDITAR
+        $(document).ready(function () {
+
+            $(".confirm-id").click(function (event) {
+                const pass = document.getElementById("editPasswordHash").value;
+                var editFormHasErrors = false;
+
+                // Validate FirstName
+                if (!$("#editFirstName").val().trim()) {
+                    $("#editFirstNameError").text("Por favor rellena este campo.").removeClass("alert - success").addClass("alert - danger").css("color", "red").removeClass("d - none");
+                    editFormHasErrors = true;
+                } else if (!$("#editFirstName").val().match(/^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/) || $("#editFirstName").val().length < 3) {
+                    $("#editFirstNameError").text("El nombre debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert - success").addClass("alert - danger").css("color", "red").removeClass("d - none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editFirstNameError").addClass("d-none");
+                }
+
+                // Validate LastName
+                if (!$("#editLastName").val().trim()) {
+                    $("#editLastNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if (!$("#editLastName").val().match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                    $("#editLastNameError").text("El primer apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editLastNameError").addClass("d-none");
+                }
+
+                // Validate SecondLastName
+                if (!$("#editSecondLastName").val().trim()) {
+                    $("#editSecondLastNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if (!$("#editSecondLastName").val().match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                    $("#editSecondLastNameError").text("El segundo apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editSecondLastNameError").addClass("d-none");
+                }
+
+                // Validate UserName
+                if (!$("#editUserName").val().trim()) {
+                    $("#editUserNameError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if (!$("#editUserName").val().match(/^[a-zA-Z0-9_\-@@#$.]{5,}$/)) {
+                    $("#editUserNameError").text("El nombre de usuario debe tener al menos 5 caracteres y solo puede contener letras, números y los caracteres '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if ($("#editUserName").val().match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    $("#editUserNameError").text("El nombre de usuario no puede poseer formato de correo electrónico.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editUserNameError").addClass("d-none");
+                }
+
+                // Validate Email
+                if (!$("#editEmail").val().trim()) {
+                    $("#editEmailError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if (!$("#editEmail").val().match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    $("#editEmailError").text("Por favor ingrese un correo electrónico válido.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editEmailError").addClass("d-none");
+                }
+
+                // Validate PhoneNumber
+                if (!$("#editPhoneNumber").val().trim()) {
+                    $("#editPhoneNumberError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else if (!$("#editPhoneNumber").val().match(/^\d{8}$/)) {
+                    $("#editPhoneNumberError").text("El número de teléfono debe constar exactamente de 8 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editPhoneNumberError").addClass("d-none");
+                }
+
+                // Validate Identification
+                if ($("#DNIType").val() == "1") {
+                    if (!$("#editIdentification").val().trim()) {
+                        $("#editIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else if (!$("#editIdentification").val().match(/^\d{9}$/)) {
+                        $("#editIdentificationError").text("El número de cédula física debe constar exactamente de 9 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else {
+                        $("#editIdentificationError").addClass("d-none");
+                    }
+                } else if ($("#DNIType").val() == "2") {
+                    if (!$("#editIdentification").val().trim()) {
+                        $("#editIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else if (!$("#editIdentification").val().match(/^\d{10}$/)) {
+                        $("#editIdentificationError").text("El número de cédula jurídica debe constar exactamente de 10 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else {
+                        $("#editIdentificationError").addClass("d-none");
+                    }
+                } else if ($("#DNIType").val() == "3") {
+                    if (!$("#editIdentification").val().trim()) {
+                        $("#editIdentificationError").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else if (!$("#editIdentification").val().match(/^\d{11,12}$/)) {
+                        $("#editIdentificationError").text("El número de cédula de migración y extrangería debe constar exactamente de 11 ó 12 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        editFormHasErrors = true;
+                    } else {
+                        $("#editIdentificationError").addClass("d-none");
+                    }
+                }
+
+                // Validate PasswordHash
+                if (pass !== "" && !isValidPassword(pass)) {
+                    $("#editPasswordHashError").text("La contraseña debe tener al menos 7 caracteres y contener al menos un número, una letra mayúscula, una letra minúscula y un carácter especial '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editPasswordHashError").addClass("d-none");
+                }
+
+                let confirmPass = $("#edit_confirm_password").val();
+                if (pass !== confirmPass) {
+                    $("#editConfirmPasswordError").text("Las contraseñas no coinciden.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    editFormHasErrors = true;
+                } else {
+                    $("#editConfirmPasswordError").addClass("d-none");
+                }
+                console.log("no hubo problema con las contraseñas");
+
+                if (editFormHasErrors == true) {
+                    event.preventDefault();
+                    Swal.close();
+                    return;
+                }
+
+                var userData = {
+                    Id: $("#editId").val(),
+                    UserName: $("#editUserName").val(),
+                    Email: $("#editEmail").val(),
+                    PhoneNumber: $("#editPhoneNumber").val(),
+                    Identification: $("#editIdentification").val(),
+                    FirstName: $("#editFirstName").val(),
+                    LastName: $("#editLastName").val(),
+                    SecondLastName: $("#editSecondLastName").val(),
+                    PasswordHash: $("#editPasswordHash").val(),
+                    IdStatus: $("#editIdStatus").val(),
+                };
+                var role = $("#editRole").val();
+                console.log("evento userData activado correctamente");
+
+                $.ajax({
+                    url: apiUrl + "/api/AspNetUser/EditUser",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(userData),
+                    headers: {
+                        "ApiKey": apiKey,
+                        "Role": role
+                    },
+                    success: function (data) {
+                        if (data.statusCode == 500) {
+                            console.error("Error al intentar actualizar el usuario:", data.errorMessage);
+                            Swal.fire({
+                                title: "¡Error!",
+                                text: data.errorMessage,
+                                icon: "error",
+                                didOpen: (popup) => {
+                                    popup.style.backgroundColor = '#0C1427';
+                                }
+                            });
+                        }
+                        else {
+                            console.log("El usuario fue modificado exitosamente:", data);
+                            Swal.fire({
+                                title: "¡El usuario ha sido actualizado!",
+                                text: "El usuario fue modificado exitosamente",
+                                didOpen: (popup) => {
+                                    popup.style.backgroundColor = '#0C1427';
+                                },
+                                didClose: () => {
+                                    window.location.href = "/User/UserManagement";
+                                }
+                            });
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Error en la solicitud AJAX:", error);
+                        Swal.fire({
+                            title: "¡Error!",
+                            text: "Ocurrio un error mientras se editaba el usuario, por favor intente de nuevo." + error,
+                            icon: "error",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            }
+                        });
+                    }
+                });
+                console.log("la solicitud AJAX fue enviada");
+            });
+        });
+
+        //LÓGICA MODAL ELIMINAR
+        $(document).ready(function () {
+
+            $("#confirmDeleteButton").click(function () {
+                var userId = $("#idDeleteUser").val();
+                $.ajax({
+                    url: apiUrl+"/api/AspNetUser/" + userId,
+                    type: "DELETE",
+                    headers: {
+                        "ApiKey": apiKey
+                    },
+                    success: function (data) {
+                        Swal.fire({
+                            title: "¡El usuario ha sido eliminado!",
+                            text: "El usuario fue eliminado exitosamente",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            },
+                            didClose: () => {
+                                window.location.href = "/User/UserManagement";
+                            }
+                        });
+                        console.log("El usuario fue eliminado exitosamente:", data);
+                    },
+                    error: function (error) {
+                        console.error("Error en la solicitud AJAX:", error);
+                        Swal.fire({
+                            title: "¡Error!",
+                            text: "Ocurrio un error mientras se eliminaba el usuario, por favor intente de nuevo." + error,
+                            icon: "error",
+                            didOpen: (popup) => {
+                                popup.style.backgroundColor = '#0C1427';
+                            },
+                            didClose: () => {
+                                window.location.href = "/User/UserManagement";
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // LOGICA MODAL DESABILITAR
+        $(document).ready(function () {
+
+            $(".confirm-disable").click(function (event) {
+                var currentStatus = $("#disableIdStatus").val();
+                var newStatus;
+
+                if (currentStatus == "1") {
+                    newStatus = "2";
+                } else if (currentStatus == "2") {
+                    newStatus = "1";
+                }
+
+                var userData = {
+                    Id: $("#disableId").val(),
+                    UserName: $("#disableUserName").val(),
+                    Email: $("#disableEmail").val(),
+                    PhoneNumber: $("#disablePhoneNumber").val(),
+                    Identification: $("#disableIdentification").val(),
+                    FirstName: $("#disableFirstName").val(),
+                    LastName: $("#disableLastName").val(),
+                    SecondLastName: $("#disableSecondLastName").val(),
+                    PasswordHash: $("#disablePasswordHash").val(),
+                    IdStatus: newStatus
+                };
+                var role = $("#disableRole").val();
+                console.log("evento userData activado correctamente");
+
+                $.ajax({
+                    url: apiUrl + "/api/AspNetUser/EditUser",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(userData),
+                    headers: {
+                        "ApiKey": apiKey,
+                        "Role": role
+                    },
+                    success: function (data) {
+                        if (data.statusCode == 500) {
+                            if (newStatus == "2") {
+                                console.error("Error al intentar desabilitar el usuario:", data.errorMessage);
+                                Swal.fire({
+                                    title: "¡Error!",
+                                    text: data.errorMessage,
+                                    icon: "error",
+                                    didOpen: (popup) => {
+                                        popup.style.backgroundColor = '#0C1427';
+                                    }
+                                });
+                            } else {
+                                console.error("Error al intentar habilitar el usuario:", data.errorMessage);
+                                Swal.fire({
+                                    title: "¡Error!",
+                                    text: data.errorMessage,
+                                    icon: "error",
+                                    didOpen: (popup) => {
+                                        popup.style.backgroundColor = '#0C1427';
+                                    }
+                                });
+                            }
+                            
+                        }
+                        else {
+                            if (newStatus == "2") {
+                                console.log("El usuario fue desabilitado exitosamente:", data);
+                                Swal.fire({
+                                    title: "¡El usuario ha sido desabilitado!",
+                                    text: "El usuario fue inactivado exitosamente",
+                                    didOpen: (popup) => {
+                                        popup.style.backgroundColor = '#0C1427';
+                                    },
+                                    didClose: () => {
+                                        window.location.href = "/User/UserManagement";
+                                    }
+                                });
+                            } else {
+                                console.log("El usuario fue habilitado exitosamente:", data);
+                                Swal.fire({
+                                    title: "¡El usuario ha sido habilitado!",
+                                    text: "El usuario fue activado exitosamente",
+                                    didOpen: (popup) => {
+                                        popup.style.backgroundColor = '#0C1427';
+                                    },
+                                    didClose: () => {
+                                        window.location.href = "/User/UserManagement";
+                                    }
+                                });
+                            }
+                            
+                        }
+                    },
+                    error: function (error) {
+                        if (newStatus == "2") {
+                            console.error("Error en la solicitud AJAX:", error);
+                            Swal.fire({
+                                title: "¡Error!",
+                                text: "Ocurrio un error mientras se desabilitaba el usuario, por favor intente de nuevo." + error,
+                                icon: "error",
+                                didOpen: (popup) => {
+                                    popup.style.backgroundColor = '#0C1427';
+                                }
+                            });
+                        } else {
+                            console.error("Error en la solicitud AJAX:", error);
+                            Swal.fire({
+                                title: "¡Error!",
+                                text: "Ocurrio un error mientras se habilitaba el usuario, por favor intente de nuevo." + error,
+                                icon: "error",
+                                didOpen: (popup) => {
+                                    popup.style.backgroundColor = '#0C1427';
+                                }
+                            });
+                        }
+                        
+                    }
+                });
+                console.log("la solicitud AJAX fue enviada");
+            });
+        });
+
+        function isValidPassword(pass) {
+            if (pass.length < 7) {
+                return false;
+            }
+            if (!/[A-Z]/.test(pass)) {
+                return false;
+            }
+            if (!/[a-z]/.test(pass)) {
+                return false;
+            }
+            if (!/\d/.test(pass)) {
+                return false;
+            }
+            if (!/[$&+,:;=?#|'<>.^*()%!-]/.test(pass)) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+
+    @* --- EDIT MODAL --- *@
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">EDITAR USUARIO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <input type="hidden" id="editId" name="Id" value="">
+                        <input type="hidden" id="editIdStatus" name="IdStatus" value="">
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">Nombre</label>
+                            <input id="editFirstName" class="form-control" name="FirstName" type="text" value="" required>
+                            <div id="editFirstNameError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Primer Apellido</label>
+                            <input id="editLastName" class="form-control" name="LastName" type="text" value="" required>
+                            <div id="editLastNameError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="SecondLastName" class="form-label">Segundo Apellido</label>
+                            <input id="editSecondLastName" class="form-control" name="SecondLastName" type="text" value="" required>
+                            <div id="editSecondLastNameError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <label for="UserName" class="form-label">Nombre de Usuario</label>
+                            <input id="editUserName" class="form-control" name="UserName" type="text" value="" required>
+                            <div id="editUserNameError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Correo Electronico</label>
+                            <input id="editEmail" class="form-control" name="Email" type="email" value="" required>
+                            <div id="editEmailError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="PhoneNumber" class="form-label">Numero de Teléfono</label>
+                            <input id="editPhoneNumber" class="form-control" name="PhoneNumber" type="number" value="" required>
+                            <div id="editPhoneNumberError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="DNIType" class="form-label">Tipo de Cédula</label>
+                            <select class="form-select" name="DNIType" id="DNIType">
+                                <option value="1">Cédula Física</option>
+                                <option value="2">Cédula Jurídica</option>
+                                <option value="3">Cédula DIMEX</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Identification" class="form-label">Numero de Cédula</label>
+                            <input id="editIdentification" class="form-control" name="Identification" type="number" value="" required>
+                            <div id="editIdentificationError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="PasswordHash" class="form-label">Nueva Contraseña</label>
+                            <input id="editPasswordHash" class="form-control" name="PasswordHash" type="password">
+                            <div id="editPasswordHashError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label">Confirme su contraseña</label>
+                            <input id="edit_confirm_password" class="form-control" name="confirm_password" type="password">
+                            <div id="editConfirmPasswordError" class="alert d-none" role="alert"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Role" class="form-label">Rol</label>
+                            <select class="form-select" name="Role" id="editRole">
+                                @foreach (var role in ViewBag.Roles)
+                                {
+                                    <option value="@role.Id">@role.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div id="editErrorMessage" class="alert d-none" role="alert" style="padding-bottom: 20px"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary confirm-id" id="confirmEditButton" data-user-id="Id">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* --- EDIT MODAL END --- *@
+
+    @* --- DETAILS MODAL --- *@
+
+    <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">DETALLES DEL USUARIO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="detailsForm">
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">Nombre</label>
+                            <input id="FirstName" class="form-control" name="FirstName" type="text" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Primer Apellido</label>
+                            <input id="LastName" class="form-control" name="LastName" type="text" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="SecondLastName" class="form-label">Segundo Apellido</label>
+                            <input id="SecondLastName" class="form-control" name="SecondLastName" type="text" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Correo Electronico</label>
+                            <input id="Email" class="form-control" name="Email" type="email" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Identification" class="form-label">Numero de Cédula</label>
+                            <input id="Identification" class="form-control" name="Identification" type="text" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="PhoneNumber" class="form-label">Numero de Teléfono</label>
+                            <input id="PhoneNumber" class="form-control" name="PhoneNumber" type="tel" value="" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Role" class="form-label">Rol</label>
+                            <input id="Role" class="form-control" name="Role" type="text" value="" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* --- DETAILS MODAL END --- *@
+
+    @* --- DELETE MODAL --- *@
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ELIMINAR USUARIO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="idDeleteUser" name="Id" value="">
+                    <p id="confirmationMessage" value="" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger delete-button" id="confirmDeleteButton">
+                        Eliminar usuario
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* --- DELETE MODAL END --- *@
+
+    @* --- DISABLE MODAL --- *@
+
+    <div class="modal fade" id="disableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="disableModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="idDisableUser" name="Id" value="">
+                    <p id="disableConfirmationMessage" value="" />
+                    <form id="disableForm">
+                        <input id="disableId" name="Id" value="" type="hidden">
+                        <input id="disableFirstName" name="FirstName" value="" type="hidden">
+                        <input id="disableLastName" name="LastName" value="" type="hidden">
+                        <input id="disableSecondLastName" name="SecondLastName" value="" type="hidden">
+                        <input id="disableUserName" name="UserName" value="" type="hidden">
+                        <input id="disableEmail" name="Email" value="" type="hidden">
+                        <input id="disablePhoneNumber" name="PhoneNumber" value="" type="hidden">
+                        <input id="disableIdentification" name="Identification" value="" type="hidden">
+                        <input id="disablePasswordHash" name="PasswordHash" type="hidden">
+                        <input id="disableRole" name="Role" type="hidden">
+                        <input id="disableIdStatus" name="Status" type="hidden">
+                    </form>
+                </div>
+                <div id="editErrorMessage" class="alert d-none" role="alert" style="padding-bottom: 20px"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary confirm-disable" id="confirmDisableButton" data-user-id="Id"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* --- DISABLE MODAL END --- *@
+
+    <script>
+        // OCULTAR ALERTAS AL CERRAR MODAL EDITAR
+        var EditModal = document.getElementById('editModal');
+        EditModal.addEventListener('hidden.bs.modal', function () {
+            document.getElementById("editFirstNameError").classList.add("d-none");
+            document.getElementById("editLastNameError").classList.add("d-none");
+            document.getElementById("editSecondLastNameError").classList.add("d-none");
+            document.getElementById("editUserNameError").classList.add("d-none");
+            document.getElementById("editEmailError").classList.add("d-none");
+            document.getElementById("editPhoneNumberError").classList.add("d-none");
+            document.getElementById("editIdentificationError").classList.add("d-none");
+            document.getElementById("editPasswordHashError").classList.add("d-none");
+            document.getElementById("editConfirmPasswordError").classList.add("d-none");
+            document.getElementById("editErrorMessage").classList.add("d-none");
+        });
+    </script>
+
+}
+
+
+
+
+

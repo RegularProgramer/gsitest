@@ -1,0 +1,81 @@
+﻿@model IEnumerable<FrontendBlazor.Models.LogViewModel>
+
+@{
+    ViewBag.Title = "Logs";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+<div class="page-content">
+
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+        <div>
+            <h4 class="mb-3 mb-md-0">Sistema Administrador</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">CONTROL DE TICKETS</h6>
+                    <div class="table-responsive">
+                        <table id="dataTableExample" class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.userId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.UserName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.TableReference)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ActionMake)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.modObject)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.LogTimestamp)
+                                    </th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td data-cell="Id">
+                                            @Html.DisplayFor(modelItem => item.userId)
+                                        </td>
+                                        <td data-cell="Nombre de Usuario">
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td data-cell="Tabla Afectada">
+                                            @Html.DisplayFor(modelItem => item.TableReference)
+                                        </td>
+                                        <td data-cell="Accion Realizada">
+                                            @Html.DisplayFor(modelItem => item.ActionMake)
+                                        </td>
+                                        <td data-cell="Elemento Modificado">
+                                            @Html.DisplayFor(modelItem => item.modObject)
+                                        </td>
+                                        <td data-cell="Fecha">
+                                            @Html.DisplayFor(modelItem => item.LogTimestamp)
+                                        </td>
+                                        
+                                        
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

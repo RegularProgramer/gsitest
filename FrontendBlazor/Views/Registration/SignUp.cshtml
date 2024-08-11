@@ -1,0 +1,371 @@
+﻿@model FrontendBlazor.Models.RegistrationViewModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewData["Title"] = "Register";
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/FrontPageLayout.cshtml";
+}
+<div id="content" class="site-content">
+    <div class="entry-content" style="background-color: white">
+        <div class="container">
+            <div class="boxed-content" style="background-color: #EEF1F7">
+                <section class="wpb_row row-fluid section-padd">
+                    <div class="container">
+                        <div class="row">
+                            <div class="wpb_column column_container col-sm-12 col-md-7">
+                                <div class="column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="section-head ">
+                                            <h2 class="section-title">CREAR CUENTA</h2>
+                                        </div>
+                                        <div class="empty_space_12"><span class="empty_space_inner"></span></div>
+                                        <div role="form" class="wpcf7" id="wpcf7-f1989-p967-o1" lang="en-US" dir="ltr">
+                                            <div class="screen-reader-response"></div>
+                                            <form id="formularioRegistro"> @* asp-action="Register" *@
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="Email" class="form-label">Nombre</label>
+                                                            <input asp-for="FirstName" name="FirstName" value="" id="FirstName" size="40" class="wpcf7-form-control" placeholder="Nombre">
+                                                            <div id="messageFirstName" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="LastName" class="form-label">Primer Apellido</label>
+                                                            <input asp-for="LastName" name="LastName" value="" id="LastName" size="40" class="wpcf7-form-control" placeholder="Primer Apellido">
+                                                            <div id="messageLastName" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="SecondLastName" class="form-label">Segundo Apellido</label>
+                                                            <input asp-for="SecondLastName" name="SecondLastName" value="" id="SecondLastName" size="40" class="wpcf7-form-control" placeholder="Segundo Apellido">
+                                                            <div id="messageSecondLastName" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="UserName" class="form-label">Nombre de usuario</label>
+                                                            <input asp-for="UserName" name="UserName" value="" id="UserName" size="40" class="wpcf7-form-control" placeholder="Nombre de usuario">
+                                                            <div id="messageUserName" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="Email" class="form-label">Correo Electrónico</label>
+                                                            <input asp-for="Email" name="Email" value="" id="Email" size="40" class="wpcf7-form-control" placeholder="Correo Electrónico">
+                                                            <div id="messageEmail" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="PhoneNumber" class="form-label">Numero de Teléfono</label>
+                                                            <input asp-for="PhoneNumber" name="PhoneNumber" value="" id="PhoneNumber"  size="40" class="wpcf7-form-control" placeholder="Numero de Teléfono">
+                                                            <div id="messagePhoneNumber" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="DMIType" class="form-label">Tipo de Cédula</label>
+                                                            <select class="form-select" name="DMIType" id="DMIType" value="" style="width: 194.58px;">
+                                                                <option value="1" >Cédula Física</option>
+                                                                <option value="2" >Cédula Jurídica</option>
+                                                                <option value="3" >Cédula DIMEX</option>
+                                                            </select>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="Identification" class="form-label">Numero de Cédula</label>
+                                                            <input asp-for="Identification" name="Identification" value="" id="Identification" size="40" class="wpcf7-form-control" placeholder="Numero de Cédula">
+                                                            <div id="messageIdentification" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="PasswordHash" class="form-label">Contraseña</label>
+                                                            <input asp-for="PasswordHash" type="password" name="PasswordHash" value="" id="PasswordHash" size="40" class="wpcf7-form-control" placeholder="Contraseña">
+                                                            <div id="messagePasswordHash" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="wpcf7-form-control-wrap">
+                                                            <label for="passwordConfirmation" class="form-label">Confirme su contraseña</label>
+                                                            <input type="password" name="passwordConfirmation" value="" id="passwordConfirmation" size="40" class="wpcf7-form-control" placeholder="Confirme su contraseña">
+                                                            <div id="messageConfirmPassword" class="alert d-none" role="alert"></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                    <div id="message" class="alert d-none" role="alert" style="padding-bottom: 20px"></div>
+                                                <p>
+                                                    <input type="submit" value="REGISTRARSE" class="wpcf7-form-control wpcf7-submit btn">
+                                                </p>
+                                            </form>
+                                        </div>
+                                        <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column column_container col-sm-12 col-md-5">
+                                <div class="column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_single_image wpb_content_element align_center">
+                                            <figure class="wpb_wrapper figure">
+                                                <div class="single_image-wrapper box_border_grey"><img src="~/Content/assets/images/placeholder1.png" class="single_image-img attachment-full" alt=""></div>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        var apiKey = '@Configuration["ApiKey"]';
+        var apiUrl = '@Configuration["BackendApiUrl"]';
+
+        $(document).ready(function () {
+
+            var utcLockoutEnd = new Date().toISOString();
+            var addFormHasErrors = false;
+
+
+            $("form").submit(function (event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: "Registrando Usuario!",
+                    html: "Estamos registrando tu cuenta espera por favor",
+                    timerProgressBar: true,
+                    allowOutsideClick: false, // Evitar que se cierre haciendo clic fuera de la alerta
+                    showCloseButton: false, // Ocultar el botón "Cerrar"
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                });
+
+                let firstName = $("#FirstName").val();
+                let lastName = $("#LastName").val();
+                let secondLastName = $("#SecondLastName").val();
+                let userName = $("#UserName").val();
+                let email = $("#Email").val();
+                let phoneNumber = $("#PhoneNumber").val();
+                let identification = $("#Identification").val();
+                let pwd = $("#PasswordHash").val();
+                let confirmPwd = $("#passwordConfirmation").val();
+                let dmiType = $("#DMIType").val();
+
+                // Validate FirstName
+                if (!firstName.trim()) {
+                    $("#messageFirstName").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!firstName.match(/^[a-zA-ZÀ-ÿ]+(?: [a-zA-ZÀ-ÿ]+)?$/) || firstName.length < 3) {
+                    $("#messageFirstName").text("El nombre debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageFirstName").text("").addClass("d-none");
+                }
+
+                // Validate LastName
+                if (!lastName.trim()) {
+                    $("#messageLastName").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!lastName.match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                    $("#messageLastName").text("El primer apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageLastName").text("").addClass("d-none");
+                }
+
+                // Validate SecondLastName
+                if (!secondLastName.trim()) {
+                    $("#messageSecondLastName").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!secondLastName.match(/^[a-zA-ZÀ-ÿ]{3,}$/)) {
+                    $("#messageSecondLastName").text("El segundo apellido debe tener al menos 3 caracteres y solo puede contener letras.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageSecondLastName").text("").addClass("d-none");
+                }
+
+                // Validate UserName
+                if (!userName.trim()) {
+                    $("#messageUserName").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!userName.match(/^[a-zA-Z0-9_\-@@#$.]{5,}$/)) {
+                    $("#messageUserName").text("El nombre de usuario debe tener al menos 5 caracteres y solo puede contener letras, números y los caracteres '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (userName.match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    $("#messageUserName").text("El nombre de usuario no puede poseer formato de correo electrónico").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageUserName").text("").addClass("d-none");
+                }
+
+                // Validate Email
+                if (!email.trim()) {
+                    $("#messageEmail").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!email.match(/^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                    $("#messageEmail").text("Por favor ingrese un correo electrónico válido").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageEmail").text("").addClass("d-none");
+                }
+
+                // Validate PhoneNumber
+                if (!phoneNumber.trim()) {
+                    $("#messagePhoneNumber").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!phoneNumber.match(/^\d{8}$/)) {
+                    $("#messagePhoneNumber").text("El número de teléfono debe constar exactamente de 8 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messagePhoneNumber").text("").addClass("d-none");
+                }
+
+                // Validate Identification
+                if (dmiType == "1") {
+                    if (!identification.trim()) {
+                        $("#messageIdentification").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else if (!identification.match(/^\d{9}$/)) {
+                        $("#messageIdentification").text("El número de cédula física debe constar exactamente de 9 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else {
+                        $("#messageIdentification").text("").addClass("d-none");
+                    }
+                } else if (dmiType == "2") {
+                    if (!identification.trim()) {
+                        $("#messageIdentification").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else if (!identification.match(/^\d{10}$/)) {
+                        $("#messageIdentification").text("El número de cédula jurídica debe constar exactamente de 10 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else {
+                        $("#messageIdentification").text("").addClass("d-none");
+                    }
+                } else if (dmiType == "3") {
+                    if (!identification.trim()) {
+                        $("#messageIdentification").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else if (!identification.match(/^\d{11,12}$/)) {
+                        $("#messageIdentification").text("El número de cédula de migración y extrangería debe constar exactamente de 11 ó 12 dígitos.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        addFormHasErrors = true;
+                    } else {
+                        $("#messageIdentification").text("").addClass("d-none");
+                    }
+                }
+
+                // Validate PasswordHash
+                if (!pwd.trim()) {
+                    $("#messagePasswordHash").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (!pwd.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[_\-@@#$.])[A-Za-z\d_\-@@#$.]{7,}$/) && pwd.trim()) {
+                    $("#messagePasswordHash").text("La contraseña debe tener al menos 7 caracteres y contener al menos un número, una letra mayúscula, una letra minúscula y un carácter especial '_-@@#$.'").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messagePasswordHash").text("").addClass("d-none");
+                }
+
+                // Verificar si las contraseñas coinciden
+                if (!confirmPwd.trim()) {
+                    $("#messageConfirmPassword").text("Por favor rellena este campo.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else if (pwd !== confirmPwd) {
+                    $("#messageConfirmPassword").text("Las contraseñas no coinciden.").removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                    addFormHasErrors = true;
+                } else {
+                    $("#messageConfirmPassword").text("").addClass("d-none");
+                }
+
+                if (addFormHasErrors == true) {
+                    event.preventDefault();
+                    Swal.close()
+                    return;
+                }
+
+                $.ajax({
+                    url: apiUrl+"/api/Account/Register",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        UserName: userName,
+                        Email: email,
+                        PhoneNumber: phoneNumber,
+                        PasswordHash: pwd,
+                        FirstName: firstName,
+                        LastName: lastName,
+                        SecondlastName: secondLastName,
+                        Identification: identification,
+                        Id: "",
+                        NormalizedUserName: userName,
+                        NormalizedEmail: email,
+                        EmailConfirmed: false,
+                        SecurityStamp: "",
+                        ConcurrencyStamp: "",
+                        PhoneNumberConfirmed: false,
+                        TwoFactorEnabled: false,
+                        LockoutEnd: utcLockoutEnd,
+                        LockoutEnabled: false,
+                        AccessFailedCount: 0
+                    }),
+                    headers: {
+                        "ApiKey": apiKey
+                    },
+                    success: function (data) {
+                        console.log("Registro exitoso:", data);
+                        $("#formularioRegistro")[0].reset();
+                        $("#message").text("El registro se realizó exitosamente.").removeClass("alert-danger").addClass("alert-success").css("color", "limegreen").removeClass("d-none");
+                        Swal.close()
+                        console.log("Registro exitoso:", data);
+                        $("#formularioRegistro")[0].reset();
+                        $("#message").text("El registro se realizó exitosamente.").removeClass("alert-danger").addClass("alert-success").css("color", "limegreen").removeClass("d-none");
+                        Swal.fire({
+                            title: "Inicio de sesion exitoso",
+                            text: "Ahora va a pasar a un inicio de sesión",
+                            icon: "infor",
+                            allowOutsideClick: false,
+                            confirmButtonColor: "#3085d6",
+                            confirmButtonText: "Ok, lo he entendido"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = '/Registration/Login';
+                            }
+                        });
+                    },
+                    error: function (error) {
+                        // Manejar el error, mostrar message de error al usuario
+                        console.error("Error en la solicitud AJAX:", error);
+                        // Mostrar el message de error en el contenedor designado
+                        $("#message").text(error.responseText).removeClass("alert-success").addClass("alert-danger").css("color", "red").removeClass("d-none");
+                        Swal.close()
+                        //window.location.href = '/Registration/Login';
+                    }
+                });
+            });
+        });
+    </script>
+}

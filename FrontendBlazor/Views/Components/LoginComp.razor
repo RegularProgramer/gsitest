@@ -1,0 +1,60 @@
+﻿@page "/loginComp"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop
+@using System.Threading.Tasks
+
+<form method="post" @onsubmit="Login">
+    <div class="row">
+        <div class="col-md-6">
+            <span class="wpcf7-form-control-wrap">
+                <input type="email" @bind="email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" required="" placeholder="Correo Electrónico">
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <span class="wpcf7-form-control-wrap">
+                <input type="password" @bind="password" class="wpcf7-form-control wpcf7-validates-as-required" required="" placeholder="Contraseña">
+            </span>
+            @if (loginFailed)
+            {
+                <div class="alert alert-danger">
+                    <p>Credenciales incorrectos</p>
+                </div>
+            }
+        </div>
+    </div>
+    <input type="submit" class="wpcf7-form-control wpcf7-submit btn" value="INGRESAR"/>
+    <div class="wpcf7-response-output wpcf7-display-none"></div>
+</form>
+
+@code {
+   
+    private string email;
+    private string password;
+    private bool loginFailed;
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    private async Task Login()
+    {
+        Console.WriteLine("321");
+        var loginData = new Dictionary<string, string>
+        {
+            { "email", email },
+            { "password", password }
+        };
+
+        var token = await JSRuntime.InvokeAsync<string>("loginInterop.login", loginData);
+        if (!string.IsNullOrWhiteSpace(token))
+        {
+            // Handle the JWT token and redirection as needed
+        }
+        else
+        {
+            // Handle login failure
+            loginFailed = true;
+        }
+    }
+}

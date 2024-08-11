@@ -1,0 +1,101 @@
+﻿@page "/SignUpComp"
+@using FrontendBlazor.Models
+@using FrontendBlazor.Helpers
+
+<div class="container">
+    <div class="row">
+        <div class="wpb_column column_container col-sm-12 col-md-7">
+            <div class="column-inner">
+                <div class="wpb_wrapper">
+                    <div class="section-head ">
+                        <h2 class="section-title">CREAR CUENTA</h2>
+                    </div>
+
+                    <div class="empty_space_12"><span class="empty_space_inner"></span></div>
+                    <div role="form" class="wpcf7" id="wpcf7-f1989-p967-o1" lang="en-US" dir="ltr">
+                        <div class="screen-reader-response"></div>
+                        <form @submit="RegisterUser">
+                            <div class="row">
+                                <div class="col-md-6"><span class="wpcf7-form-control-wrap"><input type="text" @bind="user.UserName" name="UserName" value="" size="40" class="wpcf7-form-control" required placeholder="Nombre de usuario"></span></div>
+                                <div class="col-md-6"><span class="wpcf7-form-control-wrap"><input type="email" @bind="user.Email" name="Email" value="" size="40" class="wpcf7-form-control" required placeholder="Correo Electrónico"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><span class="wpcf7-form-control-wrap"><input type="tel" @bind="user.PhoneNumber" name="PhoneNumber" value="" size="40" class="wpcf7-form-control" required placeholder="Numero de Teléfono"></span></div>
+                                <div class="col-md-6"><span class="wpcf7-form-control-wrap"><input type="password" @bind="user.PasswordHash" name="password" value="" size="40" class="wpcf7-form-control" required placeholder="Contraseña"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><span class="wpcf7-form-control-wrap"><input type="password" @bind="confirmPassword" name="password_confirmation" value="" size="40" class="wpcf7-form-control" required placeholder="Confirme su contraseña"></span></div>
+                                @if (passwordMismatch)
+                                {
+                                    <div class="alert alert-danger">
+                                        <p>Las contraseñas no coinciden</p>
+                                    </div>
+                                }
+                            </div>
+                            <p>
+                                <input type="submit" value="REGISTRARSE" class="wpcf7-form-control wpcf7-submit btn">
+                                @if (registrationSuccess)
+                                {
+                                    <div class="alert alert-success">
+                                        <p>¡Registro exitoso!</p>
+                                    </div>
+                                }
+                                else if (registrationFail)
+                                {
+                                    <div class="alert alert-danger">
+                                        <p>Hubo un problema, el registro no fue exitoso</p>
+                                    </div>
+                                }
+                            </p>
+                        </form>
+                    </div>
+                    <div class="empty_space_30 lg-hidden"><span class="empty_space_inner"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="wpb_column column_container col-sm-12 col-md-5">
+            <div class="column-inner">
+                <div class="wpb_wrapper">
+                    <div class="wpb_single_image wpb_content_element align_center">
+                        <figure class="wpb_wrapper figure">
+                            <div class="single_image-wrapper box_border_grey"><img src="~/Content/assets/images/placeholder1.png" class="single_image-img attachment-full" alt=""></div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private AspNetUserViewModel user = new AspNetUserViewModel();
+    private LoginHelper loginHelper = new LoginHelper();
+    private string confirmPassword;
+    private bool passwordMismatch;
+    private bool registrationSuccess = false;
+    private bool registrationFail = false;
+
+    private async Task RegisterUser()
+    {
+        if (user.PasswordHash != confirmPassword)
+        {
+            passwordMismatch = true;
+            return;
+        }else
+        {
+            // Call the registration method from your helper
+            var registrationResult = loginHelper.Create(user);
+
+            if (registrationResult != null)
+            {
+                // Handle successful registration
+                registrationSuccess = true;
+            }
+            else
+            {
+                // Handle registration failure
+                registrationFail = true;
+            }
+        }
+    }
+}

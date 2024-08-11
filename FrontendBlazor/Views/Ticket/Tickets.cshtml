@@ -1,0 +1,314 @@
+﻿@model IEnumerable<FrontendBlazor.Models.TicketViewModel>
+
+@{
+    ViewBag.Title = "Tickets";
+    Layout = "~/Views/Shared/MainPageLayout.cshtml";
+}
+
+<style>
+    th a {
+        color: white; /* Cambiar el color de los enlaces en los encabezados */
+        text-decoration: none; /* Quitar el subrayado */
+    }
+
+        th a:hover {
+            color: gray; /* Color al pasar el ratón por encima */
+        }
+</style>
+
+<link rel="stylesheet" href="~/Content/assets/css/responsivetables.css" />
+
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">CONTROL DE TICKETS</h6>
+                        <div class="table-responsive">
+                            <table id="dataTableExample" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="?sortOrder=@ViewBag.IdTicketSortParm">
+                                                Id del Ticket
+                                                @if (ViewBag.CurrentSort == "id_desc")
+                                                {
+                                                    <i class="fas fa-sort-down"></i>
+                                                }
+                                                else if (ViewBag.CurrentSort == "id_asc")
+                                                {
+                                                    <i class="fas fa-sort-up"></i>
+                                                }
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a href="?sortOrder=@ViewBag.MailSortParm">
+                                                Correo Electrónico
+                                                @if (ViewBag.CurrentSort == "mail_desc")
+                                                {
+                                                    <i class="fas fa-sort-down"></i>
+                                                }
+                                                else if (ViewBag.CurrentSort == "mail")
+                                                {
+                                                    <i class="fas fa-sort-up"></i>
+                                                }
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a href="?sortOrder=@ViewBag.NameSortParm">
+                                                Nombre del cliente
+                                                @if (ViewBag.CurrentSort == "name_desc")
+                                                {
+                                                    <i class="fas fa-sort-down"></i>
+                                                }
+                                                else if (ViewBag.CurrentSort == "name")
+                                                {
+                                                    <i class="fas fa-sort-up"></i>
+                                                }
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a href="?sortOrder=@ViewBag.QuerySortParm">
+                                                Consulta del cliente
+                                                @if (ViewBag.CurrentSort == "query_desc")
+                                                {
+                                                    <i class="fas fa-sort-down"></i>
+                                                }
+                                                else if (ViewBag.CurrentSort == "query")
+                                                {
+                                                    <i class="fas fa-sort-up"></i>
+                                                }
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a href="?sortOrder=@ViewBag.TicketStateSortParm">
+                                                Estado del Ticket
+                                                @if (ViewBag.CurrentSort == "state_desc")
+                                                {
+                                                    <i class="fas fa-sort-down"></i>
+                                                }
+                                                else if (ViewBag.CurrentSort == "state")
+                                                {
+                                                    <i class="fas fa-sort-up"></i>
+                                                }
+                                            </a>
+                                        </th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td data-cell="Id">
+                                                @Html.DisplayFor(modelItem => item.IdTicket)
+                                            </td>
+                                            <td data-cell="Correo Electrónico">
+                                                @Html.DisplayFor(modelItem => item.Mail)
+                                            </td>
+                                            <td data-cell="Nombre">
+                                                @Html.DisplayFor(modelItem => item.Name)
+                                            </td>
+                                            <td data-cell="Consulta">
+                                                @Html.DisplayFor(modelItem => item.QUERY)
+                                            </td>
+                                            <td data-cell="Estado">
+                                                @Html.DisplayFor(modelItem => item.TicketState)
+                                            </td>
+                                            <td data-cell = "Acciones">
+                                                @if (Context.Session.GetString("RoleId") == "1")
+                                                {
+                                                    <button type="button" class="btn btn-primary btn-icon btn-sm" onclick="loadTicketDetails(@item.IdTicket)">
+                                                        <i data-feather="file-text"></i>
+                                                    </button>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @* Modal de los details *@
+    <div class="modal fade" id="ticketDetailsModal" tabindex="-1" aria-labelledby="ticketDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ticketDetailsModalLabel">Detalles del Ticket</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ticketDetailsForm">
+                        <div class="mb-3">
+                            <p><strong>Id del Ticket:</strong> <span id="ticketId"></span></p>
+                        </div>
+                        <div class="mb-3">
+                            <p><strong>Nombre del Cliente:</strong> <span id="ticketName"></span></p>
+                        </div>
+                        <div class="mb-3">
+                            <p><strong>Correo del Cliente:</strong> <span id="ticketMail"></span></p>
+                        </div>
+                        <div class="mb-3">
+                            <p><strong>Consulta del Cliente:</strong> <span id="ticketQuery"></span></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticketStatus" class="form-label">Estado</label>
+                            <select class="form-select" id="ticketStatus">
+                                <option value="Pendiente de Contestar">Pendiente de Contestar</option>
+                                <option value="Contestado">Contestado</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="saveTicketDetails">Guardar</button>
+                    <button type="button" class="btn btn-info" id="sendEmailButton">Contestar Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            // Función para cargar los detalles del ticket en el modal
+            window.loadTicketDetails = function (id) {
+                $.ajax({
+                    url: '/Ticket/Details/' + id,
+                    type: 'GET',
+                    success: function (ticket) {
+                        $('#ticketId').text(ticket.idTicket);
+                        $('#ticketName').text(ticket.name);
+                        $('#ticketMail').text(ticket.mail);
+                        $('#ticketQuery').text(ticket.query);
+                        $('#ticketStatus').val(ticket.ticketState);
+                        $('#ticketDetailsForm').data('ticketId', id);
+                        $('#ticketDetailsModal').modal('show');
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: 'Error',
+                            text: 'No se pudieron cargar los detalles del ticket.',
+                            icon: 'error',
+                            background: '#172340',
+                            showConfirmButton: true, // Mostrar el botón de confirmación
+                            allowOutsideClick: false // No permitir cerrar haciendo clic fuera del Swal
+                        });
+                    }
+                });
+            };
+
+            // Función para guardar los cambios en el ticket
+            $('#saveTicketDetails').click(function () {
+                var id = $('#ticketDetailsForm').data('ticketId');
+                var status = $('#ticketStatus').val();
+                var name = $('#ticketName').text();
+                var mail = $('#ticketMail').text();
+                var query = $('#ticketQuery').text();
+
+                var ticket = {
+                    IdTicket: id,
+                    Name: name,
+                    Mail: mail,
+                    QUERY: query,
+                    TicketState: status
+                };
+
+                $.ajax({
+                    url: '/Ticket/UpdateQueryStatus',
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(ticket),
+                    success: function (response) {
+                        Swal.fire({
+                            title: 'Guardado',
+                            text: 'El estado del ticket se ha actualizado correctamente.',
+                            icon: 'success',
+                            background: '#172340',
+                            showConfirmButton: true, // Mostrar el botón de confirmación
+                            allowOutsideClick: false // No permitir cerrar haciendo clic fuera del Swal
+                        }).then(() => {
+                            $('#ticketDetailsModal').modal('hide');
+                            location.reload(); // Para recargar la página y reflejar los cambios
+                        });
+                    },
+                    error: function () {
+                        Swal.fire({
+                            title: 'Error',
+                            text: 'No se pudo actualizar el estado del ticket.',
+                            icon: 'error',
+                            background: '#172340',
+                            showConfirmButton: true, // Mostrar el botón de confirmación
+                            allowOutsideClick: false // No permitir cerrar haciendo clic fuera del Swal
+                        });
+                    }
+                });
+            });
+
+            // Función para enviar correo y actualizar el estado del ticket
+            $('#sendEmailButton').click(function () {
+                var id = $('#ticketDetailsForm').data('ticketId');
+                var mail = $('#ticketMail').text();
+                var subject = encodeURIComponent("Consulta del ticket MVR Seguros");
+                var body = encodeURIComponent("Buenas estimado cliente,\n\nQuisiera discutir sobre su consulta enviada: " + $('#ticketQuery').text() + ".\n\nQuedamos atentos a sus comentarios.\n\nSaludos cordiales.");
+
+                // Abrir la aplicación de correo
+                window.location.href = "mailto:" + mail + "?subject=" + subject + "&body=" + body;
+
+                // Esperar un poco antes de ejecutar el siguiente bloque de código para asegurar que el cliente de correo se abra
+                setTimeout(function () {
+                    // Actualizar el estado del ticket
+                    $.ajax({
+                        url: '/Ticket/UpdateQueryStatus',
+                        type: 'POST',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify({
+                            IdTicket: id,
+                            Name: $('#ticketName').text(),
+                            Mail: mail,
+                            QUERY: $('#ticketQuery').text(),
+                            TicketState: 'Contestado'
+                        }),
+                        success: function (response) {
+                            Swal.fire({
+                                title: 'Correo Enviado',
+                                text: 'El estado del ticket se ha actualizado a Contestado.',
+                                icon: 'success',
+                                background: '#172340',
+                                showConfirmButton: true, // Mostrar el botón de confirmación
+                                allowOutsideClick: false // No permitir cerrar haciendo clic fuera del Swal
+                            }).then(() => {
+                                $('#ticketDetailsModal').modal('hide');
+                                location.reload(); // Para recargar la página y reflejar los cambios
+                            });
+                        },
+                        error: function () {
+                            Swal.fire({
+                                title: 'Error',
+                                text: 'No se pudo actualizar el estado del ticket.',
+                                icon: 'error',
+                                background: '#172340',
+                                showConfirmButton: true, // Mostrar el botón de confirmación
+                                allowOutsideClick: false // No permitir cerrar haciendo clic fuera del Swal
+                            });
+                        }
+                    });
+                }, 1000); // Espera 1 segundo antes de ejecutar la actualización del estado
+            });
+        });
+    </script>
+
